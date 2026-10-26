@@ -13,15 +13,19 @@ Regras: nunca repetir tema, desenho ou música. Cada vídeo tem paleta e ilustra
 5. **Música emocional**, que ele prefere à alegre. Volume fixo, sem ducking (o sobe e desce pareceu defeito): música `loudnorm I=-27`, voz `I=-16`, total -14 LUFS.
 6. Exporto em até 20 MB, subo em `AAAA-MM-DD-.../`, agendo com `send_later` pra 11h59 e mando a prévia.
 
-## Temas (só com fonte da seção 5 da variacao-conteudo-rotina)
-| Dia | Tema | Pontos | Fonte | Paleta |
-|---|---|---|---|---|
-| Ter 27/10 ✅ | 3 erros na hora de dormir | horário fixo · ritual calmo · mesma ordem | AAP | noite azul |
-| Qua 28/10 | Manhã sem briga: 3 truques | 2 opções ("essa ou aquela?") · acordar com calma, de bom humor · despedida curta | AAP | nascer do sol (pêssego) |
-| Qui 29/10 | Mito ou verdade: rotina tem que ser rígida? | rígida demais cansa (MITO) · previsível ajuda (VERDADE) · escolhas simples ajudam (VERDADE) | AAP | verde e coral com carimbos |
-| Sex 30/10 | 10.085 crianças: o que um estudo achou | dormiam mais cedo · pegavam no sono mais rápido · acordavam menos | Mindell e colegas, Sleep 2015 | lua e verde-água, gráficos |
-| Sáb 31/10 | Depois da escola: 3 coisas que ajudam | brincar e se mexer · refeição em família sem tela · noite calma | AAP | tarde no parque |
-| Dom 01/11 | Previsível acalma: saber o que vem depois | quadro com desenhos · mesma sequência · avisar antes de mudar | AAP | lilás |
+## Temas
+**Pedido do Mateus (26/10):** cada vídeo com dados reais e fontes fortes, de várias áreas (pediatria brasileira, OMS, pediatria americana, CDC, Harvard, estudos com milhares de crianças), dizendo o nome da instituição na tela e na voz. Tudo vem do `BANCO-DE-FONTES.md`. Misturar pelo menos 2 fontes diferentes por vídeo.
+
+| Dia | Tema | Pontos e fontes (ver BANCO-DE-FONTES.md) | Paleta |
+|---|---|---|---|
+| Ter 27/10 ✅ | 3 erros na hora de dormir | horário fixo · ritual calmo · mesma ordem (AAP) | noite azul |
+| Qua 28/10 | Manhã sem briga: 3 truques | duas opções, não dez (CDC) · roupa e mochila prontas na véspera (AAP) · despedida curta (AAP) | nascer do sol (pêssego) |
+| Qui 29/10 | Mito ou verdade? | "Fim de semana pode dormir qualquer hora" MITO (SBP 2021) · "Tela antes de dormir relaxa" MITO (SBP 2021: 1 h antes, melatonina) · "Rotina ajuda o comportamento" VERDADE (UCL 2013, 10 mil crianças) | verde e coral com carimbos |
+| Sex 30/10 | O que a ciência descobriu sobre rotina de dormir | 10.085 crianças (Mindell 2015) · 405 famílias, 3 semanas, mães de melhor humor (Mindell 2009) · 10 mil crianças em Londres, efeito reversível (Kelly 2013) | lua e verde-água, contadores e gráficos |
+| Sáb 31/10 | Depois da escola: 3 coisas que ajudam | 3 horas de movimento por dia (OMS) · brincar constrói o cérebro (AAP 2018) · tela desligada 1 a 2 h antes de dormir (SBP 2020) | tarde no parque |
+| Dom 01/11 | O cérebro do seu filho e o "vai e volta" | mais de 1 milhão de conexões por segundo (Harvard) · responder quando ele puxa conversa (Harvard) · ler em voz alta todo dia (AAP 2014 + Cincinnati 2015) | lilás |
+
+**Próxima semana (já com fonte):** quanto seu filho precisa dormir por idade (AASM/AAP 2016 + OMS) · telas por idade (SBP 2020 + OMS) · ritual de até 30 minutos (SBP 2021) · elogio que funciona: descrever em vez de "muito bem" (CDC) · palmada não ensina (AAP 2018) · mudança de rotina se combina com calma (CDC) · refeição é afeto, sem tela (Ministério da Saúde + SBP).
 
 ## Músicas
 - Já usadas: kids happy (amostra 1), kids-kids-happy (amostra 2), gentle baby sleep lullaby dream (Ter 27, publicada).
