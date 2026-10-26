@@ -1,0 +1,163 @@
+{
+ "name": "tatu-parte2",
+ "dir": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p2",
+ "title": [
+  "Família Tatu"
+ ],
+ "subtitle": "Parte 2 · O Segredo da Mamãe",
+ "title_until": 2.7,
+ "segments": [
+  {
+   "freeze": "c1.mp4",
+   "at": 0.05,
+   "dur": 2.7,
+   "narr": [
+    [
+     0.25,
+     "n1"
+    ]
+   ]
+  },
+  {
+   "clip": "c1.mp4",
+   "t0": 0.0,
+   "t1": 3.6,
+   "caps": [
+    [
+     0.55,
+     2.3,
+     "Bento, primeiro passo.",
+     "mae"
+    ]
+   ]
+  },
+  {
+   "clip": "c2.mp4",
+   "t0": 0.4,
+   "t1": 5.0,
+   "caps": [
+    [
+     1.5,
+     2.7,
+     "Desenrolei!",
+     "bento"
+    ]
+   ]
+  },
+  {
+   "freeze": "c2.mp4",
+   "at": 4.9,
+   "dur": 2.8,
+   "narr": [
+    [
+     0.2,
+     "n2"
+    ]
+   ]
+  },
+  {
+   "clip": "c3.mp4",
+   "t0": 1.2,
+   "t1": 5.0,
+   "caps": [
+    [
+     1.2,
+     2.3,
+     "Como assim?",
+     "pai"
+    ]
+   ],
+   "db": 5
+  },
+  {
+   "freeze": "c3.mp4",
+   "at": 4.9,
+   "dur": 3.4,
+   "narr": [
+    [
+     0.2,
+     "n3"
+    ]
+   ]
+  },
+  {
+   "clip": "c4.mp4",
+   "t0": 0.6,
+   "t1": 5.0,
+   "caps": [
+    [
+     0.4,
+     3.2,
+     "Escova, história e luz. Nessa ordem.",
+     "mae"
+    ]
+   ]
+  },
+  {
+   "freeze": "c4.mp4",
+   "at": 4.9,
+   "dur": 3.6,
+   "narr": [
+    [
+     0.2,
+     "n4"
+    ]
+   ]
+  },
+  {
+   "clip": "c5.mp4",
+   "t0": 0.0,
+   "t1": 5.0,
+   "narr": [
+    [
+     1.8,
+     "n5"
+    ]
+   ]
+  },
+  {
+   "card": 3.4,
+   "lines": [
+    "Parte 3:",
+    "A Manhã do Papai"
+   ],
+   "when": "amanhã, 20h",
+   "narr": [
+    [
+     0.35,
+     "n6"
+    ]
+   ]
+  }
+ ],
+ "narr": {
+  "n1": [
+   "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p2/n1.wav",
+   "Ontem, o Papai Tatu perdeu a aposta."
+  ],
+  "n2": [
+   "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p2/n2.wav",
+   "Escovar os dentes nunca foi tão comemorado."
+  ],
+  "n3": [
+   "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p2/n3.wav",
+   "Uma hora de luta do Papai. Três minutos da Mamãe."
+  ],
+  "n4": [
+   "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p2/n4.wav",
+   "A pediatria chama isso de rotina. A Mamãe chama de paz."
+  ],
+  "n5": [
+   "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p2/n5.wav",
+   "Seis e cinquenta. A Mamãe já tinha saído."
+  ],
+  "n6": [
+   "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p2/n6.wav",
+   "E o Papai ainda não sabia o que vinha pela frente."
+  ]
+ },
+ "music": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/musica/pixabay/5b544b14-funny-bouncy-cartoon-mischief-578469.mp3",
+ "music_start": 0,
+ "music_db": -19,
+ "narr_db": 11
+}
