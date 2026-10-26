@@ -22,6 +22,8 @@ Leia isto primeiro ao continuar o trabalho do Instagram @paisdarotina numa conve
 - Horários: 12h e 20h, todo dia. Ele aprovou agendar automático; mande a prévia e ele pode cancelar até a hora.
 - Não prometer "parte X amanhã" sem os clipes na mão.
 - Marca anônima, sem dados pessoais, sem comentar em contas dos outros.
+- **Legenda sem a linha "feito com IA"** (pedido do Mateus em 26/10): o próprio Instagram rotula.
+- 20h: Família Tatu com narradora estilo "Todo Mundo Odeia o Chris" (Nathalia), falas originais dos clipes do Mateus. 12h: informativo em motion 2D feito por mim (voz Amandinha calma, transição 3D suave, música emocional).
 
 ## Agendado
 - 26/10 20h: Reel "Faz hoje: 3 coisas antes de dormir" (agendado na conversa antiga; publica sozinho).
