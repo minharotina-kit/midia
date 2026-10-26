@@ -8,11 +8,14 @@ config:
   "segments": [
      {"clip": "c1.mp4", "t0": 0, "t1": 3.8, "caps": [[l0, l1, "texto", "mae|pai|bento|vovo"]],
       "narr": [[local_t, "n1"]]},
-     {"freeze": "c1.mp4", "at": 3.8, "dur": 2.4, "narr": [[0.25, "n2"]]},
+     {"freeze": "c1.mp4", "at": 3.8, "dur": 2.4, "narr": [[0.25, "n2"]],
+      "src": [[0.2, 2.4, "Academia Americana de Pediatria"]]},
      {"card": 3.4, "lines": ["Parte 3:", "A Manhã do Papai"], "when": "amanhã, 20h", "narr": [[0.3, "n7"]]}
   ],
   "narr": {"n1": ["arquivo.wav", "legenda da narradora"]},
   "music": "musica.mp3", "music_start": 0, "music_db": -16 }
+
+"src": selo "FONTE" no alto da tela enquanto a narradora fala um dado real (só fatos do BANCO-DE-FONTES.md).
 """
 import json
 import subprocess
@@ -49,6 +52,21 @@ def narr_sprite(text):
     for s in sps:
         im.alpha_composite(s, ((w - s.width) // 2, y))
         y += s.height + 6
+    return im
+
+
+def src_sprite(text):
+    """Selo da fonte: cartão creme com "FONTE" em coral e a instituição em azul-marinho."""
+    from PIL import ImageDraw
+    a = text_sprite('FONTE', te.BODYB, 30, CORAL + (255,))
+    b = text_sprite(text, te.BODYB, 42, NAVY + (255,))
+    w = max(a.width, b.width) + 56
+    h = a.height + b.height + 34
+    im = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+    ImageDraw.Draw(im).rounded_rectangle((0, 0, w - 1, h - 1), radius=26, fill=(255, 248, 232, 240),
+                                         outline=CORAL + (255,), width=3)
+    im.alpha_composite(a, ((w - a.width) // 2, 14))
+    im.alpha_composite(b, ((w - b.width) // 2, 14 + a.height + 6))
     return im
 
 
@@ -90,11 +108,14 @@ def run(cfg):
     DUR = t
     narr_events = []  # (início global, chave)
     caps = []         # (início, fim, sprite)
+    srcs = []         # selos de fonte (início, fim, sprite)
     for st, d, sg in segs:
         for lt, key in sg.get('narr', []):
             narr_events.append((st + lt, key))
         for l0, l1, txt, who in sg.get('caps', []):
             caps.append((st + l0, st + l1, te.pill(txt, COLORS[who])))
+        for l0, l1, txt in sg.get('src', []):
+            srcs.append((st + l0, st + l1, src_sprite(txt)))
     ncaps = [(t0, t0 + narr[k][2] + 0.15, nsp[k]) for t0, k in narr_events]
 
     def overlay(im, tt, freeze=False):
@@ -119,6 +140,10 @@ def run(cfg):
                 a = min(ease((tt - a0) / 0.12), ease((a1 - tt) / 0.15))
                 y = 1180 if not any(c0 <= tt < c1 for c0, c1, _ in caps) else 1080
                 im.alpha_composite(with_alpha(sp, a), ((RW - sp.width) // 2, y - sp.height // 2))
+        for a0, a1, sp in srcs:
+            if a0 <= tt < a1:
+                a = min(ease((tt - a0) / 0.25), ease((a1 - tt) / 0.2))
+                im.alpha_composite(with_alpha(sp, a), ((RW - sp.width) // 2, int(240 - (1 - a) * 24)))
         return im
 
     def freeze_img(base, local, d):

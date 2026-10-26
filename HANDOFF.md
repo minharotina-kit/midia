@@ -24,6 +24,7 @@ Leia isto primeiro ao continuar o trabalho do Instagram @paisdarotina numa conve
 - Marca anônima, sem dados pessoais, sem comentar em contas dos outros.
 - **Legenda sem a linha "feito com IA"** (pedido do Mateus em 26/10): o próprio Instagram rotula.
 - 20h: Família Tatu com narradora estilo "Todo Mundo Odeia o Chris" (Nathalia), falas originais dos clipes do Mateus. 12h: informativo em motion 2D feito por mim (voz Amandinha calma, transição 3D suave, música emocional).
+- **Dados reais nos dois horários** (pedido de 26/10, vale da parte 3 e do 12h de quarta em diante; os vídeos de 27/10 não mudam). Só fatos do `BANCO-DE-FONTES.md`. No 20h: 1 ou 2 dados por parte, falados pela narradora num congelado, com selo FONTE (`"src"` no config) e "Fonte:" na legenda. Plano em `PAUTA-20H.md`.
 
 ## Agendado
 - 26/10 20h: Reel "Faz hoje: 3 coisas antes de dormir" (agendado na conversa antiga; publica sozinho).
