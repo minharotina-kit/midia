@@ -36,15 +36,34 @@ COLORS = {'pai': NAVY, 'mae': CORAL, 'bento': GREEN, 'vovo': PURPLE}
 NARR_FILL = (255, 236, 170, 255)
 
 
-def narr_sprite(text):
-    """Legenda da narradora: amarelinha, sem caixa, com contorno, em até 2 linhas."""
+def narr_sprite(text, max_w=1000):
+    """Legenda da narradora: amarelinha, sem caixa, com contorno. Quebra em linhas equilibradas que cabem na tela."""
     words = text.split()
-    if len(text) <= 26:
-        lines = [text]
-    else:  # quebra em 2 linhas do tamanho mais parecido possível
-        best = min(range(1, len(words)), key=lambda i: abs(len(' '.join(words[:i])) - len(' '.join(words[i:]))))
-        lines = [' '.join(words[:best]), ' '.join(words[best:])]
-    sps = [text_sprite(l, te.BODYB, 54, NARR_FILL, 6, (24, 22, 40, 255)) for l in lines]
+
+    def split(k):
+        if k == 1:
+            return [text]
+        target = len(text) / k
+        lines, cur = [], []
+        for w in words:
+            if cur and len(' '.join(cur + [w])) > target + 4 and len(lines) < k - 1:
+                lines.append(' '.join(cur))
+                cur = [w]
+            else:
+                cur.append(w)
+        lines.append(' '.join(cur))
+        return lines
+
+    for k in range(1, 5):
+        lines = split(k) if not (k == 2 and len(text) > 26) else None
+        if k == 2:  # 2 linhas: o corte mais parecido possível
+            best = min(range(1, len(words)), key=lambda i: abs(len(' '.join(words[:i])) - len(' '.join(words[i:]))))
+            lines = [' '.join(words[:best]), ' '.join(words[best:])]
+        if k == 1 and len(text) > 26:
+            continue
+        sps = [text_sprite(l, te.BODYB, 54, NARR_FILL, 6, (24, 22, 40, 255)) for l in lines]
+        if max(s.width for s in sps) <= max_w:
+            break
     w = max(s.width for s in sps)
     h = sum(s.height for s in sps) + 6 * (len(sps) - 1)
     im = Image.new('RGBA', (w, h), (0, 0, 0, 0))

@@ -1,0 +1,32 @@
+{
+  "name": "tatu-parte3",
+  "dir": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p3",
+  "title": ["Família Tatu"],
+  "subtitle": "Parte 3 · A Manhã do Papai",
+  "title_until": 2.4,
+  "segments": [
+    {"freeze": "c1.mp4", "at": 0.05, "dur": 2.4, "narr": [[0.3, "n1"]]},
+    {"clip": "c1.mp4", "t0": 0.0, "t1": 4.4, "caps": [[0.8, 1.9, "Deixa comigo.", "pai"]], "narr": [[2.05, "n2"]]},
+    {"clip": "c2.mp4", "t0": 0.2, "t1": 4.9, "caps": [[0.25, 1.7, "Cadê a outra meia?", "pai"]], "narr": [[2.2, "n3"]]},
+    {"clip": "c3.mp4", "t0": 0.6, "t1": 4.6, "caps": [[0.35, 1.2, "Essa não!", "bento"], [1.75, 2.6, "Essa não!", "bento"], [3.0, 3.95, "Essa não!", "bento"]]},
+    {"freeze": "c3.mp4", "at": 4.55, "dur": 2.6, "narr": [[0.25, "n4"]]},
+    {"clip": "c4.mp4", "t0": 0.0, "t1": 0.9},
+    {"freeze": "c4.mp4", "at": 0.88, "dur": 6.4, "narr": [[0.25, "n5"]], "src": [[0.15, 6.3, "Academia Americana de Pediatria"]]},
+    {"clip": "c4.mp4", "t0": 0.9, "t1": 5.0},
+    {"freeze": "c4.mp4", "at": 4.95, "dur": 2.0, "narr": [[0.2, "n6"]]},
+    {"card": 3.4, "lines": ["Parte 4:", "O Quadro da Geladeira"], "when": "amanhã, 20h", "narr": [[0.3, "n7"]]}
+  ],
+  "narr": {
+    "n1": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p3/n1a.wav", "Primeira manhã do Papai sozinho."],
+    "n2": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p3/n2a.wav", "Ele leu só a primeira linha do bilhete."],
+    "n3": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p3/n3a.wav", "Ninguém nunca descobriu pra onde vão as meias."],
+    "n4": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p3/n4a.wav", "Cinco camisetas. Todas serviam ontem."],
+    "n5": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p3/n5b.wav", "Fato: a Academia Americana de Pediatria orienta deixar o máximo de coisas prontas na noite anterior."],
+    "n6": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p3/n6a.wav", "O Papai não leu essa parte."],
+    "n7": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p3/n7b.wav", "Mas alguém nessa casa tinha um plano."]
+  },
+  "music": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/musica/pixabay/47277a6e-comedy-comedy-music-614068.mp3",
+  "music_start": 0,
+  "music_db": -19,
+  "narr_db": 11
+}
