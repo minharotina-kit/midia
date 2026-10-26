@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: Fredoka; src: url("../fonts/ttf/Fredoka-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: Nunito; src: url("../fonts/ttf/Nunito-ExtraBold.ttf"); font-weight: 800; }
+:root { --night1: #111633; --night2: #29337a; --yellow: #ffd66b; --coral: #ff7a66; --mint: #6fe3b5; --cream: #fff6e6; --ink: #1b1f3d; --violet: #7d6bff; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--night1); }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background: radial-gradient(120% 75% at 50% 32%, var(--night2) 0%, var(--night1) 72%);
+  font-family: Nunito, sans-serif; color: var(--cream); perspective: 1700px; perspective-origin: 50% 42%; }
+#bg { position: absolute; inset: -120px; }
+.blob { position: absolute; border-radius: 50%; filter: blur(90px); }
+.star { position: absolute; border-radius: 50%; background: #fff; box-shadow: 0 0 10px #fff; }
+#world { position: absolute; inset: 0; }
+.scene { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+.center { position: absolute; left: 0; right: 0; text-align: center; }
+.big { font-family: Fredoka, sans-serif; font-weight: 700; }
+.word { display: inline-block; opacity: 0; margin: 0 9px; }
+.badge { position: absolute; width: 176px; height: 176px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-family: Fredoka; font-size: 118px; color: var(--cream); box-shadow: 0 22px 40px rgba(0,0,0,.35), inset 0 -10px 0 rgba(0,0,0,.18), inset 0 10px 18px rgba(255,255,255,.35); }
+.bad { font-family: Fredoka; font-size: 72px; white-space: nowrap; line-height: 1.05; position: relative; display: inline-block; }
+.strike { position: absolute; left: -12px; right: -12px; top: 52%; height: 13px; border-radius: 7px; background: var(--coral); transform-origin: left center; transform: scaleX(0); }
+.good { font-family: Fredoka; font-size: 80px; line-height: 1.1; color: var(--mint); text-shadow: 0 10px 30px rgba(111,227,181,.35); }
+.chip { display: inline-block; background: rgba(255,246,230,.12); border: 2px solid rgba(255,246,230,.35); font-size: 34px; padding: 12px 28px; border-radius: 40px; }
+.soft { filter: drop-shadow(0 26px 30px rgba(0,0,0,.35)); }
+.card3 { position: absolute; width: 230px; height: 290px; border-radius: 34px; background: linear-gradient(180deg, #fffaf0, #f6ead4);
+  box-shadow: 0 26px 40px rgba(0,0,0,.35), inset 0 -8px 0 rgba(0,0,0,.08); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.card3 .n { font-family: Fredoka; font-size: 56px; color: var(--ink); margin-top: 6px; opacity: 0; }
+.prog { position: absolute; top: 300px; left: 50%; transform: translateX(-50%); display: flex; gap: 18px; opacity: 0; }
+.prog div { width: 120px; height: 14px; border-radius: 7px; background: rgba(255,255,255,.16); overflow: hidden; }
+.prog i { display: block; height: 100%; width: 0%; background: var(--yellow); border-radius: 7px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg">
+    <div class="blob" id="blobA" style="width:760px;height:760px;left:-140px;top:260px;background:#5b4bff;opacity:.45"></div>
+    <div class="blob" id="blobB" style="width:640px;height:640px;right:-120px;top:1180px;background:#ff7a66;opacity:.22"></div>
+    <div class="blob" id="blobC" style="width:520px;height:520px;left:300px;top:-120px;background:#6fe3b5;opacity:.12"></div>
+    <div id="stars"></div>
+  </div>
+  <div class="prog" id="prog"><div><i></i></div><div><i></i></div><div><i></i></div></div>
+
+  <div id="world">
+    <!-- GANCHO -->
+    <div class="scene" id="s0">
+      <svg id="clock" class="soft" width="300" height="320" viewBox="0 0 300 320" style="position:absolute;left:390px;top:360px;overflow:visible">
+        <g id="clockBody">
+          <circle cx="70" cy="70" r="42" fill="#ffd66b"/><circle cx="230" cy="70" r="42" fill="#ffd66b"/>
+          <rect x="140" y="20" width="20" height="40" rx="8" fill="#ffd66b"/>
+          <circle cx="150" cy="170" r="125" fill="#ffd66b"/><circle cx="150" cy="170" r="102" fill="#fff6e6"/>
+          <line id="hand1" x1="150" y1="170" x2="150" y2="100" stroke="#1b1f3d" stroke-width="14" stroke-linecap="round"/>
+          <line id="hand2" x1="150" y1="170" x2="205" y2="170" stroke="#ff7a66" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="150" cy="170" r="12" fill="#1b1f3d"/>
+          <rect x="70" y="282" width="26" height="36" rx="10" fill="#ffd66b"/><rect x="204" y="282" width="26" height="36" rx="10" fill="#ffd66b"/>
+        </g>
+        <g id="ring" stroke="#ffd66b" stroke-width="10" stroke-linecap="round" opacity="0">
+          <path d="M-10 130 q-20 40 0 80" fill="none"/><path d="M-40 110 q-30 60 0 120" fill="none"/>
+          <path d="M310 130 q20 40 0 80" fill="none"/><path d="M340 110 q30 60 0 120" fill="none"/>
+        </g>
+      </svg>
+      <div class="center" id="hLine" style="top:800px;font-size:86px;line-height:1.15;padding:0 60px;font-family:Fredoka"></div>
+      <div class="center big" id="hWar" style="top:920px;font-size:170px;color:var(--coral);text-shadow:0 18px 40px rgba(255,122,102,.45)">GUERRA?</div>
+      <div class="center" id="hPode" style="top:1180px;font-size:58px;opacity:0">pode ser um desses</div>
+      <div class="center big" id="h3" style="top:1250px;font-size:230px;line-height:1;color:var(--yellow);text-shadow:0 20px 50px rgba(255,214,107,.35)">3 ERROS</div>
+    </div>
+
+    <!-- 1 -->
+    <div class="scene" id="s1">
+      <div class="badge" id="b1" style="left:452px;top:410px;background:radial-gradient(circle at 35% 30%, #ff9c8c, #ff6a55)">1</div>
+      <div class="center" style="top:650px"><span class="bad" id="bad1">Cada dia um horário<span class="strike" id="st1"></span></span></div>
+      <div id="clocks" style="position:absolute;left:60px;top:870px;width:960px;height:220px"></div>
+      <div class="center good" id="good1" style="top:1150px">Horário fixo ajuda</div>
+      <div class="center" id="chip1" style="top:1320px"><span class="chip">Academia Americana de Pediatria</span></div>
+    </div>
+
+    <!-- 2 -->
+    <div class="scene" id="s2">
+      <div class="badge" id="b2" style="left:452px;top:410px;background:radial-gradient(circle at 35% 30%, #a596ff, #6a57f2)">2</div>
+      <div class="center" style="top:650px"><span class="bad" id="bad2">Agitação antes de deitar<span class="strike" id="st2"></span></span></div>
+      <svg id="bed" class="soft" width="700" height="440" viewBox="0 0 700 440" style="position:absolute;left:190px;top:790px;overflow:visible">
+        <g id="zig" stroke="#ff7a66" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="40,60 80,20 120,60 160,20 200,60"/><polyline points="500,40 540,0 580,40 620,0 660,40"/>
+          <polyline points="20,200 50,170 80,200 110,170"/><polyline points="590,200 620,170 650,200 680,170"/>
+        </g>
+        <g id="calm" stroke="#6fe3b5" stroke-width="10" fill="none" stroke-linecap="round" opacity="0">
+          <path d="M30 70 q40 -26 80 0 t80 0"/><path d="M60 150 q40 -26 80 0 t80 0"/>
+        </g>
+        <g id="bedBody">
+          <rect x="150" y="220" width="400" height="110" rx="26" fill="#fff6e6"/>
+          <rect x="150" y="180" width="130" height="70" rx="30" fill="#b9a7ff"/>
+          <rect x="270" y="200" width="290" height="80" rx="30" fill="#7d6bff"/>
+          <rect x="120" y="140" width="40" height="250" rx="16" fill="#ffd66b"/><rect x="540" y="230" width="40" height="160" rx="16" fill="#ffd66b"/>
+        </g>
+        <g id="moon" opacity="0"><circle cx="560" cy="60" r="70" fill="#ffd66b"/><circle cx="595" cy="35" r="62" fill="#29337a"/></g>
+        <g id="zzz" font-family="Fredoka" fill="#fff6e6" opacity="0"><text x="360" y="150" font-size="64">z</text><text x="410" y="100" font-size="80">z</text><text x="470" y="40" font-size="96">Z</text></g>
+      </svg>
+      <div class="center good" id="good2" style="top:1260px">Ritual calminho ajuda<br>a pegar no sono</div>
+    </div>
+
+    <!-- 3 -->
+    <div class="scene" id="s3">
+      <div class="badge" id="b3" style="left:452px;top:410px;background:radial-gradient(circle at 35% 30%, #6ff0c0, #22ad80)">3</div>
+      <div class="center" style="top:650px"><span class="bad" id="bad3">Cada noite uma ordem<span class="strike" id="st3"></span></span></div>
+      <div id="cards" style="position:absolute;left:0;top:840px;width:1080px;height:360px">
+        <div class="card3" id="c1"><svg width="140" height="140" viewBox="0 0 140 140"><rect x="62" y="40" width="16" height="92" rx="8" fill="#7d6bff"/><rect x="48" y="8" width="44" height="40" rx="12" fill="#6fe3b5"/><g fill="#fff"><rect x="54" y="12" width="6" height="24" rx="3"/><rect x="67" y="12" width="6" height="24" rx="3"/><rect x="80" y="12" width="6" height="24" rx="3"/></g></svg><div class="n">1</div></div>
+        <div class="card3" id="c2"><svg width="140" height="140" viewBox="0 0 140 140"><path d="M10 30 q30 -14 60 0 v90 q-30 -14 -60 0z" fill="#ff7a66"/><path d="M130 30 q-30 -14 -60 0 v90 q30 -14 60 0z" fill="#ffd66b"/><g stroke="#1b1f3d" stroke-width="5" stroke-linecap="round" opacity=".5"><line x1="24" y1="55" x2="56" y2="50"/><line x1="24" y1="75" x2="56" y2="70"/><line x1="84" y1="50" x2="116" y2="55"/><line x1="84" y1="70" x2="116" y2="75"/></g></svg><div class="n">2</div></div>
+        <div class="card3" id="c3"><svg width="140" height="140" viewBox="0 0 140 140"><circle cx="70" cy="58" r="42" fill="#ffd66b"/><rect x="50" y="92" width="40" height="30" rx="8" fill="#b9a7ff"/><rect x="56" y="120" width="28" height="12" rx="6" fill="#7d6bff"/></svg><div class="n">3</div></div>
+      </div>
+      <div class="center good" id="good3" style="top:1260px">Sempre na mesma ordem</div>
+    </div>
+
+    <!-- FIM -->
+    <div class="scene" id="s4">
+      <svg id="bookmark" class="soft" width="150" height="190" viewBox="0 0 150 190" style="position:absolute;left:465px;top:330px;overflow:visible">
+        <path d="M20 10 h110 v170 l-55 -40 l-55 40 z" fill="none" stroke="#ffd66b" stroke-width="12" stroke-linejoin="round"/>
+        <path id="bmFill" d="M20 10 h110 v170 l-55 -40 l-55 40 z" fill="#ffd66b" opacity="0"/>
+      </svg>
+      <svg id="bento" class="soft" width="520" height="520" viewBox="0 0 520 520" style="position:absolute;left:280px;top:560px;overflow:visible">
+        <ellipse cx="260" cy="470" rx="170" ry="22" fill="rgba(0,0,0,.25)"/>
+        <g id="bentoBody">
+          <ellipse cx="260" cy="350" rx="185" ry="120" fill="#d9944f"/>
+          <g stroke="#b8743a" stroke-width="11" fill="none" stroke-linecap="round"><path d="M92 320 q168 -90 336 0"/><path d="M82 360 q178 -90 356 0"/><path d="M90 400 q170 -80 340 0"/></g>
+          <rect x="165" y="285" width="190" height="165" rx="80" fill="#9fc3ff"/>
+          <g stroke="#ffffff" stroke-width="9" opacity=".75"><line x1="205" y1="292" x2="205" y2="444"/><line x1="245" y1="286" x2="245" y2="450"/><line x1="285" y1="286" x2="285" y2="450"/><line x1="320" y1="292" x2="320" y2="444"/></g>
+          <ellipse cx="215" cy="455" rx="38" ry="19" fill="#efc08a"/><ellipse cx="305" cy="455" rx="38" ry="19" fill="#efc08a"/>
+          <rect x="128" y="300" width="40" height="100" rx="20" fill="#9fc3ff" transform="rotate(18 148 310)"/>
+          <g id="head">
+            <ellipse cx="185" cy="95" rx="34" ry="58" fill="#efc08a" transform="rotate(-18 185 95)"/><ellipse cx="185" cy="100" rx="17" ry="38" fill="#ffb3a8" transform="rotate(-18 185 100)"/>
+            <ellipse cx="335" cy="95" rx="34" ry="58" fill="#efc08a" transform="rotate(18 335 95)"/><ellipse cx="335" cy="100" rx="17" ry="38" fill="#ffb3a8" transform="rotate(18 335 100)"/>
+            <ellipse cx="260" cy="190" rx="100" ry="88" fill="#efc08a"/>
+            <path d="M175 150 q85 -70 170 0 q-85 -30 -170 0z" fill="#d9944f"/>
+            <g stroke="#b8743a" stroke-width="7" fill="none" stroke-linecap="round"><path d="M200 128 q60 -34 120 0"/><path d="M215 112 q45 -22 90 0"/></g>
+            <path d="M228 205 q32 -22 64 0 l-14 78 q-18 14 -36 0z" fill="#f6d2a6"/>
+            <ellipse cx="260" cy="282" rx="17" ry="11" fill="#7a4a3a"/>
+            <path d="M236 292 q-14 8 -24 0 M284 292 q14 8 24 0" stroke="#7a4a3a" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <g id="eyes"><ellipse cx="215" cy="185" rx="15" ry="18" fill="#2a1d1a"/><ellipse cx="305" cy="185" rx="15" ry="18" fill="#2a1d1a"/><circle cx="220" cy="178" r="5.5" fill="#fff"/><circle cx="310" cy="178" r="5.5" fill="#fff"/></g>
+            <circle cx="188" cy="226" r="15" fill="#ff9e91" opacity=".55"/><circle cx="332" cy="226" r="15" fill="#ff9e91" opacity=".55"/>
+          </g>
+          <g id="arm"><g transform="rotate(32 362 335)"><rect x="342" y="232" width="40" height="112" rx="20" fill="#9fc3ff"/><circle cx="362" cy="228" r="25" fill="#efc08a"/></g></g>
+        </g>
+      </svg>
+      <div class="center big" id="cta" style="top:1130px;font-size:96px;line-height:1.05;color:var(--yellow);text-shadow:0 16px 40px rgba(255,214,107,.3)">Salva pra fazer<br>hoje à noite</div>
+      <div class="center" id="handle" style="top:1370px;font-size:44px;opacity:.9">@paisdarotina</div>
+    </div>
+  </div>
+</div>
+
+<script src="node_modules/gsap/dist/gsap.min.js"></script>
+<script>
+const CUES = window.CUES || [];
+const norm = w => w.toLowerCase().replace(/[^a-zà-ú]/g, '');
+function cue(w, n = 1) { let k = 0; for (const c of CUES) { if (norm(c.w) === w) { k++; if (k === n) return c.s; } } throw new Error('cue ' + w); }
+const END = window.END || 24.6;
+
+// estrelas
+let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const starsBox = document.getElementById('stars');
+for (let i = 0; i < 60; i++) { const s = document.createElement('div'); s.className = 'star'; const z = 2 + rnd() * 6;
+  Object.assign(s.style, { left: rnd() * 1320 + 'px', top: rnd() * 2160 + 'px', width: z + 'px', height: z + 'px', opacity: .15 + rnd() * .6 }); starsBox.appendChild(s); }
+
+// relógios do item 1
+const clocksBox = document.getElementById('clocks');
+for (let i = 0; i < 5; i++) clocksBox.insertAdjacentHTML('beforeend', `<svg class="mini soft" width="170" height="170" viewBox="0 0 170 170" style="position:absolute;left:${i * 195}px;top:20px">
+  <circle cx="85" cy="85" r="78" fill="#ff7a66" class="ring"/><circle cx="85" cy="85" r="62" fill="#fff6e6"/>
+  <line class="mh" x1="85" y1="85" x2="85" y2="40" stroke="#1b1f3d" stroke-width="9" stroke-linecap="round"/>
+  <line class="hh" x1="85" y1="85" x2="115" y2="85" stroke="#1b1f3d" stroke-width="11" stroke-linecap="round"/>
+  <circle cx="85" cy="85" r="8" fill="#1b1f3d"/></svg>`);
+
+// palavras do gancho
+const hLine = document.getElementById('hLine');
+['a', 'hora', 'de', 'dormir', 'aí', 'vira'].forEach(w => hLine.insertAdjacentHTML('beforeend', `<span class="word" data-w="${w}">${w === 'a' ? 'A' : w}</span>`));
+
+// estado inicial (fora da linha do tempo, pra não brigar com os from())
+const xs = [125, 425, 725];
+[['#c3', 0, -8], ['#c1', 1, 6], ['#c2', 2, -4]].forEach(([c, i, r]) => gsap.set(c, { x: xs[i], rotate: r }));
+
+gsap.set('.scene', { transformPerspective: 1700, transformOrigin: '50% 45%' });
+gsap.set(['.badge', '.word', '.good', '.card3', '#bookmark', '#h3', '#hWar'], { transformPerspective: 900 });
+const tl = gsap.timeline({ paused: true });
+
+// ---------- câmera e fundo: tudo devagar e contínuo ----------
+tl.fromTo('#world', { scale: 1 }, { scale: 1.05, duration: END, ease: 'none' }, 0);
+tl.to('#blobA', { x: 180, y: 160, duration: END, ease: 'sine.inOut' }, 0);
+tl.to('#blobB', { x: -160, y: -220, duration: END, ease: 'sine.inOut' }, 0);
+tl.to('#blobC', { x: 80, y: 240, duration: END, ease: 'sine.inOut' }, 0);
+document.querySelectorAll('.star').forEach((s, i) => tl.to(s, { opacity: .05, duration: 1 + (i % 5) * .3, yoyo: true, repeat: Math.ceil(END), ease: 'sine.inOut' }, (i % 9) * .15));
+
+// ---------- transição 3D suave: a cena sai girando pra trás e a próxima chega de baixo, em profundidade ----------
+const IN = { autoAlpha: 0, rotationX: -32, z: -520, y: 260 };
+const OUT = { autoAlpha: 0, rotationX: 26, z: -480, y: -280 };
+function enter(id, t) { tl.fromTo(id, IN, { autoAlpha: 1, rotationX: 0, z: 0, y: 0, duration: .9, ease: 'power3.out' }, t); }
+function leave(id, t) { tl.to(id, { ...OUT, duration: .8, ease: 'power2.inOut' }, t); }
+// a cada troca o céu desce um pouco: dá sensação de câmera andando
+function camera(t, k) { tl.to('#bg', { y: -60 * k, duration: 1.2, ease: 'power2.inOut' }, t); }
+
+// ---------- GANCHO ----------
+tl.set('#s0', { autoAlpha: 1 }, 0);
+tl.from('#clock', { scale: .4, autoAlpha: 0, z: -300, duration: .8, ease: 'power3.out' }, 0);
+tl.to('#hand1', { rotate: 540, svgOrigin: '150 170', duration: 2.4, ease: 'power2.inOut' }, 0);
+tl.to('#hand2', { rotate: 1440, svgOrigin: '150 170', duration: 2.4, ease: 'power2.inOut' }, 0);
+tl.to('#clockBody', { rotate: 4, svgOrigin: '150 170', duration: .18, yoyo: true, repeat: 11, ease: 'sine.inOut' }, .3);
+tl.to('#ring', { opacity: 1, duration: .3, yoyo: true, repeat: 5, ease: 'sine.inOut' }, .3);
+document.querySelectorAll('#hLine .word').forEach(el => tl.fromTo(el, { opacity: 0, y: 40, rotationX: -60 }, { opacity: 1, y: 0, rotationX: 0, duration: .45, ease: 'power3.out' }, cue(norm(el.dataset.w)) - .08));
+tl.fromTo('#hWar', { autoAlpha: 0, scale: .6, z: -200 }, { autoAlpha: 1, scale: 1, z: 0, duration: .6, ease: 'back.out(1.6)' }, cue('guerra') - .1);
+tl.to('#hWar', { scale: 1.05, duration: .5, yoyo: true, repeat: 1, ease: 'sine.inOut' }, cue('guerra') + .5);
+// "pode ser um desses... 3 ERROS": tudo sobe com calma e o título vira de frente
+const tPode = cue('pode');
+tl.to(['#clock', '#hLine', '#hWar'], { y: -260, duration: .9, ease: 'power3.inOut' }, tPode - .15);
+tl.to('#clock', { autoAlpha: 0, duration: .6 }, tPode - .05);
+tl.to('#hPode', { opacity: 1, y: -260, duration: .7, ease: 'power3.out' }, tPode);
+tl.set('#hPode', { y: 0 }, 0);
+tl.fromTo('#h3', { autoAlpha: 0, rotationX: 90, y: -200, transformOrigin: '50% 100%' }, { autoAlpha: 1, rotationX: 0, y: -260, duration: .9, ease: 'back.out(1.4)' }, cue('três') - .15);
+
+// barra de progresso
+const bars = document.querySelectorAll('.prog i');
+const T1 = cue('primeiro'), T2 = cue('segundo'), T3 = cue('terceiro'), T4 = cue('salva');
+tl.to('#prog', { opacity: 1, duration: .5 }, T1 - .3);
+[[T1, T2], [T2, T3], [T3, T4]].forEach(([a, b], i) => tl.fromTo(bars[i], { width: '0%' }, { width: '100%', duration: b - a - .3, ease: 'none' }, a));
+tl.to('#prog', { opacity: 0, duration: .5 }, T4 - .4);
+
+// trocas de cena
+leave('#s0', T1 - .55); enter('#s1', T1 - .3); camera(T1 - .5, 1);
+leave('#s1', T2 - .55); enter('#s2', T2 - .3); camera(T2 - .5, 2);
+leave('#s2', T3 - .55); enter('#s3', T3 - .3); camera(T3 - .5, 3);
+leave('#s3', T4 - .55); enter('#s4', T4 - .3); camera(T4 - .5, 4);
+
+// item padrão: número gira em 3D, texto ruim é riscado, o certo sobe com brilho
+function item(n, start, badBy, goodAt) {
+  tl.fromTo('#b' + n, { rotationY: -180, scale: .6 }, { rotationY: 0, scale: 1, duration: .9, ease: 'power3.out' }, start - .1);
+  tl.fromTo('#bad' + n, { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .6, ease: 'power3.out' }, start + .2);
+  tl.to('#st' + n, { scaleX: 1, duration: .5, ease: 'power2.inOut' }, badBy);
+  tl.to('#bad' + n, { opacity: .5, scale: .92, duration: .5, ease: 'power2.inOut' }, badBy + .15);
+  tl.fromTo('#good' + n, { y: 70, opacity: 0, rotationX: -50 }, { y: 0, opacity: 1, rotationX: 0, duration: .8, ease: 'power3.out' }, goodAt);
+}
+
+// ---------- 1 ----------
+const g1 = cue('pediatria') - .2;
+item(1, T1, cue('diferente', 1) + .1, g1);
+document.querySelectorAll('#clocks .mini').forEach((m, i) => {
+  tl.fromTo(m, { y: 90, opacity: 0, scale: .6 }, { y: 0, opacity: 1, scale: 1, duration: .6, ease: 'power3.out' }, T1 + .5 + i * .1);
+  tl.to(m.querySelector('.mh'), { rotate: 360 * (1 + i * .5), svgOrigin: '85 85', duration: g1 - T1 - .6, ease: 'sine.inOut' }, T1 + .6);
+  tl.to(m.querySelector('.hh'), { rotate: (i * 73) % 360, svgOrigin: '85 85', duration: g1 - T1 - .6, ease: 'sine.inOut' }, T1 + .6);
+  tl.to(m.querySelector('.hh'), { rotate: -60, svgOrigin: '85 85', duration: .7, ease: 'power3.inOut' }, g1 + i * .07);
+  tl.to(m.querySelector('.mh'), { rotate: '+=200', svgOrigin: '85 85', duration: .7, ease: 'power3.inOut' }, g1 + i * .07);
+  tl.to(m.querySelector('.ring'), { fill: '#6fe3b5', duration: .5 }, g1 + .2 + i * .07);
+});
+tl.fromTo('#chip1', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .6, ease: 'power3.out' }, g1 + .7);
+
+// ---------- 2 ----------
+const g2 = cue('ritual') - .25;
+item(2, T2, cue('deitar') + .1, g2);
+tl.fromTo('#bedBody', { y: 120, opacity: 0 }, { y: 0, opacity: 1, duration: .7, ease: 'power3.out' }, T2 + .3);
+tl.to('#bedBody', { y: -18, duration: .28, yoyo: true, repeat: Math.floor((g2 - T2 - 1) / .28), ease: 'sine.inOut' }, T2 + 1);
+tl.fromTo('#zig polyline', { opacity: 0, scale: .5, transformOrigin: '50% 50%' }, { opacity: 1, scale: 1, duration: .5, stagger: .1, ease: 'power3.out' }, T2 + .5);
+tl.to('#zig', { scale: 1.08, transformOrigin: '50% 50%', duration: .35, yoyo: true, repeat: Math.floor((g2 - T2 - 1) / .35), ease: 'sine.inOut' }, T2 + 1);
+tl.to('#zig', { opacity: 0, duration: .6 }, g2);
+tl.to('#bedBody', { y: 0, duration: .5, ease: 'power2.out' }, g2);
+tl.to('#calm', { opacity: 1, duration: .8 }, g2 + .2);
+tl.fromTo('#moon', { opacity: 0, y: 120 }, { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, g2 + .1);
+tl.to('#zzz', { opacity: 1, duration: .5 }, g2 + .6);
+tl.fromTo('#zzz text', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: .8, stagger: .25, ease: 'power2.out' }, g2 + .6);
+tl.to('#zzz', { y: -20, duration: 1.2, yoyo: true, repeat: 2, ease: 'sine.inOut' }, g2 + 1.4);
+
+// ---------- 3 ----------
+item(3, T3, cue('diferente', 2) + .05, cue('sempre') - .15);
+tl.fromTo('#cards .card3', { y: 240, opacity: 0, rotationY: -70 }, { y: 0, opacity: 1, rotationY: 0, duration: .8, stagger: .12, ease: 'power3.out' }, T3 + .4);
+const tOrd = cue('escova') - .45;
+[['#c1', 0], ['#c2', 1], ['#c3', 2]].forEach(([c, pos], i) => {
+  tl.to(c, { x: xs[pos], rotate: 0, duration: .55, ease: 'power3.inOut' }, tOrd + i * .05);
+  tl.to(c, { y: -50, duration: .27, yoyo: true, repeat: 1, ease: 'sine.inOut' }, tOrd + i * .05);
+});
+[['#c1', 'escova'], ['#c2', 'história'], ['#c3', 'luz']].forEach(([c, w]) => {
+  const tw = cue(w) - .05;
+  tl.to(c, { scale: 1.12, duration: .22, yoyo: true, repeat: 1, ease: 'sine.inOut' }, tw);
+  tl.to(c + ' .n', { opacity: 1, duration: .25 }, tw);
+});
+
+// ---------- FIM ----------
+tl.fromTo('#bento', { y: 420, opacity: 0 }, { y: 0, opacity: 1, duration: .9, ease: 'power3.out' }, T4 - .1);
+tl.to('#arm', { rotate: 22, svgOrigin: '362 335', duration: .45, yoyo: true, repeat: 5, ease: 'sine.inOut' }, T4 + .6);
+tl.to('#eyes', { scaleY: .1, svgOrigin: '260 185', duration: .08, yoyo: true, repeat: 1 }, T4 + 1.7);
+tl.fromTo('#bookmark', { scale: .3, opacity: 0, rotationY: 180 }, { scale: 1, opacity: 1, rotationY: 0, duration: .9, ease: 'power3.out' }, T4 + .1);
+tl.to('#bmFill', { opacity: 1, duration: .4 }, T4 + .9);
+tl.fromTo('#cta', { y: 70, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: 'power3.out' }, T4 + .1);
+tl.fromTo('#handle', { opacity: 0 }, { opacity: .9, duration: .6 }, T4 + 1);
+tl.to({}, { duration: .01 }, END);
+
+window.seek = (t) => { tl.seek(t, false); };
+window.ready = document.fonts.ready.then(() => true);
+</script>
+</body>
+</html>
