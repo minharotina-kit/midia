@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<style>
+@font-face { font-family: Fredoka; src: url("../fonts/ttf/Fredoka-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: Nunito; src: url("../fonts/ttf/Nunito-ExtraBold.ttf"); font-weight: 800; }
+:root { --ink: #3b2346; --coral: #ee5f52; --mint: #2c9f7b; --mintL: #8fe0c1; --sun: #ffc65c; --lav: #9b86f5; --cream: #fffaf4; --peach: #ffcfb3; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #ffe2cf; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+  background: linear-gradient(180deg, #ffc7a8 0%, #ffd9c2 30%, #ffe9da 62%, #fff4ea 100%);
+  font-family: Nunito, sans-serif; color: var(--ink); perspective: 1700px; perspective-origin: 50% 42%; }
+#bg { position: absolute; inset: -120px; }
+#sun { position: absolute; width: 820px; height: 820px; left: 250px; top: 1560px; border-radius: 50%; opacity: .55;
+  background: radial-gradient(circle, #ffe08f 0%, #ffc65c 38%, rgba(255,170,110,.0) 70%); }
+.cloud { position: absolute; background: #fff; border-radius: 120px; filter: blur(2px); opacity: .75; }
+.cloud::before, .cloud::after { content: ''; position: absolute; background: #fff; border-radius: 50%; }
+.cloud::before { width: 55%; height: 150%; left: 14%; top: -60%; }
+.cloud::after { width: 40%; height: 120%; right: 12%; top: -40%; }
+.glow { position: absolute; border-radius: 50%; filter: blur(80px); }
+#world { position: absolute; inset: 0; }
+.scene { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+.center { position: absolute; left: 0; right: 0; text-align: center; }
+.fred { font-family: Fredoka, sans-serif; font-weight: 700; }
+.word { display: inline-block; opacity: 0; margin: 0 10px; }
+.badge { position: absolute; left: 452px; top: 400px; width: 176px; height: 176px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-family: Fredoka; font-size: 118px; color: #fff; box-shadow: 0 22px 40px rgba(120,60,40,.25), inset 0 -10px 0 rgba(0,0,0,.14), inset 0 10px 18px rgba(255,255,255,.4); }
+.chip { display: inline-block; background: var(--cream); border: 3px solid var(--coral); color: var(--ink); font-size: 36px; padding: 12px 30px; border-radius: 40px;
+  box-shadow: 0 12px 24px rgba(160,80,50,.15); }
+.soft { filter: drop-shadow(0 22px 26px rgba(150,70,40,.22)); }
+.token { position: absolute; top: 560px; width: 260px; text-align: center; }
+.token .disc { width: 220px; height: 220px; margin: 0 auto; border-radius: 50%; background: var(--cream); display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 22px 36px rgba(150,70,40,.22), inset 0 -8px 0 rgba(0,0,0,.06); }
+.token .lab { font-family: Fredoka; font-size: 54px; margin-top: 22px; }
+.row { position: absolute; left: 70px; width: 940px; height: 230px; border-radius: 44px; background: var(--cream);
+  box-shadow: 0 24px 40px rgba(150,70,40,.18); }
+.row .ico { position: absolute; left: 34px; top: 30px; width: 170px; height: 170px; }
+.row .t1 { position: absolute; left: 236px; top: 34px; font-family: Fredoka; font-size: 66px; color: var(--coral); }
+.row .t2 { position: absolute; left: 236px; top: 122px; font-size: 44px; line-height: 1.1; white-space: nowrap; }
+.check { position: absolute; left: 80px; width: 920px; height: 150px; display: flex; align-items: center; }
+.check svg { flex: 0 0 auto; }
+.check span { font-family: Fredoka; font-size: 56px; margin-left: 34px; white-space: nowrap; }
+.prog { position: absolute; top: 300px; left: 50%; transform: translateX(-50%); display: flex; gap: 18px; opacity: 0; }
+.prog div { width: 120px; height: 14px; border-radius: 7px; background: rgba(255,255,255,.7); overflow: hidden; }
+.prog i { display: block; height: 100%; width: 0%; background: var(--coral); border-radius: 7px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg">
+    <div class="glow" id="glowA" style="width:700px;height:700px;left:-160px;top:200px;background:#ff9f8a;opacity:.35"></div>
+    <div class="glow" id="glowB" style="width:620px;height:620px;right:-140px;top:1100px;background:#ffd36b;opacity:.35"></div>
+    <div id="sun"></div>
+    <div class="cloud" id="cl1" style="width:300px;height:80px;left:80px;top:300px"></div>
+    <div class="cloud" id="cl2" style="width:240px;height:64px;left:760px;top:520px"></div>
+    <div class="cloud" id="cl3" style="width:340px;height:90px;left:640px;top:1560px;opacity:.6"></div>
+    <div class="cloud" id="cl4" style="width:220px;height:60px;left:120px;top:1820px;opacity:.6"></div>
+  </div>
+  <div class="prog" id="prog"><div><i></i></div><div><i></i></div><div><i></i></div></div>
+
+  <div id="world">
+    <!-- GANCHO -->
+    <div class="scene" id="s0">
+      <div class="token" id="tk1" style="left:40px">
+        <div class="disc"><svg width="150" height="150" viewBox="0 0 150 150">
+          <rect x="34" y="62" width="82" height="70" rx="30" fill="#ee5f52"/>
+          <rect x="36" y="18" width="18" height="62" rx="9" fill="#ee5f52"/><rect x="58" y="10" width="18" height="66" rx="9" fill="#ee5f52"/>
+          <rect x="80" y="14" width="18" height="62" rx="9" fill="#ee5f52"/><rect x="100" y="26" width="16" height="54" rx="8" fill="#ee5f52"/>
+          <rect x="6" y="66" width="44" height="18" rx="9" fill="#ee5f52" transform="rotate(32 28 75)"/></svg></div>
+        <div class="lab" style="color:var(--coral)">Palmada</div>
+      </div>
+      <div class="token" id="tk2" style="left:410px">
+        <div class="disc"><svg width="160" height="150" viewBox="0 0 160 150">
+          <path d="M22 58 h26 l56 -34 v102 l-56 -34 h-26 z" fill="#9b86f5" stroke="#9b86f5" stroke-width="10" stroke-linejoin="round"/>
+          <rect x="40" y="92" width="18" height="38" rx="9" fill="#9b86f5"/>
+          <g stroke="#9b86f5" stroke-width="9" fill="none" stroke-linecap="round"><path d="M120 50 q14 25 0 50"/><path d="M136 36 q24 39 0 78"/></g></svg></div>
+        <div class="lab" style="color:var(--lav)">Grito</div>
+      </div>
+      <div class="token" id="tk3" style="left:780px">
+        <div class="disc"><svg width="150" height="140" viewBox="0 0 150 140">
+          <path id="hk" d="M75 128 C 20 92 6 62 18 38 C 30 14 62 14 75 40 C 88 14 120 14 132 38 C 144 62 130 92 75 128 Z" fill="#2c9f7b"/>
+          <circle cx="52" cy="46" r="10" fill="#fff" opacity=".5"/></svg></div>
+        <div class="lab" style="color:var(--mint)">Elogio</div>
+      </div>
+      <svg id="lupa" class="soft" width="180" height="180" viewBox="0 0 180 180" style="position:absolute;left:450px;top:930px;overflow:visible">
+        <circle cx="76" cy="76" r="54" fill="#fffaf4" stroke="#3b2346" stroke-width="16"/>
+        <circle cx="60" cy="58" r="14" fill="#fff" opacity=".9"/>
+        <rect x="112" y="108" width="62" height="26" rx="13" fill="#3b2346" transform="rotate(45 125 121)"/>
+      </svg>
+      <div class="center fred" id="hLine" style="top:1160px;font-size:108px;line-height:1.1;padding:0 50px"></div>
+      <svg id="und" width="420" height="40" viewBox="0 0 420 40" style="position:absolute;left:330px;top:1292px;overflow:visible">
+        <path id="undP" d="M10 26 q100 -22 200 -4 t200 -6" stroke="#ee5f52" stroke-width="14" fill="none" stroke-linecap="round" stroke-dasharray="460" stroke-dashoffset="460"/>
+      </svg>
+    </div>
+
+    <!-- 1 -->
+    <div class="scene" id="s1">
+      <div class="badge" id="b1" style="background:radial-gradient(circle at 35% 30%, #ff8a7c, #e5493c)">1</div>
+      <div class="center" id="src1" style="top:640px"><span class="chip">Academia Americana de Pediatria · 2018</span></div>
+      <div class="row" id="rA" style="top:790px">
+        <svg class="ico" viewBox="0 0 150 150">
+          <rect x="34" y="62" width="82" height="70" rx="30" fill="#ee5f52"/>
+          <rect x="36" y="18" width="18" height="62" rx="9" fill="#ee5f52"/><rect x="58" y="10" width="18" height="66" rx="9" fill="#ee5f52"/>
+          <rect x="80" y="14" width="18" height="62" rx="9" fill="#ee5f52"/><rect x="100" y="26" width="16" height="54" rx="8" fill="#ee5f52"/>
+          <rect x="6" y="66" width="44" height="18" rx="9" fill="#ee5f52" transform="rotate(32 28 75)"/>
+          <g id="xA" stroke="#3b2346" stroke-width="14" stroke-linecap="round"><line class="x1" x1="12" y1="12" x2="138" y2="138"/><line class="x2" x1="138" y1="12" x2="12" y2="138"/></g>
+        </svg>
+        <div class="t1">Palmada</div>
+        <div class="t2" id="tA">não ensina autocontrole</div>
+      </div>
+      <div class="row" id="rB" style="top:1080px">
+        <svg class="ico" viewBox="0 0 160 150">
+          <path d="M22 58 h26 l56 -34 v102 l-56 -34 h-26 z" fill="#9b86f5" stroke="#9b86f5" stroke-width="10" stroke-linejoin="round"/>
+          <rect x="40" y="92" width="18" height="38" rx="9" fill="#9b86f5"/>
+          <g stroke="#9b86f5" stroke-width="9" fill="none" stroke-linecap="round"><path d="M120 50 q14 25 0 50"/><path d="M136 36 q24 39 0 78"/></g>
+          <g id="xB" stroke="#3b2346" stroke-width="14" stroke-linecap="round"><line class="x1" x1="16" y1="12" x2="144" y2="138"/><line class="x2" x1="144" y1="12" x2="16" y2="138"/></g>
+        </svg>
+        <div class="t1" style="color:var(--lav)">Grito</div>
+        <div class="t2" id="tB">não melhora o comportamento</div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="scene" id="s2">
+      <div class="badge" id="b2" style="background:radial-gradient(circle at 35% 30%, #5fd3aa, #1f8d6b)">2</div>
+      <div class="center fred" id="h2" style="top:650px;font-size:92px">O que funciona</div>
+      <div class="check" id="k1" style="top:820px"><svg width="130" height="130" viewBox="0 0 130 130"><circle cx="65" cy="65" r="58" fill="#2c9f7b"/><path class="ck" d="M36 68 l20 20 l40 -44" stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100"/></svg><span>Elogiar o que é bom</span></div>
+      <div class="check" id="k2" style="top:1000px"><svg width="130" height="130" viewBox="0 0 130 130"><circle cx="65" cy="65" r="58" fill="#2c9f7b"/><path class="ck" d="M36 68 l20 20 l40 -44" stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100"/></svg><span>Combinar as regras antes</span></div>
+      <div class="check" id="k3" style="top:1180px"><svg width="130" height="130" viewBox="0 0 130 130"><circle cx="65" cy="65" r="58" fill="#2c9f7b"/><path class="ck" d="M36 68 l20 20 l40 -44" stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="100" stroke-dashoffset="100"/></svg><span>Cumprir sempre</span></div>
+      <div class="center" id="src2" style="top:1390px"><span class="chip">Academia Americana de Pediatria · 2018</span></div>
+    </div>
+
+    <!-- 3 -->
+    <div class="scene" id="s3">
+      <div class="badge" id="b3" style="background:radial-gradient(circle at 35% 30%, #b9a8ff, #7a62ea)">3</div>
+      <div class="center" id="src3" style="top:640px"><span class="chip">CDC · centro de saúde dos EUA</span></div>
+      <div class="center fred" id="h3" style="top:740px;font-size:84px">Descreva o que ele faz</div>
+      <div id="bubble" style="position:absolute;left:150px;top:880px;width:780px;padding:34px 44px;border-radius:50px;background:#fff;font-size:54px;line-height:1.18;text-align:center;box-shadow:0 22px 36px rgba(150,70,40,.18)">
+        “Você guardou os blocos na caixa.”
+        <svg width="70" height="50" viewBox="0 0 70 50" style="position:absolute;left:120px;bottom:-44px"><path d="M0 0 h70 l-52 48 z" fill="#fff"/></svg>
+      </div>
+      <svg id="toys" width="560" height="420" viewBox="0 0 560 420" style="position:absolute;left:260px;top:1130px;overflow:visible">
+        <g id="blk1"><rect x="150" y="-10" width="92" height="92" rx="18" fill="#ee5f52"/><text x="196" y="54" font-family="Fredoka" font-size="58" fill="#fff" text-anchor="middle">A</text></g>
+        <g id="blk2"><rect x="250" y="-40" width="92" height="92" rx="18" fill="#ffc65c"/><text x="296" y="24" font-family="Fredoka" font-size="58" fill="#fff" text-anchor="middle">B</text></g>
+        <g id="blk3"><rect x="350" y="-10" width="92" height="92" rx="18" fill="#2c9f7b"/><text x="396" y="54" font-family="Fredoka" font-size="58" fill="#fff" text-anchor="middle">C</text></g>
+        <g id="box">
+          <path d="M70 170 l40 -46 h340 l40 46 z" fill="#7a62ea"/>
+          <rect x="70" y="168" width="420" height="200" rx="26" fill="#9b86f5"/>
+          <rect x="120" y="220" width="320" height="22" rx="11" fill="#fff" opacity=".35"/>
+        </g>
+      </svg>
+      <div class="center fred" id="selfie" style="top:1560px;font-size:80px;color:var(--mint)">
+        <svg id="heart3" width="96" height="88" viewBox="0 0 150 140" style="vertical-align:-14px;margin-right:16px"><path d="M75 128 C 20 92 6 62 18 38 C 30 14 62 14 75 40 C 88 14 120 14 132 38 C 144 62 130 92 75 128 Z" fill="#ee5f52"/></svg>Ajuda a autoestima
+      </div>
+    </div>
+
+    <!-- FIM -->
+    <div class="scene" id="s4">
+      <svg id="bookmark" class="soft" width="150" height="190" viewBox="0 0 150 190" style="position:absolute;left:465px;top:330px;overflow:visible">
+        <path d="M20 10 h110 v170 l-55 -40 l-55 40 z" fill="none" stroke="#ee5f52" stroke-width="12" stroke-linejoin="round"/>
+        <path id="bmFill" d="M20 10 h110 v170 l-55 -40 l-55 40 z" fill="#ee5f52" opacity="0"/>
+      </svg>
+      <svg id="bento" class="soft" width="520" height="540" viewBox="0 0 520 540" style="position:absolute;left:280px;top:560px;overflow:visible">
+        <ellipse cx="260" cy="488" rx="170" ry="22" fill="rgba(150,70,40,.18)"/>
+        <g id="bentoBody">
+          <ellipse cx="260" cy="360" rx="180" ry="122" fill="#d9944f"/>
+          <g stroke="#b8743a" stroke-width="11" fill="none" stroke-linecap="round"><path d="M98 330 q162 -88 324 0"/><path d="M88 372 q172 -88 344 0"/><path d="M96 414 q164 -78 328 0"/></g>
+          <rect x="165" y="296" width="190" height="170" rx="80" fill="#cfe2ff"/>
+          <g stroke="#8fb6f2" stroke-width="9"><line x1="205" y1="302" x2="205" y2="460"/><line x1="245" y1="298" x2="245" y2="466"/><line x1="285" y1="298" x2="285" y2="466"/><line x1="320" y1="302" x2="320" y2="460"/></g>
+          <ellipse cx="215" cy="472" rx="38" ry="19" fill="#efc08a"/><ellipse cx="305" cy="472" rx="38" ry="19" fill="#efc08a"/>
+          <g id="head">
+            <ellipse cx="185" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(-22 185 98)"/><ellipse cx="185" cy="103" rx="16" ry="36" fill="#ffb3a8" transform="rotate(-22 185 103)"/>
+            <ellipse cx="335" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(22 335 98)"/><ellipse cx="335" cy="103" rx="16" ry="36" fill="#ffb3a8" transform="rotate(22 335 103)"/>
+            <ellipse cx="260" cy="196" rx="102" ry="90" fill="#efc08a"/>
+            <path d="M176 156 q84 -70 168 0 q-84 -30 -168 0z" fill="#d9944f"/>
+            <g stroke="#b8743a" stroke-width="7" fill="none" stroke-linecap="round"><path d="M200 134 q60 -34 120 0"/><path d="M215 118 q45 -22 90 0"/></g>
+            <path d="M228 212 q32 -22 64 0 l-14 76 q-18 14 -36 0z" fill="#f6d2a6"/>
+            <ellipse cx="260" cy="288" rx="17" ry="11" fill="#7a4a3a"/>
+            <path d="M238 300 q22 18 44 0" stroke="#7a4a3a" stroke-width="6" fill="none" stroke-linecap="round"/>
+            <g stroke="#2a1d1a" stroke-width="9" fill="none" stroke-linecap="round"><path d="M198 192 q17 -18 34 0"/><path d="M288 192 q17 -18 34 0"/></g>
+            <circle cx="186" cy="232" r="16" fill="#ff9e91" opacity=".6"/><circle cx="334" cy="232" r="16" fill="#ff9e91" opacity=".6"/>
+          </g>
+          <g id="hug">
+            <rect x="140" y="330" width="44" height="120" rx="22" fill="#cfe2ff" transform="rotate(-38 162 340)"/>
+            <rect x="336" y="330" width="44" height="120" rx="22" fill="#cfe2ff" transform="rotate(38 358 340)"/>
+            <g id="bigHeart"><path d="M260 470 C 196 430 178 396 192 368 C 206 340 244 340 260 370 C 276 340 314 340 328 368 C 342 396 324 430 260 470 Z" fill="#ee5f52"/>
+              <circle cx="228" cy="378" r="10" fill="#fff" opacity=".55"/></g>
+            <circle cx="212" cy="402" r="22" fill="#efc08a"/><circle cx="308" cy="402" r="22" fill="#efc08a"/>
+          </g>
+        </g>
+      </svg>
+      <div class="center fred" id="cta" style="top:1150px;font-size:88px;line-height:1.08;color:var(--coral)">Salva pra lembrar no<br>próximo dia difícil</div>
+      <div class="center" id="handle" style="top:1390px;font-size:44px;opacity:.9">@paisdarotina</div>
+    </div>
+  </div>
+</div>
+
+<script src="node_modules/gsap/dist/gsap.min.js"></script>
+<script>
+const CUES = window.CUES || [];
+const norm = w => w.toLowerCase().replace(/[^a-zà-ú]/g, '');
+function cue(w, n = 1) { let k = 0; for (const c of CUES) { if (norm(c.w) === w) { k++; if (k === n) return c.s; } } throw new Error('cue ' + w + ' ' + n); }
+const END = window.END || 25.9;
+
+// palavras do gancho
+const hLine = document.getElementById('hLine');
+[['o', 'O'], ['que', 'que'], ['a', 'a'], ['ciência', 'ciência'], ['diz', 'diz']].forEach(([k, t]) => hLine.insertAdjacentHTML('beforeend', `<span class="word" data-w="${k}">${t}</span>`));
+
+gsap.set('.scene', { transformPerspective: 1700, transformOrigin: '50% 45%' });
+gsap.set(['.badge', '.word', '.token', '.row', '.check', '#bubble', '#bookmark', '#lupa', '#h2', '#h3'], { transformPerspective: 900 });
+gsap.set(['#xA line', '#xB line'], { scale: 0, transformOrigin: '50% 50%' });
+const tl = gsap.timeline({ paused: true });
+
+// ---------- câmera e fundo: o sol nasce devagar durante o vídeo ----------
+tl.fromTo('#world', { scale: 1 }, { scale: 1.05, duration: END, ease: 'none' }, 0);
+tl.to('#sun', { y: -380, scale: 1.12, duration: END, ease: 'sine.out' }, 0);
+tl.to('#glowA', { x: 160, y: 140, duration: END, ease: 'sine.inOut' }, 0);
+tl.to('#glowB', { x: -140, y: -200, duration: END, ease: 'sine.inOut' }, 0);
+[['#cl1', 90], ['#cl2', -80], ['#cl3', -110], ['#cl4', 100]].forEach(([c, dx]) => tl.to(c, { x: dx, duration: END, ease: 'none' }, 0));
+
+const IN = { autoAlpha: 0, rotationX: -32, z: -520, y: 260 };
+const OUT = { autoAlpha: 0, rotationX: 26, z: -480, y: -280 };
+function enter(id, t) { tl.fromTo(id, IN, { autoAlpha: 1, rotationX: 0, z: 0, y: 0, duration: .9, ease: 'power3.out' }, t); }
+function leave(id, t) { tl.to(id, { ...OUT, duration: .8, ease: 'power2.inOut' }, t); }
+function camera(t, k) { tl.to('#bg', { y: -60 * k, duration: 1.2, ease: 'power2.inOut' }, t); }
+function pop(sel, t) { tl.fromTo(sel, { autoAlpha: 0, y: 60, rotationX: -50 }, { autoAlpha: 1, y: 0, rotationX: 0, duration: .7, ease: 'power3.out' }, t); }
+
+// ---------- GANCHO ----------
+tl.set('#s0', { autoAlpha: 1 }, 0);
+[['#tk1', 'palmada'], ['#tk2', 'grito'], ['#tk3', 'elogio']].forEach(([s, w], i) => {
+  const t = i === 0 ? 0 : cue(w) - .12;
+  tl.fromTo(s, { autoAlpha: 0, rotationY: -120, scale: .5, y: 80 }, { autoAlpha: 1, rotationY: 0, scale: 1, y: 0, duration: .8, ease: 'back.out(1.5)' }, t);
+});
+tl.to('#tk1 .disc', { rotation: -8, duration: .2, yoyo: true, repeat: 3, ease: 'sine.inOut' }, .5);
+tl.to('#tk2 .disc', { scale: 1.08, duration: .16, yoyo: true, repeat: 3, ease: 'sine.inOut' }, cue('grito') + .4);
+tl.to('#hk', { scale: 1.15, transformOrigin: '50% 60%', duration: .3, yoyo: true, repeat: 3, ease: 'sine.inOut' }, cue('elogio') + .3);
+const tCi = cue('o', 1);
+tl.to(['#tk1', '#tk2', '#tk3'], { y: -110, duration: .9, ease: 'power3.inOut' }, tCi - .3);
+tl.fromTo('#lupa', { autoAlpha: 0, scale: .4, rotation: -30 }, { autoAlpha: 1, scale: 1, rotation: 0, duration: .8, ease: 'back.out(1.6)' }, tCi - .15);
+tl.to('#lupa', { x: 30, y: -16, duration: .6, yoyo: true, repeat: 2, ease: 'sine.inOut' }, tCi + .7);
+document.querySelectorAll('#hLine .word').forEach(el => tl.fromTo(el, { opacity: 0, y: 40, rotationX: -60 }, { opacity: 1, y: 0, rotationX: 0, duration: .45, ease: 'power3.out' }, cue(norm(el.dataset.w), el.dataset.w === 'o' || el.dataset.w === 'que' || el.dataset.w === 'a' ? 1 : 1) - .08));
+tl.to('#undP', { attr: { 'stroke-dashoffset': 0 }, duration: .6, ease: 'power2.out' }, cue('ciência') + .1);
+
+// barra de progresso e trocas
+const bars = document.querySelectorAll('.prog i');
+const T1 = cue('um'), T2 = cue('dois'), T3 = cue('três'), T4 = cue('salva');
+tl.to('#prog', { opacity: 1, duration: .5 }, T1 - .3);
+[[T1, T2], [T2, T3], [T3, T4]].forEach(([a, b], i) => tl.fromTo(bars[i], { width: '0%' }, { width: '100%', duration: b - a - .3, ease: 'none' }, a));
+tl.to('#prog', { opacity: 0, duration: .5 }, T4 - .4);
+leave('#s0', T1 - .55); enter('#s1', T1 - .3); camera(T1 - .5, 1);
+leave('#s1', T2 - .55); enter('#s2', T2 - .3); camera(T2 - .5, 2);
+leave('#s2', T3 - .55); enter('#s3', T3 - .3); camera(T3 - .5, 3);
+leave('#s3', T4 - .55); enter('#s4', T4 - .3); camera(T4 - .5, 4);
+function badge(n, t) { tl.fromTo('#b' + n, { rotationY: -180, scale: .6 }, { rotationY: 0, scale: 1, duration: .9, ease: 'power3.out' }, t - .1); }
+
+// ---------- 1 ----------
+badge(1, T1);
+tl.fromTo('#src1', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: .6, ease: 'power3.out' }, cue('academia') - .1);
+pop('#rA', cue('palmada', 2) - .25);
+tl.fromTo('#tA', { autoAlpha: 0, x: 40 }, { autoAlpha: 1, x: 0, duration: .5, ease: 'power3.out' }, cue('ensina') - .1);
+tl.to('#xA .x1', { scale: 1, duration: .3, ease: 'power2.out' }, cue('autocontrole') - .05);
+tl.to('#xA .x2', { scale: 1, duration: .3, ease: 'power2.out' }, cue('autocontrole') + .15);
+pop('#rB', cue('grito', 2) - .3);
+tl.fromTo('#tB', { autoAlpha: 0, x: 40 }, { autoAlpha: 1, x: 0, duration: .5, ease: 'power3.out' }, cue('melhora') - .1);
+tl.to('#xB .x1', { scale: 1, duration: .3, ease: 'power2.out' }, cue('comportamento', 1) + .1);
+tl.to('#xB .x2', { scale: 1, duration: .3, ease: 'power2.out' }, cue('comportamento', 1) + .3);
+
+// ---------- 2 ----------
+badge(2, T2);
+pop('#h2', cue('funciona') - .25);
+[['#k1', 'elogiar'], ['#k2', 'combinar'], ['#k3', 'cumprir']].forEach(([k, w]) => {
+  const t = cue(w) - .2;
+  tl.fromTo(k, { autoAlpha: 0, x: -80, rotationY: -40 }, { autoAlpha: 1, x: 0, rotationY: 0, duration: .6, ease: 'power3.out' }, t);
+  tl.to(k + ' .ck', { attr: { 'stroke-dashoffset': 0 }, duration: .45, ease: 'power2.out' }, t + .35);
+  tl.to(k + ' svg', { scale: 1.15, transformOrigin: '50% 50%', duration: .18, yoyo: true, repeat: 1, ease: 'sine.inOut' }, t + .7);
+});
+tl.fromTo('#src2', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: .6, ease: 'power3.out' }, cue('sempre') + .1);
+
+// ---------- 3 ----------
+badge(3, T3);
+tl.fromTo('#src3', { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: .6, ease: 'power3.out' }, cue('cdc') - .15);
+pop('#h3', cue('descrever') - .2);
+tl.fromTo('#bubble', { autoAlpha: 0, scale: .6, y: 60, transformOrigin: '20% 100%' }, { autoAlpha: 1, scale: 1, y: 0, duration: .6, ease: 'back.out(1.5)' }, cue('você') - .2);
+tl.fromTo('#toys', { autoAlpha: 0, y: 80 }, { autoAlpha: 1, y: 0, duration: .6, ease: 'power3.out' }, cue('você') - .1);
+tl.fromTo(['#blk1', '#blk2', '#blk3'], { y: -40, rotation: (i) => [-14, 10, -8][i], transformOrigin: '50% 50%' }, { y: 0, rotation: 0, duration: .4, ease: 'sine.out' }, cue('você'));
+const tB = cue('blocos') - .05;
+['#blk1', '#blk2', '#blk3'].forEach((b, i) => tl.to(b, { y: 210, rotation: [8, -6, 10][i], duration: .45, ease: 'power2.in' }, tB + i * .14));
+tl.to('#box', { y: 10, scaleY: .96, transformOrigin: '50% 100%', duration: .14, yoyo: true, repeat: 1, ease: 'sine.inOut' }, cue('caixa') + .1);
+tl.fromTo('#selfie', { autoAlpha: 0, y: 50 }, { autoAlpha: 1, y: 0, duration: .6, ease: 'power3.out' }, cue('isso') - .1);
+tl.fromTo('#heart3', { scale: .3, transformOrigin: '50% 60%' }, { scale: 1, duration: .6, ease: 'back.out(2)' }, cue('isso'));
+tl.to('#heart3', { scale: 1.18, transformOrigin: '50% 60%', duration: .25, yoyo: true, repeat: 3, ease: 'sine.inOut' }, cue('autoestima'));
+
+// ---------- FIM ----------
+tl.fromTo('#bento', { y: 420, opacity: 0 }, { y: 0, opacity: 1, duration: .9, ease: 'power3.out' }, T4 - .1);
+tl.to('#bigHeart', { scale: 1.12, transformOrigin: '260px 410px', duration: .35, yoyo: true, repeat: 5, ease: 'sine.inOut' }, T4 + .7);
+tl.to('#head', { rotation: 6, svgOrigin: '260 240', duration: .6, yoyo: true, repeat: 2, ease: 'sine.inOut' }, T4 + .6);
+tl.fromTo('#bookmark', { scale: .3, opacity: 0, rotationY: 180 }, { scale: 1, opacity: 1, rotationY: 0, duration: .9, ease: 'power3.out' }, T4 + .1);
+tl.to('#bmFill', { opacity: 1, duration: .4 }, T4 + .9);
+tl.fromTo('#cta', { y: 70, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: 'power3.out' }, T4 + .1);
+tl.fromTo('#handle', { opacity: 0 }, { opacity: .9, duration: .6 }, T4 + 1);
+tl.to({}, { duration: .01 }, END);
+
+window.seek = (t) => { tl.seek(t, false); };
+window.ready = document.fonts.ready.then(() => true);
+</script>
+</body>
+</html>
