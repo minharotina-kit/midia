@@ -1,0 +1,29 @@
+{
+  "name": "tatu-parte4",
+  "dir": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p4",
+  "title": ["Família Tatu"],
+  "subtitle": "Parte 4 · O Quadro da Geladeira",
+  "title_until": 2.2,
+  "segments": [
+    {"freeze": "c1.mp4", "at": 0.05, "dur": 2.2, "narr": [[0.3, "n1"]]},
+    {"clip": "c1.mp4", "t0": 0.0, "t1": 4.4, "caps": [[0.45, 1.95, "O quadro, Papai!", "bento"]], "narr": [[2.15, "n2"]]},
+    {"clip": "c2.mp4", "t0": 0.5, "t1": 4.9, "caps": [[0.35, 1.5, "Essa ou aquela?", "pai"]]},
+    {"freeze": "c2.mp4", "at": 4.85, "dur": 6.9, "narr": [[0.25, "n3"]], "src": [[0.15, 6.8, "Academia Americana de Pediatria"]]},
+    {"clip": "c3.mp4", "t0": 0.3, "t1": 5.0, "caps": [[0.3, 2.0, "Desenrolei!", "bento"]], "narr": [[2.3, "n4"]]},
+    {"clip": "c4.mp4", "t0": 0.0, "t1": 5.0, "caps": [[0.6, 3.4, "Amor, a Vovó Tatu chega amanhã.", "mae"]]},
+    {"freeze": "c4.mp4", "at": 4.95, "dur": 2.3, "narr": [[0.2, "n5"]]},
+    {"card": 3.4, "lines": ["Parte 5:", "A Vovó Chegou"], "when": "amanhã, 20h", "narr": [[0.3, "n6"]]}
+  ],
+  "narr": {
+    "n1": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p4/n1a.wav", "Segunda manhã do Papai sozinho."],
+    "n2": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p4/n2b.wav", "O plano tava na geladeira o tempo todo."],
+    "n3": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p4/n3a.wav", "Fato: a Academia Americana de Pediatria diz que oferecer uma escolha ajuda a evitar a briga de última hora."],
+    "n4": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p4/n4b.wav", "Ontem, cinco camisetas. Hoje, uma pergunta."],
+    "n5": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p4/n5a.wav", "A vitória durou exatamente um café."],
+    "n6": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p4/n6a.wav", "E a Vovó tinha os próprios planos."]
+  },
+  "music": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/musica/pixabay/b3f51223-comedy-bgm-funny-background-music-583242.mp3",
+  "music_start": 0,
+  "music_db": -19,
+  "narr_db": 11
+}
