@@ -20,7 +20,7 @@ Regras: nunca repetir tema, desenho ou música. Cada vídeo tem paleta e ilustra
 | Dia | Tema | Pontos e fontes (ver BANCO-DE-FONTES.md) | Paleta |
 |---|---|---|---|
 | Ter 27/10 ✅ | 3 erros na hora de dormir | horário fixo · ritual calmo · mesma ordem (AAP) | noite azul |
-| Qua 28/10 ✅ agendado | Elogio e bronca: o que a ciência diz | em vez de só "muito bem", descrever o que ele fez (CDC) · palmada não ensina, e grito também não (AAP 2018) · o que funciona: elogiar o bom comportamento e ser constante (AAP 2018) | nascer do sol (pêssego) |
+| Qua 28/10 ✅ agendado | Elogio e bronca: o que a ciência diz | palmada não ensina autocontrole, grito não melhora o comportamento (AAP 2018) · o que funciona: elogiar o comportamento bom, combinar regras antes, cumprir sempre (AAP 2018) · descrever o que ele faz ajuda a autoestima (CDC) · `2026-10-28-info-elogio-bronca/`, molde `tools/motion/info-2810.html` | nascer do sol (pêssego) |
 | Qui 29/10 | Mito ou verdade? | "Fim de semana pode dormir qualquer hora" MITO (SBP 2021) · "Tela antes de dormir relaxa" MITO (SBP 2021: 1 h antes, melatonina) · "Rotina ajuda o comportamento" VERDADE (UCL 2013, 10 mil crianças) | verde e coral com carimbos |
 | Sex 30/10 | O que a ciência descobriu sobre rotina de dormir | 10.085 crianças (Mindell 2015) · 405 famílias, 3 semanas, mães de melhor humor (Mindell 2009) · 10 mil crianças em Londres, efeito reversível (Kelly 2013) | lua e verde-água, contadores e gráficos |
 | Sáb 31/10 | Depois da escola: 3 coisas que ajudam | 3 horas de movimento por dia (OMS) · brincar constrói o cérebro (AAP 2018) · tela desligada 1 a 2 h antes de dormir (SBP 2020) | tarde no parque |
