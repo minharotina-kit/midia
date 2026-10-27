@@ -1,0 +1,28 @@
+{
+  "name": "tatu-parte5",
+  "dir": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p5",
+  "title": ["Família Tatu"],
+  "subtitle": "Parte 5 · A Vovó Chegou",
+  "title_until": 2.4,
+  "segments": [
+    {"freeze": "c1.mp4", "at": 0.05, "dur": 2.4, "narr": [[0.3, "n1"]]},
+    {"clip": "c1.mp4", "t0": 0.0, "t1": 4.6, "caps": [[0.75, 1.6, "Vovó!", "bento"]], "narr": [[1.8, "n2"]]},
+    {"clip": "c2.mp4", "t0": 0.3, "t1": 5.0, "caps": [[0.25, 2.1, "Hoje a vovó deixa.", "vovo"]], "narr": [[3.45, "n3"]]},
+    {"clip": "c3.mp4", "t0": 0.4, "t1": 5.0, "caps": [[0.2, 1.55, "Então tem um passo novo:", "vovo"], [1.65, 3.0, "biscoito com a vovó.", "vovo"]], "narr": [[3.05, "n4"]], "src": [[2.95, 10.85, "Academia Americana de Pediatria"]]},
+    {"freeze": "c3.mp4", "at": 4.95, "dur": 6.6},
+    {"clip": "c4.mp4", "t0": 0.3, "t1": 5.0, "caps": [[0.8, 2.45, "Boa noite, Bento.", "vovo"]], "narr": [[2.6, "n5"]]},
+    {"card": 3.8, "lines": ["Fim da", "Temporada 1"], "when": "Temporada 2 em breve", "narr": [[0.5, "n6"]]}
+  ],
+  "narr": {
+    "n1": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p5/n1a.wav", "A Vovó chegou. E trouxe bolo."],
+    "n2": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p5/n2b.wav", "Bolo às oito da noite."],
+    "n3": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p5/n3b.wav", "O Papai olhou pro relógio."],
+    "n4": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p5/n4b.wav", "Fato: a Academia Americana de Pediatria diz que rotina previsível ajuda. Mas rígida demais, sem escolha nenhuma, entedia."],
+    "n5": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p5/n5b.wav", "E naquela noite, até o Papai dormiu cedo."],
+    "n6": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/p5/n6a.wav", "Mas a Família Tatu volta."]
+  },
+  "music": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/musica/pixabay/f5128c7e-comedy-cartoon-funny-background-music-365347.mp3",
+  "music_start": 0,
+  "music_db": -19,
+  "narr_db": 11
+}

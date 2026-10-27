@@ -17,7 +17,7 @@
 | 3 (opcional) | Meia sumida / camisetas | "Criança se dá melhor quando a rotina é regular, previsível e sempre igual." | AAP (mesma página) |
 | 4 · O Quadro da Geladeira (Qui 29) ✅ agendada | Papai com as duas camisetas | "Essa ou aquela? Dar escolha evita a briga de última hora." | AAP (mesma página) + CDC: poucas escolhas simples |
 | 4 (opcional) | Bento batendo na mão do Papai na porta | "Um abraço e um tchau na porta fazem diferença: a criança começa o dia bem." | AAP (mesma página) |
-| 5 · A Vovó Chegou (Sex 30) | Vovó cria o cartão novo | "Rotina rígida demais, sem escolha nenhuma, cansa. Dá pra ajustar e continuar previsível." | AAP (mesma página) |
+| 5 · A Vovó Chegou (Sex 30) ✅ agendada | Vovó cria o cartão novo | "Rotina rígida demais, sem escolha nenhuma, cansa. Dá pra ajustar e continuar previsível." | AAP (mesma página) |
 | 5 (opcional) | Mamãe mostrando o quadro pra Vovó | "Mudou a rotina? Combina com calma, explica o motivo e se é por pouco tempo." | CDC, *Tips for Relying on Routines and Rules* |
 
 Temporada 2 (a partir de 31/10): cada episódio nasce com 1 dado do banco já escolhido no roteiro.
@@ -25,4 +25,5 @@ Temporada 2 (a partir de 31/10): cada episódio nasce com 1 dado do banco já es
 ## Feito
 - Parte 3: `2026-10-28-tatu-parte3/` (commit de2eeb2), agendada 28/10 22:59Z. Música: comedy-comedy-music-614068. Dado: AAP, noite anterior.
 - Parte 4: `2026-10-29-tatu-parte4/`, agendada 29/10 22:59Z. Música: comedy-bgm-funny-background-music-583242. Dado: AAP, oferecer escolha.
-- Músicas de comédia já usadas: funny-bouncy-cartoon-mischief (parte 2), comedy-comedy-music-614068 (parte 3), comedy-bgm-funny-background-music-583242 (parte 4).
+- Parte 5 (fim da temporada 1): `2026-10-30-tatu-parte5/`, agendada 30/10 22:59Z. Música: comedy-cartoon-funny-background-music-365347. Dado: AAP, previsível sim, rígida demais entedia. Cartão final: "Temporada 2 em breve".
+- Músicas de comédia já usadas: funny-bouncy-cartoon-mischief (parte 2), comedy-comedy-music-614068 (parte 3), comedy-bgm-funny-background-music-583242 (parte 4), comedy-cartoon-funny-background-music-365347 (parte 5). Sobram: funny-playful-262598, funny-funny-music-595118, funny-funny-music-611043, comedy-comedy-music-585937, comedy-cartoon-funny-background-music-482003.
