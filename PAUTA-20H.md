@@ -27,3 +27,21 @@ Temporada 2 (a partir de 31/10): cada episódio nasce com 1 dado do banco já es
 - Parte 4: `2026-10-29-tatu-parte4/`, agendada 29/10 22:59Z. Música: comedy-bgm-funny-background-music-583242. Dado: AAP, oferecer escolha.
 - Parte 5 (fim da temporada 1): `2026-10-30-tatu-parte5/`, agendada 30/10 22:59Z. Música: comedy-cartoon-funny-background-music-365347. Dado: AAP, previsível sim, rígida demais entedia. Cartão final: "Temporada 2 em breve".
 - Músicas de comédia já usadas: funny-bouncy-cartoon-mischief (parte 2), comedy-comedy-music-614068 (parte 3), comedy-bgm-funny-background-music-583242 (parte 4), comedy-cartoon-funny-background-music-365347 (parte 5). Sobram: funny-playful-262598, funny-funny-music-595118, funny-funny-music-611043, comedy-comedy-music-585937, comedy-cartoon-funny-background-music-482003.
+
+## Temporada 2 · "A Semana da Vovó" (31/10 a 08/11)
+A Vovó Tatu fica uma semana. Cada noite um conflito pequeno de rotina, e cada episódio traz 1 dado de um país diferente (pedido do Mateus em 27/10: muitas fontes, de vários lugares). A narradora fala o dado num congelado, com selo FONTE.
+Página com todos os prompts: ver o artefato "Família Tatu · Temporada 2".
+
+| Ep | Dia | Título | Dado (fonte) |
+|---|---|---|---|
+| 1 | Sáb 31/10 | O Presente da Vovó | 2 a 5 anos: menos de 1 h de tela por dia (Sociedade Canadense de Pediatria, 2017) |
+| 2 | Dom 01/11 | Tô Com Raiva | colocar o sentimento em palavras acalmou a área de alarme do cérebro, em adultos (UCLA, 2007) |
+| 3 | Seg 02/11 | O Café da Vovó | campanha nacional do Japão: dormir cedo, acordar cedo, café da manhã; o café acerta o relógio do corpo (governo do Japão) |
+| 4 | Ter 03/11 | Uhum | o vai e volta da conversa pesa mais que a quantidade de palavras (MIT e Harvard, 2018) |
+| 5 | Qua 04/11 | Cinco Livros | 5 livros por dia ≈ 1,5 milhão de palavras até os 5 anos (Ohio State, 2019) |
+| 6 | Qui 05/11 | Pé na Grama | menos verde na infância, até 55% mais risco de problemas de saúde mental depois, associação (Univ. de Aarhus, Dinamarca, 2019) |
+| 7 | Sex 06/11 | Olha Lá Longe | +40 min ao ar livre na escola: 30% ficaram míopes contra quase 40% (China, JAMA 2015) |
+| 8 | Sáb 07/11 | A Cesta dos Celulares | telas desligadas nas refeições, pais dão o exemplo (diretriz alemã de pediatria, 2023) |
+| 9 | Dom 08/11 | A Vovó Vai Embora · fim da temporada 2 | relações boas foram o que mais previu saúde e felicidade aos 80 (Harvard, estudo desde 1938) |
+
+Clipes de cada episódio: até umas 17h do dia. Músicas de comédia que sobram: 5 (lista acima); pedir mais ao Mateus a partir do ep. 6.

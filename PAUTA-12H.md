@@ -23,12 +23,25 @@ Regras: nunca repetir tema, desenho ou música. Cada vídeo tem paleta e ilustra
 | Qua 28/10 ✅ agendado | Elogio e bronca: o que a ciência diz | palmada não ensina autocontrole, grito não melhora o comportamento (AAP 2018) · o que funciona: elogiar o comportamento bom, combinar regras antes, cumprir sempre (AAP 2018) · descrever o que ele faz ajuda a autoestima (CDC) · `2026-10-28-info-elogio-bronca/`, molde `tools/motion/info-2810.html` | nascer do sol (pêssego) |
 | Qui 29/10 | Mito ou verdade? | "Fim de semana pode dormir qualquer hora" MITO (SBP 2021) · "Tela antes de dormir relaxa" MITO (SBP 2021: 1 h antes, melatonina) · "Rotina ajuda o comportamento" VERDADE (UCL 2013, 10 mil crianças) | verde e coral com carimbos |
 | Sex 30/10 | O que a ciência descobriu sobre rotina de dormir | 10.085 crianças (Mindell 2015) · 405 famílias, 3 semanas, mães de melhor humor (Mindell 2009) · 10 mil crianças em Londres, efeito reversível (Kelly 2013) | lua e verde-água, contadores e gráficos |
-| Sáb 31/10 | Depois da escola: 3 coisas que ajudam | 3 horas de movimento por dia (OMS) · brincar constrói o cérebro (AAP 2018) · tela desligada 1 a 2 h antes de dormir (SBP 2020) | tarde no parque |
-| Dom 01/11 | O cérebro do seu filho e o "vai e volta" | mais de 1 milhão de conexões por segundo (Harvard) · responder quando ele puxa conversa (Harvard) · ler em voz alta todo dia (AAP 2014 + Cincinnati 2015) | lilás |
+| Sáb 31/10 | Depois da escola: o que 3 instituições recomendam | 3 horas de movimento por dia até os 4 anos (OMS) · de 3 a 5 anos, 1 hora disso é brincadeira intensa, e nada de ficar preso mais de 1 hora seguida no carrinho ou cadeirinha (governo da Austrália, 2021) · brincar constrói o cérebro (Academia Americana de Pediatria, 2018) | tarde no parque |
+| Dom 01/11 | O cérebro do seu filho e o "vai e volta" | mais de 1 milhão de conexões por segundo nos primeiros anos (Harvard) · responder quando ele puxa conversa constrói o cérebro (Harvard) · ler em voz alta todo dia desde bebê (Academia Americana de Pediatria, 2014) · quem ouve mais histórias em casa ativa mais as áreas da imaginação (Hospital Infantil de Cincinnati, 2015) | lilás |
 
 **Troca em 26/10:** "Manhã sem briga" saiu da quarta porque os mesmos dados (véspera, escolhas, despedida) entram na Família Tatu partes 3 e 4 (ver `PAUTA-20H.md`). Não repetir dado entre 12h e 20h do mesmo dia ou da véspera.
 
-**Próxima semana (já com fonte):** quanto seu filho precisa dormir por idade (AASM/AAP 2016 + OMS) · telas por idade (SBP 2020 + OMS + CDC: TV fora do quarto) · ritual de até 30 minutos (SBP 2021) · refeição é afeto, sem tela (Ministério da Saúde + SBP) · birra pra dormir é comum até uns 4 anos (SBP 2018) · ler em voz alta desde bebê (AAP 2014). Conferir antes se a novela já usou o dado.
+**Pedido do Mateus (27/10):** muitas fontes, de vários países ("do céu ao limite"). Cada vídeo mistura pelo menos 3 instituições, de preferência de países diferentes. Fatos novos na seção "Mundo" do `BANCO-DE-FONTES.md`.
+
+### Semana de 02 a 08/11
+| Dia | Tema | Pontos e fontes | Paleta |
+|---|---|---|---|
+| Seg 02/11 | Quanto seu filho precisa dormir? | 1–2 anos: 11 a 14 h · 3–5 anos: 10 a 13 h (Academia Americana de Medicina do Sono, com a pediatria americana, 2016) · a OMS confirma (2019) · sempre nos mesmos horários de dormir e acordar (governo da Austrália, 2021) | azul-marinho e estrelas, gráfico de barras por idade |
+| Ter 03/11 | Telas por idade: o que 4 países dizem | Brasil: menos de 2 anos, nada; 2 a 5, até 1 h (SBP 2020) · Alemanha: 3 a 6 anos, até 30 min (diretriz nacional 2023) · França: sem TV antes dos 3 (regra 3-6-9-12, Santé.fr) · OMS: até 4 anos, no máximo 1 h | mapa-múndi com bandeirinhas |
+| Qua 04/11 | O autocontrole se treina brincando | não nasce pronto, é como uma torre de controle de aeroporto (Harvard) · faz de conta, contar histórias, dança da estátua, separar por cor e depois por forma (Harvard) · brincar ajuda nas funções executivas (Academia Americana de Pediatria, 2018) | amarelo e azul, aviãozinho e torre |
+| Qui 05/11 | Na mesa, sem tela | refeição é momento de afeto em família (Guia Alimentar, Ministério da Saúde, 2019) · sem tela nas refeições (SBP 2020) · rotina da refeição: lavar as mãos e pôr a mesa juntos (CDC) | terracota e verde-oliva |
+| Sex 06/11 | O pai que brinca faz diferença | pais que brincavam mais com o bebê aos 3 meses tiveram filhos com melhores testes aos 2 anos (Imperial College London, 2017) · pai calmo na hora do livro também ajudou (mesmo estudo) · brincar fortalece o vínculo com os pais (Academia Americana de Pediatria, 2018) | azul-petróleo e laranja |
+| Sáb 07/11 | Canção de ninar funciona? | bebês relaxam com canção de ninar até em outra língua: coração e pupila desaceleram (Harvard, 2020) · ritual calmo de até 30 minutos (SBP 2021) · "escova, livro, cama" (CDC) | rosa-chá e lua |
+| Dom 08/11 | a definir no domingo 01/11, com os números da semana | fonte nova, pesquisada e conferida antes | — |
+
+Regra: o dado do 12h não pode ser o mesmo da Família Tatu do mesmo dia ou da véspera (ver `PAUTA-20H.md`, temporada 2).
 
 ## Músicas
 - Já usadas: kids happy (amostra 1), kids-kids-happy (amostra 2), gentle baby sleep lullaby dream (Ter 27), lullaby-baby-sleeping (Qua 28).
