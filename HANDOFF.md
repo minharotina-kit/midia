@@ -24,6 +24,7 @@ Leia isto primeiro ao continuar o trabalho do Instagram @paisdarotina numa conve
 - Marca anônima, sem dados pessoais, sem comentar em contas dos outros.
 - **Legenda sem a linha "feito com IA"** (pedido do Mateus em 26/10): o próprio Instagram rotula.
 - 20h: Família Tatu com narradora estilo "Todo Mundo Odeia o Chris" (Nathalia), falas originais dos clipes do Mateus. 12h: informativo em motion 2D feito por mim (voz Amandinha calma, transição 3D suave, música emocional).
+- **Revisão dos números todo domingo às 21h** (pedido de 27/10): ver se os vídeos renderam e se ganhamos seguidores; sem crescimento, mudar a estratégia. A pauta da semana seguinte só é agendada depois dessa revisão e da aprovação dele.
 - **Muitas fontes, de vários países** (pedido de 27/10: "do céu ao limite"): cada vídeo mistura instituições diferentes; ver seção "Mundo" do banco de fontes.
 - **Dados reais nos dois horários** (pedido de 26/10, vale da parte 3 e do 12h de quarta em diante; os vídeos de 27/10 não mudam). Só fatos do `BANCO-DE-FONTES.md`. No 20h: 1 ou 2 dados por parte, falados pela narradora num congelado, com selo FONTE (`"src"` no config) e "Fonte:" na legenda. Plano em `PAUTA-20H.md`.
 
@@ -32,7 +33,7 @@ Leia isto primeiro ao continuar o trabalho do Instagram @paisdarotina numa conve
 - 12h: a definir. Plano: gerar imagem/clipe/música novos com o conector completo do ElevenLabs.
 
 ## Família Tatu
-- Temporada 2 "A Semana da Vovó" (31/10 a 08/11), 9 episódios com prompts, falas, dado e narradora planejada: https://claude.ai/artifact/Xe4DReBGcdYxCfCj9pU37B (cópia em `kit/familia-tatu-temporada2.html`).
+- Temporada 2 "A Semana da Vovó": eps 1 e 2 (sáb 31/10 e dom 01/11) na página; eps 3 a 9 em rascunho (`kit/familia-tatu-temporada2-rascunho-eps3a9.html`) até a revisão de domingo: https://claude.ai/artifact/Xe4DReBGcdYxCfCj9pU37B (cópia em `kit/familia-tatu-temporada2.html`).
 - Página com todos os prompts das partes 2 a 5: https://claude.ai/artifact/C9vah7DYV78AyL7CFhbrYS
 - Parte 2: clipes do Mateus até terça 27/10 17h → sai 20h. Partes 3 a 5: até quarta 17h.
 - Referências: `cenas/familia-3d/pais-tatu.jpg`, `cenas/familia-3d/bento-3d.jpg`. Clipes brutos da parte 1: `cenas/familia-3d/clipes-parte1/`.

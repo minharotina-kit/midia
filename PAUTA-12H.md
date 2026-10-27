@@ -30,7 +30,7 @@ Regras: nunca repetir tema, desenho ou música. Cada vídeo tem paleta e ilustra
 
 **Pedido do Mateus (27/10):** muitas fontes, de vários países ("do céu ao limite"). Cada vídeo mistura pelo menos 3 instituições, de preferência de países diferentes. Fatos novos na seção "Mundo" do `BANCO-DE-FONTES.md`.
 
-### Semana de 02 a 08/11
+### Semana de 02 a 08/11 (RASCUNHO: só vale depois da revisão dos números, domingo 01/11 às 21h)
 | Dia | Tema | Pontos e fontes | Paleta |
 |---|---|---|---|
 | Seg 02/11 | Quanto seu filho precisa dormir? | 1–2 anos: 11 a 14 h · 3–5 anos: 10 a 13 h (Academia Americana de Medicina do Sono, com a pediatria americana, 2016) · a OMS confirma (2019) · sempre nos mesmos horários de dormir e acordar (governo da Austrália, 2021) | azul-marinho e estrelas, gráfico de barras por idade |

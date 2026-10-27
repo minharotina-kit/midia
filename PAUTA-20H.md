@@ -30,7 +30,7 @@ Temporada 2 (a partir de 31/10): cada episódio nasce com 1 dado do banco já es
 
 ## Temporada 2 · "A Semana da Vovó" (31/10 a 08/11)
 A Vovó Tatu fica uma semana. Cada noite um conflito pequeno de rotina, e cada episódio traz 1 dado de um país diferente (pedido do Mateus em 27/10: muitas fontes, de vários lugares). A narradora fala o dado num congelado, com selo FONTE.
-Página com todos os prompts: ver o artefato "Família Tatu · Temporada 2".
+Página com os prompts dos eps 1 e 2: artefato "Família Tatu · Temporada 2". **Pedido do Mateus (27/10): planejar só até domingo.** Eps 3 a 9 abaixo são RASCUNHO (`kit/familia-tatu-temporada2-rascunho-eps3a9.html`), decididos na revisão dos números de domingo 01/11 às 21h.
 
 | Ep | Dia | Título | Dado (fonte) |
 |---|---|---|---|

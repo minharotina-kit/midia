@@ -1,0 +1,462 @@
+<title>Família Tatu · Temporada 2</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: uma coluna de "folha de produção" pro celular; cada parte é um bloco com imagens → clipes → envio. */
+:root {
+  --bg: #eef2f7;
+  --surface: #ffffff;
+  --surface-2: #f5f7fb;
+  --ink: #1f2a4d;
+  --muted: #5b6684;
+  --line: #d8deea;
+  --coral: #c9533f;
+  --coral-soft: #fbe6e1;
+  --green: #3f6e4b;
+  --green-soft: #e3efe5;
+  --tan: #a8682f;
+  --tan-soft: #f6e9da;
+  --f-display: "Fredoka", "Nunito", system-ui, sans-serif;
+  --f-body: "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11162a; --surface: #1a2139; --surface-2: #141a30; --ink: #e8ecf5; --muted: #a3acc4; --line: #2c3553;
+    --coral: #f08a79; --coral-soft: #3a2328; --green: #86b892; --green-soft: #1f3327; --tan: #e3a86b; --tan-soft: #33281d;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11162a; --surface: #1a2139; --surface-2: #141a30; --ink: #e8ecf5; --muted: #a3acc4; --line: #2c3553;
+  --coral: #f08a79; --coral-soft: #3a2328; --green: #86b892; --green-soft: #1f3327; --tan: #e3a86b; --tan-soft: #33281d;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 16px; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 48px;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.wrap { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+h1 { font-size: 2rem; font-weight: 700; }
+h2 { font-size: 1.5rem; font-weight: 700; }
+h3 { font-size: 1.05rem; font-weight: 600; }
+p { margin: 0; }
+.eyebrow { font-size: .78rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+header.top { padding-top: 28px; display: flex; flex-direction: column; gap: 10px; }
+header.top p { color: var(--muted); max-width: 60ch; }
+
+nav.jump {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg);
+  display: flex; gap: 8px; overflow-x: auto; padding-block: 10px; scrollbar-width: none;
+}
+nav.jump::-webkit-scrollbar { display: none; }
+nav.jump a {
+  flex: 0 0 auto; text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: .9rem; white-space: nowrap;
+}
+nav.jump a .n { color: var(--muted); font-weight: 600; margin-left: 4px; font-variant-numeric: tabular-nums; }
+nav.jump a.done { background: var(--green-soft); border-color: transparent; }
+
+.how { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.how div { background: var(--surface); border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 4px; }
+.how b { font-family: var(--f-display); font-weight: 600; font-size: 1.05rem; }
+.how span { color: var(--muted); font-size: .92rem; }
+@media (max-width: 560px) { .how { grid-template-columns: 1fr; } }
+
+table.agenda { width: 100%; border-collapse: collapse; font-size: .95rem; }
+.agenda-box { background: var(--surface); border-radius: 14px; overflow-x: auto; }
+table.agenda th, table.agenda td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+table.agenda tr:last-child td { border-bottom: 0; }
+table.agenda th { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 800; }
+table.agenda td:first-child { font-weight: 800; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.who { display: inline-block; font-size: .72rem; font-weight: 800; border-radius: 6px; padding: 1px 6px; margin-left: 4px; vertical-align: 1px; }
+.who.me { background: var(--green-soft); color: var(--green); }
+.who.you { background: var(--coral-soft); color: var(--coral); }
+
+section.ep { background: var(--surface); border-radius: 18px; padding: 20px 18px; display: flex; flex-direction: column; gap: 18px; scroll-margin-top: 64px; }
+.ep-head { display: flex; flex-direction: column; gap: 6px; }
+.ep-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.chip { font-size: .8rem; font-weight: 800; border-radius: 999px; padding: 3px 10px; background: var(--tan-soft); color: var(--tan); font-variant-numeric: tabular-nums; }
+.chip.prog { background: var(--surface-2); color: var(--muted); }
+.chip.prog.full { background: var(--green-soft); color: var(--green); }
+.ep-head p { color: var(--muted); }
+.hook { border-left: 3px solid var(--coral); padding: 2px 0 2px 12px; font-weight: 700; }
+.lesson { font-size: .9rem; color: var(--muted); }
+
+.step { display: flex; flex-direction: column; gap: 10px; }
+.step-title { display: flex; align-items: baseline; gap: 8px; }
+.step-title .tip { color: var(--muted); font-size: .9rem; }
+
+.item { border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); display: flex; flex-direction: column; }
+.item-row { display: flex; gap: 10px; align-items: flex-start; padding: 12px; }
+.item-row input[type=checkbox] { width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--green); flex: 0 0 auto; }
+.item-text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.item-text b { font-weight: 800; }
+.item-text .desc { color: var(--muted); font-size: .92rem; }
+.item-text .line { font-family: var(--f-display); font-weight: 500; color: var(--coral); }
+.uses { font-size: .78rem; font-weight: 800; color: var(--tan); }
+.item.is-done .item-text b, .item.is-done .item-text .desc { text-decoration: line-through; opacity: .6; }
+button.copy {
+  flex: 0 0 auto; font: 800 .85rem var(--f-body); color: var(--surface); background: var(--ink); border: 0; border-radius: 10px;
+  padding: 8px 12px; cursor: pointer; min-width: 74px;
+}
+button.copy.ok { background: var(--green); }
+button.copy:focus-visible, details summary:focus-visible, nav.jump a:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
+details { border-top: 1px dashed var(--line); }
+details summary { cursor: pointer; padding: 8px 12px; font-size: .82rem; font-weight: 700; color: var(--muted); list-style: none; }
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: "▸ "; }
+details[open] summary::before { content: "▾ "; }
+pre.prompt { margin: 0; padding: 0 12px 12px; font: 400 .8rem/1.55 var(--f-mono); white-space: pre-wrap; word-break: break-word; color: var(--ink); }
+.send { background: var(--green-soft); color: var(--green); border-radius: 12px; padding: 12px 14px; font-weight: 700; }
+.send span { color: var(--ink); font-weight: 600; }
+.note { background: var(--surface); border-radius: 14px; padding: 14px 16px; color: var(--muted); font-size: .92rem; display: flex; flex-direction: column; gap: 6px; }
+.note b { color: var(--ink); }
+footer { color: var(--muted); font-size: .85rem; text-align: center; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+.fact { background: var(--tan-soft); border-radius: 12px; padding: 10px 12px; font-size: .92rem; display: flex; flex-direction: column; gap: 4px; }
+.fact b { font-family: var(--f-display); font-weight: 600; color: var(--tan); }
+.fact a { color: var(--ink); }
+.narr { font-size: .9rem; color: var(--muted); }
+.narr i { color: var(--ink); font-style: normal; font-weight: 700; }
+ul.src { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: .92rem; }
+ul.src a { color: var(--ink); }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <span class="eyebrow">@paisdarotina · produção</span>
+    <h1>Família Tatu · Temporada 2</h1>
+    <p>"A Semana da Vovó": 9 episódios das 20h, de sábado 31/10 a domingo 08/11. Em cada um, um conflito de rotina e um dado real de um país diferente, que a narradora fala no meio da história.</p>
+  </header>
+
+  <nav class="jump" id="jump" aria-label="Ir para"><a href="#agenda">Agenda</a></nav>
+
+  <div class="how">
+    <div><b>1 · ChatGPT</b><span>Anexa as fotos dos pais, do Bento em 3D e a da Vovó (a imagem 5R da temporada 1) e cola o prompt de cada imagem.</span></div>
+    <div><b>2 · Grok ou Flow</b><span>Sobe a imagem indicada, cola o prompt do clipe e baixa o vídeo em pé (9:16).</span></div>
+    <div><b>3 · Me manda</b><span>Os 4 clipes juntos num vídeo só, ou separados, escrevendo "ep 1, 20h". Eu ponho narradora, dado com fonte, legenda, música e agendo.</span></div>
+  </div>
+
+  <section id="agenda" style="display:flex;flex-direction:column;gap:12px;scroll-margin-top:64px">
+    <h2>Agenda</h2>
+    <div class="agenda-box">
+      <table class="agenda">
+        <thead><tr><th>Dia</th><th>Episódio</th><th>Dado</th></tr></thead>
+        <tbody id="agendaBody"></tbody>
+      </table>
+    </div>
+    <p class="lesson">Prazo: clipes de cada episódio até umas 17h do dia dele. Pode adiantar quantos quiser: eu monto e agendo na hora.</p>
+  </section>
+
+  <div id="eps"></div>
+
+  <section class="ep" id="fontes">
+    <div class="ep-head"><span class="eyebrow">Conferido na fonte original</span><h2>Fontes da temporada</h2></div>
+    <ul class="src" id="srcList"></ul>
+  </section>
+
+  <div class="note">
+    <b>Se o Grok errar a fala</b>
+    <span>Gera o clipe sem fala ("no dialogue") e me manda assim mesmo. Eu ponho a fala com legenda e narradora.</span>
+    <b>Se o personagem sair diferente</b>
+    <span>Refaz só a imagem, anexando de novo as referências. Bento sempre com metade da altura dos pais; a Vovó sempre de xale lilás e coque.</span>
+  </div>
+
+  <footer>Os ✓ ficam salvos só neste aparelho.</footer>
+</div>
+<script>
+const PRE = "Same 3D animated style and the same armadillo characters from the attached images (parents, Bento and Vovó Tatu). Mamãe Tatu: round glasses, coral headband with a small bow, green cardigan. Papai Tatu: taller and rounder, navy t-shirt, dish towel on his shoulder, flip-flops. Bento: little armadillo about half the height of his parents. Vovó Tatu: elderly armadillo grandmother, small round glasses, lavender knitted shawl, flowered dress, grey hair bun.";
+const SUF = "Family animated feature film look, warm cinematic lighting, expressive and exaggerated faces. Vertical 9:16. Keep the top 20% of the frame calm and simple. No text, no letters, no numbers, no logos, no watermark.";
+const DAY = "Bento wears a yellow t-shirt and blue shorts.";
+const NIGHT = "Bento wears blue striped pajamas.";
+const img = (scene, outfit) => `${PRE} ${outfit || ""}\n\nScene: ${scene}\n\n${SUF}`;
+const vid = (motion, camera, audio) => `Animate this image.\nMotion: ${motion}\nCamera: ${camera}\nAudio: ${audio} No music, no subtitles.`;
+const say = (who, tone, line) => `${who} says in Brazilian Portuguese, ${tone}: "${line}".`;
+const V = { pai: "Papai Tatu, an adult male voice", mae: "Mamãe Tatu, an adult female voice", bento: "Bento, a little child voice", vovo: "Vovó Tatu, an elderly warm female voice" };
+
+const EPS = [
+{ id: "e1", n: 1, title: "O Presente da Vovó", day: "Sáb 31/10 · 20h",
+  sum: "A Vovó dá um tablet de presente. O Bento não larga nem pra jantar. A Mamãe inventa o timer do tablet.",
+  hook: "O timer apita e o Bento começa a inflar. Amanhã: a maior birra da família Tatu.",
+  fact: "De 2 a 5 anos, menos de 1 hora de tela por dia.", src: "Sociedade Canadense de Pediatria, 2017", url: "https://cps.ca/en/media/doctors-should-counsel-parents-of-young-children-on-screen-time", flag: "🇨🇦",
+  narr: ["A Vovó trouxe presente. O problema é que o presente tinha bateria.", "Fato: a Sociedade Canadense de Pediatria recomenda menos de 1 hora de tela por dia, de 2 a 5 anos."],
+  images: [
+    ["1A", "Sala: Vovó entregando uma caixa de presente, Bento abrindo com olhos brilhando, pais atrás trocando olhar preocupado",
+      img("The living room in the late afternoon. Vovó Tatu hands Bento a wrapped gift box with a big ribbon. Bento tears it open, eyes sparkling. Behind them, Mamãe and Papai Tatu exchange a worried look.", DAY)],
+    ["1B", "Sala, mais tarde: Bento hipnotizado no sofá com o tablet, prato de jantar intocado, Papai abanando a mão na frente dele",
+      img("The living room in the evening. Bento sits on the sofa hypnotized by a tablet (the screen faces away from the camera, only a soft blue glow on his face). A dinner plate sits untouched on a small table. Papai Tatu waves his hand in front of Bento's eyes, frustrated.", DAY)],
+    ["1C", "Sala: Mamãe ajoelhada mostrando um timer de cozinha em forma de tomate, Bento desconfiado abraçando o tablet",
+      img("The living room. Mamãe Tatu kneels at Bento's eye level holding up a red tomato-shaped kitchen timer. Bento hugs the tablet to his chest, suspicious, one eyebrow raised. Vovó watches from the armchair, amused.", DAY)],
+    ["1D", "Close: timer tocando na mesinha, Bento com o rosto vermelho e as bochechas infladas; Vovó tapando os ouvidos",
+      img("Close-up in the living room. The tomato kitchen timer rings on the small table, shaking. Bento's face turns red, cheeks puffed, about to explode in a tantrum. Behind him, Vovó Tatu covers her ears with both hands.", DAY)],
+  ],
+  clips: [
+    ["Clipe 1", "1A", "Pra você, meu netinho!", vid("Vovó hands over the box with a big smile; Bento rips the paper and gasps.", "static, slight push-in on Bento's sparkling eyes.", say(V.vovo, "sweet and proud", "Pra você, meu netinho") + " Paper tearing.")],
+    ["Clipe 2", "1B", "Bento? Terra chamando!", vid("Papai waves his hand in front of Bento's face; Bento doesn't blink. Papai leans closer, desperate.", "static medium shot, small zoom on Papai's face at the end.", say(V.pai, "half joking, half desperate", "Bento? Terra chamando") + " Faint game sounds.")],
+    ["Clipe 3", "1C", "Quando apitar, desliga. Combinado?", vid("Mamãe winds the timer and places it on the table; Bento nods slowly, still hugging the tablet.", "slow push-in toward Mamãe.", say(V.mae, "calm and firm", "Quando apitar, desliga. Combinado") + " Ticking of the timer.")],
+    ["Clipe 4", "1D", "(sem fala: só o timer)", vid("The timer rings and shakes; Bento's cheeks puff up more and more; Vovó covers her ears.", "fast zoom on Bento's red face.", "Loud kitchen timer ringing, no dialogue.")],
+  ] },
+{ id: "e2", n: 2, title: "Tô Com Raiva", day: "Dom 01/11 · 20h",
+  sum: "O timer apitou e veio a birra. O Papai grita e piora. A Vovó dá nome ao sentimento e o Bento se acalma.",
+  hook: "Amanhã: o Papai sai sem café da manhã e o Bento quer copiar.",
+  fact: "Colocar o sentimento em palavras acalmou a área de alarme do cérebro (estudo com adultos).", src: "Universidade da Califórnia (UCLA), 2007", url: "https://www.uclahealth.org/news/release/putting-feelings-into-words-produces-therapeutic-effects-in-the-brain-ucla-neuroimaging-study-supports-ancient-buddhist-teachings", flag: "🇺🇸",
+  narr: ["Domingo, sete da noite. O timer apitou.", "Fato: na Universidade da Califórnia, dar nome ao sentimento acalmou a área de alarme do cérebro. Em adultos. E pelo visto em tatus também."],
+  images: [
+    ["2A", "Sala: Bento de bruços no tapete esperneando; Mamãe segurando o tablet no alto; Papai com as mãos na cabeça",
+      img("The living room in the evening. Bento lies face down on the rug, kicking and pounding his fists in a big tantrum. Mamãe Tatu holds the tablet up high, calm. Papai Tatu stands with both hands on his head.", DAY)],
+    ["2B", "Papai inclinado apontando o dedo, dando bronca; Bento chorando ainda mais alto com lágrimas exageradas",
+      img("The living room. Papai Tatu leans over, pointing his finger and scolding with his mouth wide open. Bento cries even louder, comically big tears flying.", DAY)],
+    ["2C", "Vovó sentada no chão na altura do Bento, mão no peito, falando baixinho; Bento soluçando, parando de chorar",
+      img("The living room. Vovó Tatu sits on the floor at Bento's eye level, one hand on her chest, speaking softly. Bento sits up, sniffling, his crying slowing down, looking at her.", DAY)],
+    ["2D", "Bento abraçando a Vovó; Papai e Mamãe ao fundo se olhando surpresos",
+      img("The living room, warm lamp light. Bento hugs Vovó Tatu tightly, calm now. In the background, Mamãe and Papai Tatu look at each other, surprised and impressed.", DAY)],
+  ],
+  clips: [
+    ["Clipe 1", "2A", "Eu quero o tablet!", vid("Bento kicks and pounds the rug; Mamãe keeps the tablet up high; Papai paces in panic.", "static wide shot.", say(V.bento, "crying and shouting", "Eu quero o tablet") + " Tantrum noises.")],
+    ["Clipe 2", "2B", "Para com isso agora!", vid("Papai scolds with his finger up; Bento cries even louder, the tears fly.", "quick push-in on Bento's crying face.", say(V.pai, "loud and stressed", "Para com isso agora") + " Bento wailing louder.")],
+    ["Clipe 3", "2C", "Você tá com raiva. Eu sei.", vid("Vovó sits on the floor and speaks softly; Bento's sobs slow down and he looks at her.", "slow push-in toward Vovó and Bento.", say(V.vovo, "very soft and calm", "Você tá com raiva. Eu sei") + " Quiet room, small sniffles.")],
+    ["Clipe 4", "2D", "Tô com raiva.", vid("Bento sniffles, nods and hugs Vovó; the parents look at each other in surprise.", "static, gentle push-in on the hug.", say(V.bento, "sniffling, quiet", "Tô com raiva") + " Soft sigh.")],
+  ] },
+{ id: "e3", n: 3, title: "O Café da Vovó", day: "Seg 02/11 · 20h",
+  sum: "Segunda de manhã: o Papai sai correndo sem comer e o Bento copia. A Vovó põe todo mundo sentado por cinco minutinhos.",
+  hook: "Amanhã: o Bento conta uma história e o Papai só responde \"uhum\".",
+  fact: "No Japão, o governo tem uma campanha nacional: dormir cedo, acordar cedo e tomar café da manhã. O café ajuda a acertar o relógio do corpo.", src: "Ministério da Educação do Japão (MEXT) e relatório Shokuiku do governo japonês", url: "https://www.maff.go.jp/e/data/publish/attach/pdf/Part2.pdf", flag: "🇯🇵",
+  narr: ["Segunda-feira. O Papai inventou o café da manhã em movimento.", "Fato: no Japão, o governo tem uma campanha nacional: dormir cedo, acordar cedo e tomar café da manhã. O café ajuda a acertar o relógio do corpo."],
+  images: [
+    ["3A", "Cozinha de manhã: Papai saindo apressado com a chave na mão; Bento à mesa olhando pra ele",
+      img("A sunny kitchen in the morning. Papai Tatu rushes toward the door holding car keys, hair messy, skipping breakfast. Bento sits at the table watching him, an empty bowl in front of him.", DAY)],
+    ["3B", "Bento de braços cruzados empurrando a tigela, imitando o Papai",
+      img("The kitchen table in the morning. Bento crosses his arms and pushes his bowl away with a dramatic frown, imitating his father.", DAY)],
+    ["3C", "Vovó arrumando a mesa com frutas, pão e leite; um cartão-postal com o monte Fuji desenhado na mesa",
+      img("The kitchen in the morning. Vovó Tatu sets the table with fruit, bread and milk, humming. A small postcard with a drawing of Mount Fuji (no text) leans against the fruit bowl. She points to the chairs with a firm, loving look.", DAY)],
+    ["3D", "Mesa: Papai sentado de volta, todos comendo juntos, Bento de bigode de leite rindo",
+      img("The kitchen table in the morning light. Papai, Bento and Vovó Tatu eat breakfast together. Bento has a milk mustache and laughs. Papai smiles, relaxed, his car keys left on the table.", DAY)],
+  ],
+  clips: [
+    ["Clipe 1", "3A", "Tô atrasado, como depois!", vid("Papai grabs the keys and rushes to the door; Bento watches him closely.", "pan following Papai.", say(V.pai, "in a hurry", "Tô atrasado, como depois") + " Morning kitchen ambience.")],
+    ["Clipe 2", "3B", "Também não quero.", vid("Bento crosses his arms and pushes the bowl away, copying Papai.", "static medium shot, small push-in on Bento's frown.", say(V.bento, "stubborn", "Também não quero") + " Spoon clinking.")],
+    ["Clipe 3", "3C", "Senta, os dois. Cinco minutinhos.", vid("Vovó places the last plate, then points to the chairs; Papai freezes at the door and slowly turns back.", "slow push-in on Vovó.", say(V.vovo, "warm but firm", "Senta, os dois. Cinco minutinhos") + " Birds outside.")],
+    ["Clipe 4", "3D", "Tá gostoso, papai!", vid("Bento drinks milk and laughs with a milk mustache; Papai wipes it off, smiling.", "static, gentle push-in.", say(V.bento, "happy", "Tá gostoso, papai") + " Family laughing softly.")],
+  ] },
+{ id: "e4", n: 4, title: "Uhum", day: "Ter 03/11 · 20h",
+  sum: "O Bento conta a história do dia. O Papai, no celular, só diz \"uhum\". A Vovó ensina o vai e volta.",
+  hook: "Amanhã: o desafio da Vovó, cinco livros antes de dormir.",
+  fact: "O que mais pesa pra linguagem é o vai e volta da conversa, mais que a quantidade de palavras.", src: "MIT e Harvard, Psychological Science, 2018", url: "https://news.mit.edu/2018/conversation-boost-childrens-brain-response-language-0214", flag: "🇺🇸",
+  narr: ["Terça à noite. O Bento tinha uma história importante. O Papai tinha um celular.", "Fato: pesquisadores do MIT e de Harvard viram que o vai e volta da conversa pesa mais que a quantidade de palavras. É falar COM a criança, não só PARA ela."],
+  images: [
+    ["4A", "Sala no fim da tarde: Bento gesticulando animado com um desenho de dinossauro na mão; Papai no sofá olhando o celular",
+      img("The living room at dusk. Bento waves his arms excitedly, holding a crayon drawing of a dinosaur, telling a story. Papai Tatu sits on the sofa staring at his phone, not looking up.", DAY)],
+    ["4B", "Close no Papai com olhar vidrado no celular; Bento puxando o braço dele",
+      img("Close-up on the sofa. Papai Tatu stares at his phone with glazed eyes, the screen facing away from the camera. Bento tugs his arm, frustrated.", DAY)],
+    ["4C", "Vovó tirando o celular da mão do Papai com delicadeza; Papai sem graça",
+      img("The living room. Vovó Tatu gently takes the phone out of Papai Tatu's hand and places it face down on a cushion. Papai looks embarrassed. Bento watches, hopeful.", DAY)],
+    ["4D", "Papai sentado no chão com o Bento, os dois rindo; Bento mostrando o desenho",
+      img("The living room floor. Papai Tatu sits cross-legged facing Bento, both laughing. Bento shows the dinosaur drawing and Papai looks at it with real curiosity, eyebrows raised.", DAY)],
+  ],
+  clips: [
+    ["Clipe 1", "4A", "E aí o dinossauro voou!", vid("Bento jumps and flaps his arms like wings, showing the drawing; Papai doesn't look up.", "static wide shot.", say(V.bento, "very excited", "E aí o dinossauro voou") + " Living room ambience.")],
+    ["Clipe 2", "4B", "Uhum.", vid("Papai keeps scrolling; Bento tugs his arm twice and sighs.", "slow push-in on Papai's glazed eyes.", say(V.pai, "monotone, distracted", "Uhum") + " Phone tapping sounds.")],
+    ["Clipe 3", "4C", "Pergunta pra ele.", vid("Vovó takes the phone gently and puts it face down; Papai blinks, embarrassed.", "static medium shot.", say(V.vovo, "kind but firm", "Pergunta pra ele") + " Soft cushion thump.")],
+    ["Clipe 4", "4D", "Dinossauro voa? Como assim?", vid("Papai sits on the floor and asks with curiosity; Bento laughs and explains with big gestures.", "gentle push-in on both laughing.", say(V.pai, "curious and playful", "Dinossauro voa? Como assim") + " Bento giggling.")],
+  ] },
+{ id: "e5", n: 5, title: "Cinco Livros", day: "Qua 04/11 · 20h",
+  sum: "A Vovó desafia: cinco livros antes de dormir. O Papai acha moleza. No segundo livro, quem dorme é ele.",
+  hook: "Amanhã: o Bento descobre a grama. O Papai descobre a lama.",
+  fact: "Com 5 livros por dia, a criança ouve quase 1,5 milhão de palavras até os 5 anos. Com 1 por dia, quase 300 mil.", src: "Universidade Estadual de Ohio, 2019", url: "https://news.osu.edu/a-million-word-gap-for-children-who-arent-read-to-at-home/", flag: "🇺🇸",
+  narr: ["Quarta. A Vovó lançou um desafio.", "Fato: a Universidade Estadual de Ohio calculou: com cinco livros por dia, a criança ouve quase um milhão e meio de palavras até os 5 anos."],
+  images: [
+    ["5A", "Quarto à noite: Vovó segurando uma pilha de 5 livros coloridos; Papai rindo confiante; Bento na cama animado",
+      img("Bento's bedroom at night, warm lamp light. Vovó Tatu holds a tall stack of five colorful picture books (no text on covers). Papai Tatu laughs confidently, thumbs up. Bento sits in bed, excited.", NIGHT)],
+    ["5B", "Papai lendo o primeiro livro fazendo voz de lobo; Bento rindo",
+      img("Bento's bedroom at night. Papai Tatu reads the first picture book, making a funny wolf face with claws up. Bento laughs under the blanket.", NIGHT)],
+    ["5C", "Papai dormindo sentado com o livro aberto no rosto; Bento e Vovó segurando o riso",
+      img("Bento's bedroom at night. Papai Tatu has fallen asleep sitting by the bed, an open book resting on his face. Bento and Vovó Tatu cover their mouths, holding back laughter.", NIGHT)],
+    ["5D", "Bento 'lendo' as figuras pro Papai dormindo; Vovó cobrindo os dois com uma manta",
+      img("Bento's bedroom at night, dim warm light. Bento holds a picture book open, pretending to read it to sleeping Papai. Vovó Tatu gently covers both of them with a knitted blanket, smiling.", NIGHT)],
+  ],
+  clips: [
+    ["Clipe 1", "5A", "Cinco livros. Topa?", vid("Vovó lifts the stack of books; Papai laughs and gives a confident thumbs up.", "static, small push-in on Papai's confident grin.", say(V.vovo, "playful challenge", "Cinco livros. Topa") + " Quiet night ambience.")],
+    ["Clipe 2", "5B", "Eu vou soprar!", vid("Papai reads with a wolf face and blows air; Bento laughs and hides under the blanket.", "static medium shot.", say(V.pai, "deep funny wolf voice", "Eu vou soprar") + " Bento giggling.")],
+    ["Clipe 3", "5C", "(sem fala: o Papai ronca)", vid("Papai snores loudly; the book slides down his face; Bento and Vovó hold back laughter.", "slow push-in on Papai snoring.", "Loud cartoon snoring, muffled giggles, no dialogue.")],
+    ["Clipe 4", "5D", "Agora eu leio pra você, papai.", vid("Bento opens the book toward sleeping Papai; Vovó covers them with the blanket.", "very slow push-in.", say(V.bento, "whispering sweetly", "Agora eu leio pra você, papai") + " Soft night ambience.")],
+  ] },
+{ id: "e6", n: 6, title: "Pé na Grama", day: "Qui 05/11 · 20h",
+  sum: "O Papai quer o Bento limpinho. A Vovó leva todo mundo pro quintal. Termina com o Papai sentado na lama.",
+  hook: "Amanhã: a Vovó tira o Bento de perto do papel com uma pipa.",
+  fact: "Na Dinamarca, quem cresceu com menos verde por perto teve até 55% mais risco de problemas de saúde mental depois (ligação, não prova).", src: "Universidade de Aarhus, PNAS, 2019 (quase 1 milhão de pessoas)", url: "https://neurosciencenews.com/aging-green-space-mental-health-10824", flag: "🇩🇰",
+  narr: ["Quinta. O Papai tinha acabado de lavar o tênis do Bento.", "Fato: na Dinamarca, um estudo com quase 1 milhão de pessoas viu: quem cresceu com menos verde por perto teve até 55% mais risco de problemas de saúde mental depois."],
+  images: [
+    ["6A", "Porta dos fundos: Papai segurando o Bento de roupa limpinha, cara de 'nem pensar'; quintal verde com poça de lama; Vovó de galochas sorrindo",
+      img("The back door of the house on a sunny afternoon. Papai Tatu holds Bento back by the shoulders with a 'no way' face; Bento wears a clean white t-shirt and blue shorts. Beyond them, a green backyard with a muddy puddle. Vovó Tatu stands in the grass wearing rain boots, smiling mischievously.")],
+    ["6B", "Quintal: Vovó e Bento descalços na grama, Bento rindo, uma borboleta",
+      img("A green backyard in golden afternoon light. Vovó Tatu and Bento walk barefoot on the grass. Bento laughs, looking at a butterfly. Bento wears a white t-shirt and blue shorts.")],
+    ["6C", "Bento pulando numa poça de lama, respingos; Vovó aplaudindo; Papai horrorizado",
+      img("The backyard. Bento jumps into a muddy puddle with a huge splash, mud flying everywhere, laughing. Vovó Tatu claps. Papai Tatu stands at the edge, horrified, mud splashed on his navy t-shirt.")],
+    ["6D", "Papai sentado na lama depois de escorregar, todo mundo rindo, inclusive ele",
+      img("The backyard. Papai Tatu sits in the mud after slipping, covered in mud and laughing. Bento and Vovó Tatu laugh next to him. Mamãe Tatu watches from the back door, laughing with a hand over her mouth.")],
+  ],
+  clips: [
+    ["Clipe 1", "6A", "Lama? Nem pensar.", vid("Papai holds Bento back; Vovó waves them to come out.", "static medium shot.", say(V.pai, "firm, slightly panicked", "Lama? Nem pensar") + " Birds and backyard ambience.")],
+    ["Clipe 2", "6B", "Tira o sapato, Bento!", vid("Vovó kicks off her boots and wiggles her toes in the grass; Bento laughs and runs barefoot after a butterfly.", "slow pan following Bento.", say(V.vovo, "joyful", "Tira o sapato, Bento") + " Birds chirping.")],
+    ["Clipe 3", "6C", "Pulo do tatu!", vid("Bento jumps into the puddle; mud splashes on Papai; Vovó claps.", "static wide shot, slow-motion splash.", say(V.bento, "shouting happily", "Pulo do tatu") + " Big mud splash.")],
+    ["Clipe 4", "6D", "Tá bom, tá bom!", vid("Papai slips, sits in the mud, looks at his hands and bursts out laughing; everyone laughs.", "static, small push-in on Papai laughing.", say(V.pai, "giving up, laughing", "Tá bom, tá bom") + " Family laughter.")],
+  ] },
+{ id: "e7", n: 7, title: "Olha Lá Longe", day: "Sex 06/11 · 20h",
+  sum: "O Bento desenha com o nariz quase encostando no papel. A Vovó leva ele pra soltar pipa e olhar longe.",
+  hook: "Amanhã: jantar de sábado, todo mundo no celular. Menos a Vovó.",
+  fact: "Na China, quase 2 mil crianças ganharam 40 minutos a mais ao ar livre na escola. Três anos depois, menos delas ficaram míopes: 30% contra quase 40%.", src: "Univ. Sun Yat-sen, JAMA, 2015", url: "https://www.scientificamerican.com/article/more-time-outside-tied-to-less-nearsightedness-in-children", flag: "🇨🇳",
+  narr: ["Sexta. O Bento estava a dois centímetros do desenho.", "Fato: na China, quase 2 mil crianças ganharam 40 minutos a mais ao ar livre na escola. Três anos depois, menos delas ficaram míopes."],
+  images: [
+    ["7A", "Mesa: Bento desenhando com o rosto quase encostado no papel; Vovó observando com a mão no queixo",
+      img("A sunny dining table in the afternoon. Bento draws with crayons, his nose almost touching the paper. Vovó Tatu watches him with one hand on her chin, thinking.", DAY)],
+    ["7B", "Porta: Vovó segurando uma pipa colorida; Bento correndo até ela",
+      img("The front door on a windy afternoon. Vovó Tatu holds up a colorful diamond-shaped kite with a long tail. Bento runs toward her with arms open, amazed.", DAY)],
+    ["7C", "Campo aberto: pipa alta no céu, Bento segurando a linha com a Vovó, olhando pra cima; Papai correndo atrás",
+      img("An open grassy field under a big blue sky. The kite flies high. Bento holds the string together with Vovó Tatu, both looking far up into the sky. Papai Tatu runs behind them, out of breath.", DAY)],
+    ["7D", "Pôr do sol: Bento apontando o horizonte; Vovó e Papai sentados na grama",
+      img("The same field at sunset, golden light. Bento points far toward the horizon, amazed. Vovó and Papai Tatu sit on the grass next to him, smiling. The kite rests beside them.", DAY)],
+  ],
+  clips: [
+    ["Clipe 1", "7A", "Bento, olha lá longe.", vid("Vovó taps the table softly; Bento lifts his head from the paper and squints toward the window.", "slow push-in on Bento lifting his head.", say(V.vovo, "gentle", "Bento, olha lá longe") + " Crayon scratching, then quiet.")],
+    ["Clipe 2", "7B", "Uma pipa!", vid("Bento runs to Vovó; the kite tail flutters in the wind.", "static, slight tilt up to the kite.", say(V.bento, "amazed", "Uma pipa") + " Wind blowing.")],
+    ["Clipe 3", "7C", "Corre, Bento, corre!", vid("The kite climbs higher; Bento and Vovó pull the string; Papai runs behind, panting.", "wide shot, slow tilt up to the kite in the sky.", say(V.pai, "out of breath, cheering", "Corre, Bento, corre") + " Wind and laughter.")],
+    ["Clipe 4", "7D", "Vovó, dá pra ver o mundo todo!", vid("Bento points to the horizon; Vovó and Papai look where he points and smile.", "very slow push-in, sunset light.", say(V.bento, "full of wonder", "Vovó, dá pra ver o mundo todo") + " Soft evening breeze.")],
+  ] },
+{ id: "e8", n: 8, title: "A Cesta dos Celulares", day: "Sáb 07/11 · 20h",
+  sum: "Jantar de sábado: Papai e Mamãe no celular, o Bento imitando com a colher. A Vovó passa uma cesta. Ninguém escapa.",
+  hook: "Amanhã: a Vovó vai embora. Último episódio da temporada.",
+  fact: "Telas desligadas nas refeições, e os pais dão o exemplo.", src: "Diretriz nacional da Sociedade Alemã de Pediatria, 2023", url: "https://www.aerztezeitung.de/Medizin/Neue-S2k-Leitlinie-Die-Kleinsten-sollten-bildschirmfrei-bleiben-443093.html", flag: "🇩🇪",
+  narr: ["Sábado. Jantar em família. Pelo menos era o plano.", "Fato: na Alemanha, a diretriz nacional de pediatria diz: tela desligada nas refeições. E quem dá o exemplo são os pais."],
+  images: [
+    ["8A", "Mesa de jantar: Papai e Mamãe olhando o celular; Bento segurando uma colher no ouvido como se fosse telefone; Vovó observando",
+      img("The dining table at night, warm light, dinner served. Papai and Mamãe Tatu stare at their phones (screens facing away). Bento holds a spoon to his ear like a phone, imitating them with a serious face. Vovó Tatu watches with raised eyebrows.", NIGHT)],
+    ["8B", "Vovó se levantando com uma cesta de palha, olhar firme e divertido",
+      img("The dining table at night. Vovó Tatu stands up holding a woven straw basket, with a firm but playful look over her glasses.", NIGHT)],
+    ["8C", "Papai colocando o celular na cesta devagar, cara de sofrimento; Mamãe rindo",
+      img("The dining table at night. Papai Tatu slowly lowers his phone into the straw basket, with an exaggerated suffering face. Mamãe Tatu laughs and drops hers in too. Bento claps.", NIGHT)],
+    ["8D", "Família rindo à mesa, conversando; Bento contando algo com as mãos",
+      img("The dining table at night, cozy light. The whole family laughs together over dinner. Bento tells a story with big hand gestures. The straw basket with the phones sits on a shelf in the background.", NIGHT)],
+  ],
+  clips: [
+    ["Clipe 1", "8A", "Alô? Tô ocupado.", vid("Bento holds the spoon to his ear like a phone, imitating his parents; they don't notice.", "slow push-in on Bento's serious face.", say(V.bento, "imitating an adult, serious", "Alô? Tô ocupado") + " Phone notification sounds.")],
+    ["Clipe 2", "8B", "Todo mundo. Na cesta.", vid("Vovó stands up and holds out the basket; the parents look up slowly.", "static medium shot, small zoom on Vovó's face.", say(V.vovo, "firm and playful", "Todo mundo. Na cesta") + " Chair scraping.")],
+    ["Clipe 3", "8C", "Só mais uma mensagem...", vid("Papai lowers the phone into the basket in slow motion; Mamãe laughs and drops hers.", "slow motion feel, push-in on Papai's suffering face.", say(V.pai, "begging dramatically", "Só mais uma mensagem") + " Phones dropping into the basket.")],
+    ["Clipe 4", "8D", "E aí, filho, como foi seu dia?", vid("Mamãe turns to Bento; Bento starts telling a story with big gestures; everyone laughs.", "gentle push-in on the table.", say(V.mae, "warm and curious", "E aí, filho, como foi seu dia") + " Cutlery and laughter.")],
+  ] },
+{ id: "e9", n: 9, title: "A Vovó Vai Embora", day: "Dom 08/11 · 20h", finale: true,
+  sum: "Domingo de despedida. O Bento não quer soltar. A Vovó deixa um cartão novo no quadro: ligar pra Vovó toda noite. Fim da temporada 2.",
+  hook: "Fim da temporada 2. \"Temporada 3 em breve.\"",
+  fact: "Harvard acompanha as mesmas pessoas desde 1938: o que mais previu quem estava feliz e com saúde aos 80 anos foram as relações boas, mais que o colesterol.", src: "Estudo do Desenvolvimento Adulto de Harvard (desde 1938)", url: "https://news.harvard.edu/gazette/story/2023/02/work-out-daily-ok-but-how-socially-fit-are-you", flag: "🇺🇸",
+  narr: ["Domingo. A semana da Vovó tinha acabado.", "Fato: Harvard acompanha as mesmas pessoas desde 1938. O que mais previu felicidade e saúde aos 80 anos? Relações boas. Mais do que o colesterol."],
+  images: [
+    ["9A", "Porta de casa com a mala: Bento agarrado na perna da Vovó; pais emocionados atrás",
+      img("The front door on a Sunday afternoon. Vovó Tatu stands with her small suitcase. Bento hugs her leg tightly, eyes teary. Mamãe and Papai Tatu stand behind, touched.", DAY)],
+    ["9B", "Cozinha: Vovó colando no quadro da geladeira um cartão novo com um telefone desenhado; Bento olhando",
+      img("The kitchen. Vovó Tatu sticks a new picture card with a drawing of a phone (no text) onto the routine chart on the fridge. Bento watches closely, his sadness turning into curiosity.", DAY)],
+    ["9C", "Abraço em grupo na porta: a família toda abraçando a Vovó",
+      img("The front door in golden afternoon light. The whole family hugs Vovó Tatu in a big group hug. Papai Tatu wipes a tear with his dish towel.", DAY)],
+    ["9D", "Noite: Bento na cama em videochamada com a Vovó no celular; pais na porta sorrindo",
+      img("Bento's bedroom at night, warm lamp light. Bento lies in bed holding a phone on a video call; Vovó Tatu's warm face is visible on the phone screen. Mamãe and Papai Tatu smile at the door.", NIGHT)],
+  ],
+  clips: [
+    ["Clipe 1", "9A", "Fica mais um pouquinho, vovó!", vid("Bento squeezes Vovó's leg; Vovó kneels and strokes his head.", "slow push-in on Bento's teary face.", say(V.bento, "pleading, teary", "Fica mais um pouquinho, vovó") + " Soft afternoon ambience.")],
+    ["Clipe 2", "9B", "Toda noite, liga pra vovó.", vid("Vovó sticks the phone card on the chart and taps it twice; Bento smiles a little.", "slow push-in on the card, then on Vovó's smile.", say(V.vovo, "warm and tender", "Toda noite, liga pra vovó") + " Quiet kitchen.")],
+    ["Clipe 3", "9C", "Volta logo, tá?", vid("Group hug; Papai wipes a tear with the dish towel; Vovó laughs.", "static, gentle push-in on the hug.", say(V.pai, "emotional, trying not to cry", "Volta logo, tá") + " Soft laughter.")],
+    ["Clipe 4", "9D", "Boa noite, vovó.", vid("Bento yawns and talks to Vovó on the phone; his eyes close; the parents dim the light.", "very slow push-in, light dims.", say(V.bento, "sleepy whisper", "Boa noite, vovó") + " Quiet night ambience.")],
+  ] },
+];
+
+const ORG = { e1: "Canadá · Sociedade de Pediatria", e2: "EUA · UCLA", e3: "Japão · governo", e4: "EUA · MIT e Harvard", e5: "EUA · Ohio State", e6: "Dinamarca · Univ. de Aarhus", e7: "China · Univ. Sun Yat-sen", e8: "Alemanha · Soc. de Pediatria", e9: "EUA · Harvard" };
+const KEY = "tatu-t2-v1";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch (e) { state = {}; }
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+let DESC = {};
+function itemHTML(epId, kind, code, label, sub, line, prompt) {
+  const id = `${epId}-${kind}-${code.replace(/\s+/g, "")}`;
+  const done = !!state[id];
+  return `<div class="item${done ? " is-done" : ""}" data-id="${id}">
+    <div class="item-row">
+      <input type="checkbox" id="${id}" aria-label="Feito: ${esc(label)}"${done ? " checked" : ""}>
+      <div class="item-text">
+        <b>${esc(label)}</b>
+        ${sub ? `<span class="uses">${esc(sub)}</span>` : ""}
+        ${line ? `<span class="line">“${esc(line)}”</span>` : ""}
+        <span class="desc">${esc(kind === "img" ? (DESC[code] || "") : "")}</span>
+      </div>
+      <button class="copy" type="button" data-copy="${id}">Copiar</button>
+    </div>
+    <details><summary>ver o prompt</summary><pre class="prompt" id="pr-${id}">${esc(prompt)}</pre></details>
+  </div>`;
+}
+function render() {
+  document.getElementById("agendaBody").innerHTML = EPS.map(ep => `<tr><td>${esc(ep.day.split(" · ")[0])}</td><td>Ep ${ep.n} · ${esc(ep.title)}${ep.finale ? ' <span class="who me">fim da temporada</span>' : ""}</td><td>${ep.flag} ${esc(ORG[ep.id])}</td></tr>`).join("");
+  document.getElementById("eps").innerHTML = EPS.map(ep => {
+    ep.images.forEach(([c, d]) => DESC[c] = d);
+    const imgs = ep.images.map(([c, d, p]) => itemHTML(ep.id, "img", c, `Imagem ${c}`, "", "", p)).join("");
+    const clips = ep.clips.map(([c, u, line, p]) => itemHTML(ep.id, "clip", c, c, `usa a imagem ${u}`, line, p)).join("");
+    return `<section class="ep" id="${ep.id}">
+      <div class="ep-head">
+        <span class="eyebrow">Família Tatu · temporada 2 · ep ${ep.n}</span>
+        <h2>${esc(ep.title)}</h2>
+        <div class="ep-meta"><span class="chip">${esc(ep.day)}</span><span class="chip prog" id="prog-${ep.id}"></span></div>
+        <p>${esc(ep.sum)}</p>
+        <div class="fact"><b>${ep.flag} O dado do episódio</b><span>${esc(ep.fact)}</span><span>Fonte: <a href="${ep.url}" target="_blank" rel="noopener">${esc(ep.src)}</a></span></div>
+        <p class="narr">A narradora (eu faço): ${ep.narr.map(n => `<i>“${esc(n)}”</i>`).join(" ")}</p>
+        <p class="hook">Gancho: ${esc(ep.hook)}</p>
+      </div>
+      <div class="step"><div class="step-title"><h3>Imagens no ChatGPT</h3><span class="tip">${ep.images.length} imagens</span></div>${imgs}</div>
+      <div class="step"><div class="step-title"><h3>Clipes no Grok ou no Flow</h3><span class="tip">${ep.clips.length} clipes de 5 s</span></div>${clips}</div>
+      <p class="send">Me manda: <span>os ${ep.clips.length} clipes escrito "ep ${ep.n}, 20h", na ordem (1 a ${ep.clips.length}).</span></p>
+    </section>`;
+  }).join("");
+  document.getElementById("srcList").innerHTML = EPS.map(ep => `<li>${ep.flag} Ep ${ep.n}: <a href="${ep.url}" target="_blank" rel="noopener">${esc(ep.src)}</a></li>`).join("");
+  document.getElementById("jump").innerHTML = `<a href="#agenda">Agenda</a>` + EPS.map(ep => `<a href="#${ep.id}" id="nav-${ep.id}">Ep ${ep.n}<span class="n" id="navn-${ep.id}"></span></a>`).join("") + `<a href="#fontes">Fontes</a>`;
+  progress();
+}
+function progress() {
+  EPS.forEach(ep => {
+    const ids = ep.clips.map(([c]) => `${ep.id}-clip-${c.replace(/\s+/g, "")}`);
+    const n = ids.filter(i => state[i]).length;
+    const chip = document.getElementById(`prog-${ep.id}`);
+    chip.textContent = `${n}/${ids.length} clipes`;
+    chip.classList.toggle("full", n === ids.length);
+    document.getElementById(`navn-${ep.id}`).textContent = `${n}/${ids.length}`;
+    document.getElementById(`nav-${ep.id}`).classList.toggle("done", n === ids.length);
+  });
+}
+document.addEventListener("change", e => {
+  if (e.target.matches('.item input[type=checkbox]')) {
+    state[e.target.id] = e.target.checked;
+    e.target.closest(".item").classList.toggle("is-done", e.target.checked);
+    save(); progress();
+  }
+});
+document.addEventListener("click", async e => {
+  const b = e.target.closest("button.copy");
+  if (!b) return;
+  const pre = document.getElementById("pr-" + b.dataset.copy);
+  const text = pre.textContent;
+  try {
+    await navigator.clipboard.writeText(text);
+    b.textContent = "Copiado"; b.classList.add("ok");
+    setTimeout(() => { b.textContent = "Copiar"; b.classList.remove("ok"); }, 1600);
+  } catch (err) {
+    pre.closest("details").open = true;
+    const r = document.createRange(); r.selectNodeContents(pre);
+    const s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    b.textContent = "Selecionado";
+    setTimeout(() => { b.textContent = "Copiar"; }, 1600);
+  }
+});
+render();
+if (location.hash) { const t = document.querySelector(location.hash); if (t) t.scrollIntoView(); }
+</script>
