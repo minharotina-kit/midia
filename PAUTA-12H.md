@@ -10,9 +10,10 @@ Regras: nunca repetir tema, desenho ou música. Cada vídeo tem paleta e ilustra
 4. **Visual:** `tools/motion/info-2710-v2.html` é o molde (GSAP + Playwright, `render.js`).
    - Transição 3D suave: a cena vai pra trás e a próxima chega de baixo girando, com `transformPerspective` por cena e **sem preserve-3d** (dá corte no texto).
    - Câmera com zoom lento e fundo que desce a cada troca. Sem tremidas rápidas.
-5. **Mistura com ganho fixo** (lição de 27/10): o loudnorm dinâmico na voz abaixou o fim da frase e a música cobriu "dia difícil". Agora: medir a voz e a música (ebur128), aplicar volume fixo pra -16 e -27, somar, ganho fixo pra -14 e limitador. Final de frase baixinho: subir uns +8 dB só naquele trecho. Sempre transcrever o áudio final pra conferir que nenhuma palavra sumiu.
-6. **Música emocional**, que ele prefere à alegre. Volume fixo, sem ducking (o sobe e desce pareceu defeito): música `loudnorm I=-27`, voz `I=-16`, total -14 LUFS.
-7. Exporto em até 20 MB, subo em `AAAA-MM-DD-.../`, agendo com `send_later` pra 11h59 e mando a prévia.
+5. **Ferramentas:** `tools/pausas.py` (cortes, pausas e atempo 0,9, gera o cues.json) e `tools/mix12h.sh` (mistura com ganho fixo). Palavra fraca (ex.: "Mito." solto): suba +5 dB só nela antes da mistura.
+6. **Mistura com ganho fixo** (lição de 27/10): o loudnorm dinâmico na voz abaixou o fim da frase e a música cobriu "dia difícil". Agora: medir a voz e a música (ebur128), aplicar volume fixo pra -16 e -27, somar, ganho fixo pra -14 e limitador. Final de frase baixinho: subir uns +8 dB só naquele trecho. Sempre transcrever o áudio final pra conferir que nenhuma palavra sumiu.
+7. **Música emocional**, que ele prefere à alegre. Volume fixo, sem ducking (o sobe e desce pareceu defeito): música `loudnorm I=-27`, voz `I=-16`, total -14 LUFS.
+8. Exporto em até 20 MB, subo em `AAAA-MM-DD-.../`, agendo com `send_later` pra 11h59 e mando a prévia.
 
 ## Temas
 **Pedido do Mateus (26/10):** cada vídeo com dados reais e fontes fortes, de várias áreas (pediatria brasileira, OMS, pediatria americana, CDC, Harvard, estudos com milhares de crianças), dizendo o nome da instituição na tela e na voz. Tudo vem do `BANCO-DE-FONTES.md`. Misturar pelo menos 2 fontes diferentes por vídeo.
@@ -21,7 +22,7 @@ Regras: nunca repetir tema, desenho ou música. Cada vídeo tem paleta e ilustra
 |---|---|---|---|
 | Ter 27/10 ✅ | 3 erros na hora de dormir | horário fixo · ritual calmo · mesma ordem (AAP) | noite azul |
 | Qua 28/10 ✅ agendado | Elogio e bronca: o que a ciência diz | palmada não ensina autocontrole, grito não melhora o comportamento (AAP 2018) · o que funciona: elogiar o comportamento bom, combinar regras antes, cumprir sempre (AAP 2018) · descrever o que ele faz ajuda a autoestima (CDC) · `2026-10-28-info-elogio-bronca/`, molde `tools/motion/info-2810.html` | nascer do sol (pêssego) |
-| Qui 29/10 | Mito ou verdade? | "Fim de semana pode dormir qualquer hora" MITO (SBP 2021) · "Tela antes de dormir relaxa" MITO (SBP 2021: 1 h antes, melatonina) · "Rotina ajuda o comportamento" VERDADE (UCL 2013, 10 mil crianças) | verde e coral com carimbos |
+| Qui 29/10 ✅ agendado | Mito ou verdade? | "Fim de semana pode dormir qualquer hora" MITO (SBP 2021 + governo da Austrália 2021) · "Tela antes de dormir relaxa" MITO (SBP 2021 + Sociedade Canadense de Pediatria 2017: 1 h antes) · "Birra pra dormir é normal até uns 4 anos" VERDADE (SBP 2018; luz baixa e banho morno) · troquei o VERDADE da UCL 2013 porque Kelly 2013 entra na sexta · `2026-10-29-info-mito-verdade/`, molde `tools/motion/info-2910.html` | verde e coral com carimbos, termina de noite com o Bento na cama |
 | Sex 30/10 | O que a ciência descobriu sobre rotina de dormir | 10.085 crianças (Mindell 2015) · 405 famílias, 3 semanas, mães de melhor humor (Mindell 2009) · 10 mil crianças em Londres, efeito reversível (Kelly 2013) | lua e verde-água, contadores e gráficos |
 | Sáb 31/10 | Depois da escola: o que 3 instituições recomendam | 3 horas de movimento por dia até os 4 anos (OMS) · de 3 a 5 anos, 1 hora disso é brincadeira intensa, e nada de ficar preso mais de 1 hora seguida no carrinho ou cadeirinha (governo da Austrália, 2021) · brincar constrói o cérebro (Academia Americana de Pediatria, 2018) | tarde no parque |
 | Dom 01/11 | O cérebro do seu filho e o "vai e volta" | mais de 1 milhão de conexões por segundo nos primeiros anos (Harvard) · responder quando ele puxa conversa constrói o cérebro (Harvard) · ler em voz alta todo dia desde bebê (Academia Americana de Pediatria, 2014) · quem ouve mais histórias em casa ativa mais as áreas da imaginação (Hospital Infantil de Cincinnati, 2015) | lilás |
@@ -44,6 +45,6 @@ Regras: nunca repetir tema, desenho ou música. Cada vídeo tem paleta e ilustra
 Regra: o dado do 12h não pode ser o mesmo da Família Tatu do mesmo dia ou da véspera (ver `PAUTA-20H.md`, temporada 2).
 
 ## Músicas
-- Já usadas: kids happy (amostra 1), kids-kids-happy (amostra 2), gentle baby sleep lullaby dream (Ter 27), lullaby-baby-sleeping (Qua 28).
-- Sobra de ninar/emocional: só music-box-sleep-lullaby (pra quinta). Sexta em diante precisa de música nova do Mateus. As de comédia ficam pra Família Tatu.
+- Já usadas: kids happy (amostra 1), kids-kids-happy (amostra 2), gentle baby sleep lullaby dream (Ter 27), lullaby-baby-sleeping (Qua 28), music-box-sleep-lullaby (Qui 29).
+- **Acabaram as emocionais.** Sexta em diante: música nova do Mateus ou o piano próprio (`tools/musica.py piano`, semente nova). As de comédia ficam pra Família Tatu.
 - Pedi a ele: buscas "emotional piano", "heartwarming", "sentimental", "inspiring emotional".
