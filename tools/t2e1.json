@@ -1,0 +1,30 @@
+{
+  "name": "tatu-t2-ep1",
+  "dir": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e",
+  "title": ["Família Tatu"],
+  "subtitle": "T2 · Ep 1 · O Presente da Vovó",
+  "title_until": 2.4,
+  "segments": [
+    {"freeze": "c1.mp4", "at": 0.05, "dur": 2.4, "narr": [[0.3, "n1"]]},
+    {"clip": "c1.mp4", "t0": 0.0, "t1": 4.6, "caps": [[0.45, 2.2, "Pra você, meu netinho.", "vovo"]], "narr": [[2.35, "n2"]]},
+    {"clip": "c2.mp4", "t0": 0.2, "t1": 5.0, "caps": [[0.3, 1.0, "Bento?", "pai"], [1.55, 2.6, "Terra chamando.", "pai"]], "narr": [[2.55, "n3"]]},
+    {"clip": "c3.mp4", "t0": 0.4, "t1": 4.9, "caps": [[0.25, 1.7, "Quando apitar, desliga.", "mae"], [1.85, 2.6, "Combinado?", "mae"]], "narr": [[2.75, "n4"]], "src": [[2.65, 9.25, "Sociedade Canadense de Pediatria"]]},
+    {"freeze": "c3.mp4", "at": 4.85, "dur": 4.8},
+    {"clip": "c4.mp4", "t0": 1.0, "t1": 5.0},
+    {"clip": "c5.mp4", "t0": 0.0, "t1": 4.2},
+    {"freeze": "c5.mp4", "at": 4.15, "dur": 3.1, "narr": [[0.2, "n5"]]},
+    {"card": 3.6, "lines": ["Ep 2:", "Tô Com Raiva"], "when": "amanhã, 20h", "narr": [[0.5, "n6"]]}
+  ],
+  "narr": {
+    "n1": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e/n1b.wav", "Sábado. A Vovó chegou com presente."],
+    "n2": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e/n2b.wav", "O problema é que o presente tinha bateria."],
+    "n3": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e/n3b.wav", "Duas horas depois, o jantar já tinha esfriado."],
+    "n4": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e/n4b.wav", "Fato: a Sociedade Canadense de Pediatria recomenda menos de 1 hora de tela por dia, de 2 a 5 anos."],
+    "n5": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e/n5b.wav", "Contagem regressiva pra maior birra da família Tatu."],
+    "n6": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e/n6b.wav", "Ninguém nessa casa estava preparado."]
+  },
+  "music": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/musica/pixabay/5b425938-funny-playful-262598.mp3",
+  "music_start": 0,
+  "music_db": -19,
+  "narr_db": 11
+}
