@@ -26,7 +26,7 @@ Temporada 2 (a partir de 31/10): cada episódio nasce com 1 dado do banco já es
 - Parte 3: `2026-10-28-tatu-parte3/` (commit de2eeb2), agendada 28/10 22:59Z. Música: comedy-comedy-music-614068. Dado: AAP, noite anterior.
 - Parte 4: `2026-10-29-tatu-parte4/`, agendada 29/10 22:59Z. Música: comedy-bgm-funny-background-music-583242. Dado: AAP, oferecer escolha.
 - Parte 5 (fim da temporada 1): `2026-10-30-tatu-parte5/`, agendada 30/10 22:59Z. Música: comedy-cartoon-funny-background-music-365347. Dado: AAP, previsível sim, rígida demais entedia. Cartão final: "Temporada 2 em breve".
-- Músicas de comédia já usadas: funny-bouncy-cartoon-mischief (parte 2), comedy-comedy-music-614068 (parte 3), comedy-bgm-funny-background-music-583242 (parte 4), comedy-cartoon-funny-background-music-365347 (parte 5). Sobram: funny-playful-262598, funny-funny-music-595118, funny-funny-music-611043, comedy-comedy-music-585937, comedy-cartoon-funny-background-music-482003.
+- Músicas de comédia já usadas: funny-bouncy-cartoon-mischief (parte 2), comedy-comedy-music-614068 (parte 3), comedy-bgm-funny-background-music-583242 (parte 4), comedy-cartoon-funny-background-music-365347 (parte 5). T2 ep 1: funny-playful-262598; T2 ep 2: funny-funny-music-595118. Sobram: funny-funny-music-611043, comedy-comedy-music-585937, comedy-cartoon-funny-background-music-482003.
 
 ## Temporada 2 · "A Semana da Vovó" (31/10 a 08/11)
 A Vovó Tatu fica uma semana. Cada noite um conflito pequeno de rotina, e cada episódio traz 1 dado de um país diferente (pedido do Mateus em 27/10: muitas fontes, de vários lugares). A narradora fala o dado num congelado, com selo FONTE.
@@ -34,8 +34,8 @@ Página com os prompts dos eps 1 e 2: artefato "Família Tatu · Temporada 2". *
 
 | Ep | Dia | Título | Dado (fonte) |
 |---|---|---|---|
-| 1 | Sáb 31/10 | O Presente da Vovó | 2 a 5 anos: menos de 1 h de tela por dia (Sociedade Canadense de Pediatria, 2017) |
-| 2 | Dom 01/11 | Tô Com Raiva | colocar o sentimento em palavras acalmou a área de alarme do cérebro, em adultos (UCLA, 2007) |
+| 1 ✅ agendado | Sáb 31/10 | O Presente da Vovó | 2 a 5 anos: menos de 1 h de tela por dia (Sociedade Canadense de Pediatria, 2017) |
+| 2 ✅ agendado | Dom 01/11 | Tô Com Raiva | colocar o sentimento em palavras acalmou a área de alarme do cérebro, em adultos (UCLA, 2007) |
 | 3 | Seg 02/11 | O Café da Vovó | campanha nacional do Japão: dormir cedo, acordar cedo, café da manhã; o café acerta o relógio do corpo (governo do Japão) |
 | 4 | Ter 03/11 | Uhum | o vai e volta da conversa pesa mais que a quantidade de palavras (MIT e Harvard, 2018) |
 | 5 | Qua 04/11 | Cinco Livros | 5 livros por dia ≈ 1,5 milhão de palavras até os 5 anos (Ohio State, 2019) |

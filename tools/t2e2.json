@@ -1,0 +1,29 @@
+{
+  "name": "tatu-t2-ep2",
+  "dir": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e2",
+  "title": ["Família Tatu"],
+  "subtitle": "T2 · Ep 2 · Tô Com Raiva",
+  "title_until": 2.7,
+  "segments": [
+    {"freeze": "c1.mp4", "at": 0.05, "dur": 3.0, "narr": [[0.3, "n1"]]},
+    {"clip": "c1.mp4", "t0": 0.3, "t1": 4.6, "caps": [[0.45, 2.0, "Eu quero o tablet!", "bento"]]},
+    {"clip": "c2.mp4", "t0": 0.2, "t1": 4.9, "caps": [[0.3, 1.5, "Para com isso agora!", "pai"]], "narr": [[3.0, "n2"]]},
+    {"clip": "c3.mp4", "t0": 0.4, "t1": 4.9, "caps": [[0.25, 1.4, "Você tá com raiva.", "vovo"], [1.9, 2.65, "Eu sei.", "vovo"]], "narr": [[2.85, "n3"]], "src": [[2.75, 10.1, "Universidade da Califórnia (UCLA)"]]},
+    {"freeze": "c3.mp4", "at": 4.85, "dur": 5.7},
+    {"clip": "c4.mp4", "t0": 0.5, "t1": 5.0, "caps": [[0.4, 1.6, "Tô com raiva.", "bento"]], "narr": [[2.4, "n4"]]},
+    {"clip": "c5.mp4", "t0": 0.2, "t1": 4.0, "narr": [[1.2, "n5"]]},
+    {"card": 3.9, "lines": ["A Semana", "da Vovó"], "when": "continua em breve", "narr": [[0.4, "n6"]]}
+  ],
+  "narr": {
+    "n1": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e2/n1a.wav", "Onde a gente parou? Ah, é. O timer apitou."],
+    "n2": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e2/n2a.wav", "Spoiler: gritar não ajudou."],
+    "n3": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e2/n3a.wav", "Fato: na Universidade da Califórnia, colocar o sentimento em palavras acalmou a área de alarme do cérebro. Em adultos."],
+    "n4": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e2/n4a.wav", "E pelo visto em tatus também."],
+    "n5": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e2/n5a.wav", "O Papai anotou tudo."],
+    "n6": ["/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/t2e2/n6a.wav", "E a Vovó ainda tinha uma semana inteira pela frente."]
+  },
+  "music": "/tmp/claude-0/-home-claude/5d8bda1a-7926-5607-9e1a-eeb000255e05/scratchpad/musica/pixabay/6112fd3d-funny-funny-music-595118.mp3",
+  "music_start": 0,
+  "music_db": -19,
+  "narr_db": 11
+}
