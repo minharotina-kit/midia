@@ -19,7 +19,25 @@ BORDA = 1.2                     # 2 × 0,6 mm de moldura
 OUT = os.path.join(AQUI, 'final', 'quadros')
 os.makedirs(OUT, exist_ok=True)
 
-CAPA = 'entrada/capa.jpg'       # troque aqui quando chegar a capa nova (1024×1536)
+CAPA_NOVA = 'entrada/capa-nova.png'   # quando chegar, é só pôr o arquivo aqui e rodar de novo
+CAPA = CAPA_NOVA if os.path.exists(os.path.join(AQUI, CAPA_NOVA)) else 'entrada/capa.jpg'
+DPI_MIN = 200                          # a moldura nunca fica maior que a imagem aguenta a 200 dpi
+
+
+def capa_src():
+    if CAPA != CAPA_NOVA:
+        return CAPA
+    dst = os.path.join(AQUI, 'final', 'capa-nova.jpg')  # JPG 92 no PDF: o PNG pesaria o dobro
+    Image.open(os.path.join(AQUI, CAPA)).convert('RGB').save(dst, quality=92, optimize=True)
+    return 'final/capa-nova.jpg'
+
+
+def moldura_capa():
+    if CAPA != CAPA_NOVA:
+        return ''  # capa provisória: tamanho aprovado (104 × 156 mm)
+    w, h = Image.open(os.path.join(AQUI, CAPA)).size
+    larg = min(w / DPI_MIN * 25.4, 122.0, 178.0 * w / h)  # 178 mm é a altura que cabe na capa
+    return f' style="width:{larg:.1f}mm;height:{larg * h / w:.1f}mm"'
 
 
 def versiculo(txt):
@@ -120,7 +138,7 @@ def pagina_capa():
     return (f'<section class="page capa" data-pg="capa"><div class="ceu">{faiscas(38, "#f3d98a", 7)}</div>'
             f'<h1>Dezembro<br><span>com Jesus</span></h1>'
             f'<p class="promessa">Ensine seu filho sobre Jesus em 24 noites</p>'
-            f'<div class="moldura"><img src="{CAPA}" alt=""></div>'
+            f'<div class="moldura"{moldura_capa()}><img src="{capa_src()}" alt=""></div>'
             f'<div class="selos">{selos}</div>'
             f'<div class="marca-c">@paisdarotina</div></section>')
 
@@ -144,6 +162,8 @@ def pagina_como_usar():
             f'<header class="cab-pg"><div class="kicker">Para os pais</div><h1>Como usar</h1>'
             f'<p class="lead">Dez minutinhos por noite, de 1 a 24 de dezembro. Sem pressa e sem precisar ser perfeito.</p></header>'
             f'<ol class="passos-uso">{lis}</ol><div class="duas">{precisa}{perdeu}</div>'
+            f'<div class="tinta">{ico("celular", "#3d5a8c")}<p><b>Para economizar tinta:</b> os quadrinhos podem ser lidos no celular '
+            f'ou no tablet. Imprima só as páginas de pintar, o calendário e o presépio.</p></div>'
             f'{rodape("<span></span>")}</section>')
 
 

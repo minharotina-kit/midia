@@ -21,7 +21,7 @@ const fs = require('fs');
       const rod = pg.querySelector('.rodape');
       const limite = rod ? rod.getBoundingClientRect().top : pr.bottom - 45;
       let pior = -1e9, quem = '';
-      pg.querySelectorAll('.card, .gibi, .desenho, .tres, .bloco, .fotos, .passos, .seguir').forEach(el => {
+      pg.querySelectorAll('.card, .gibi, .desenho, .tres, .bloco, .fotos, .passos, .seguir, .tinta, .passos-uso, .duas, .mapa, .fileira, .folha, .grade-c, .moldura, .selos, .estrelas, .assina').forEach(el => {
         const b = el.getBoundingClientRect().bottom;
         if (b > pior) { pior = b; quem = el.className; }
       });

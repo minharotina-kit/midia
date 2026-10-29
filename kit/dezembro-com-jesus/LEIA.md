@@ -3,10 +3,11 @@
 Regras completas: `.claude/skills/kit-dezembro-com-jesus/SKILL.md`.
 
 ## Situação (29/10/2026)
-- **Kit completo montado na opção A** (gibi em cima): 60 páginas A4, 12,8 MB.
+- **Kit completo montado na opção A** (gibi em cima): 60 páginas A4, 13,1 MB.
 - Marca no rodapé confirmada: "Dezembro com Jesus · @paisdarotina".
 - 2 Coríntios 8:9 e João 3:16 conferidos pelo Mateus no bibliaonline.com.br. O cartão da noite 13 começa com "Pois" (P maiúsculo).
-- **Capa provisória:** `capa.jpg` (497×751) dentro de moldura. O Mateus vai mandar uma capa nova vertical de 1024×1536: troque `CAPA` no topo de `kit.py` e rode de novo.
+- **Capa nova** (29/10): `entrada/capa-nova.png`, 1024×1536, enviada pelo Mateus. Se o arquivo existir, o `kit.py` usa ela numa moldura de 118,7 × 178 mm (~219 dpi, nunca abaixo de 200 dpi). Sem ele, volta pra `capa.jpg`.
+- Ajustes finais aprovados (29/10): página final com "(Gênesis 1:1; João 3:16)" no passo 1 e "(Lucas 2:11; Hebreus 4:15)" no passo 3 (mudado no `dados.json`), e caixinha "Para economizar tinta" no Como usar.
 
 ## Como remontar
 Os anexos não estão aqui (produto pago, repositório público). Peça o PDF do pacote ao Mateus.

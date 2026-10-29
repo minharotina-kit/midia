@@ -181,7 +181,7 @@ svg.rabo.fundo { z-index: 4; }
 .capa .marca-c { position: relative; margin-top: auto; font: 600 9pt/1 'Fredoka'; color: rgba(252,242,216,.75); letter-spacing: .04em; }
 
 /* como usar */
-.passos-uso { list-style: none; padding: 0; margin: 10mm 0 0; display: flex; flex-direction: column; gap: 5.2mm; flex: none; }
+.passos-uso { list-style: none; padding: 0; margin: 10mm 0 0; display: flex; flex-direction: column; gap: 4.2mm; flex: none; }
 .passos-uso li { display: grid; grid-template-columns: 10mm 16mm 1fr; gap: 4mm; align-items: center; background: #fff; border: .3mm solid var(--borda-suave); border-radius: 4mm; padding: 5.4mm 5.4mm; }
 .passos-uso .num { width: 10mm; height: 10mm; border-radius: 50%; background: var(--vermelho); color: #fff; font: 700 14pt/10mm 'Fredoka'; text-align: center; }
 .passos-uso .ic { width: 16mm; height: 16mm; border-radius: 3.4mm; background: var(--verde-claro); display: grid; place-items: center; }
@@ -250,3 +250,8 @@ svg.rabo.fundo { z-index: 4; }
 .certificado .assina span { display: block; font: 400 9.5pt/1 'Atkinson'; color: var(--tinta-clara); margin-top: 2mm; }
 
 .nw { white-space: nowrap; }
+
+.como .tinta { margin-top: 4mm; display: flex; align-items: center; gap: 3mm; background: var(--azul-claro); border-radius: 3mm; padding: 2.8mm 4.4mm; flex: none; }
+.como .tinta svg { width: 6mm; height: 6mm; flex: none; }
+.como .tinta p { margin: 0; font: 400 10.5pt/1.4 'Atkinson'; color: var(--tinta); }
+.como .tinta b { font-weight: 700; }

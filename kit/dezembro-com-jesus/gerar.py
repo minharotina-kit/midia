@@ -30,6 +30,7 @@ def ico(nome, cor='currentColor'):
         'estrela-belem': '<path d="M12 2.5l1.9 7.6 7.6 1.9-7.6 1.9-1.9 7.6-1.9-7.6-7.6-1.9 7.6-1.9z"/>',
         'calendario': '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h2M14 14h2M8 17h2"/>',
         'casa': '<path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/>',
+        'celular': '<rect x="6.5" y="2.5" width="11" height="19" rx="2.2"/><path d="M10.5 18.5h3"/>',
         'tesoura': '<circle cx="6" cy="7" r="2.6"/><circle cx="6" cy="17" r="2.6"/><path d="M8.2 8.4L20 17M8.2 15.6L20 7"/>',
         'cruz-sol': '<path d="M2.5 20.5h19"/><path d="M6 20.5a6 6 0 0 1 12 0"/><path d="M12 2.5v13M8 6.5h8"/><path d="M3.2 14.6l1.6.9M20.8 14.6l-1.6.9M7.2 10.6l.9 1.4M16.8 10.6l-.9 1.4"/>',
     }[nome]
