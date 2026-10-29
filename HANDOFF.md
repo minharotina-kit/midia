@@ -17,7 +17,7 @@ Leia isto primeiro ao continuar o trabalho do Instagram @paisdarotina numa conve
 ## Regras do Mateus (valem sempre)
 - Fala curta e visual. Só "mano" de gíria. Sem bajulação.
 - **Nunca repetir conteúdo:** nada de recorte de episódio antigo, nem cenas/imagens já usadas. Cada post tem imagem nova.
-- **Música muda em todo vídeo.** A voz (Nathalia, `XLCZh6aNZcwLn60NRLg5`) pode repetir.
+- **Música:** não repetir na mesma semana; pode reutilizar música de semanas anteriores (pedido de 29/10). Em toda prévia, mande os termos de busca do Pixabay pra ele baixar mais. A música própria em código (`tools/musica.py`) ele achou que não combina: só em último caso. A voz (Nathalia, `XLCZh6aNZcwLn60NRLg5`) pode repetir.
 - Família Tatu (novelinha 3D, estilo frutinha) é o formato que ganhou. O informativo de papel saiu da grade.
 - Horários: 12h e 20h, todo dia. Ele aprovou agendar automático; mande a prévia e ele pode cancelar até a hora.
 - Não prometer "parte X amanhã" sem os clipes na mão.

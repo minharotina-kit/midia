@@ -44,4 +44,4 @@ Página com os prompts dos eps 1 e 2: artefato "Família Tatu · Temporada 2". *
 | 8 | Sáb 07/11 | A Cesta dos Celulares | telas desligadas nas refeições, pais dão o exemplo (diretriz alemã de pediatria, 2023) |
 | 9 | Dom 08/11 | A Vovó Vai Embora · fim da temporada 2 | relações boas foram o que mais previu saúde e felicidade aos 80 (Harvard, estudo desde 1938) |
 
-Clipes de cada episódio: até umas 17h do dia. Músicas de comédia que sobram: 5 (lista acima); pedir mais ao Mateus a partir do ep. 6.
+Clipes de cada episódio: até umas 17h do dia. Música (regra de 29/10): não repetir na mesma semana; a partir de 02/11 as de comédia das partes 2 a 5 podem voltar. Toda prévia leva termos de busca do Pixabay pra ele baixar mais: "funny cartoon", "comedy playful", "quirky ukulele", "cartoon mischief".
