@@ -1,6 +1,17 @@
-# anexos do pacote (produto pago): não sobem pro repositório
+# repositório público: anexos, textos e imagens do produto ficam fora
 entrada/
 limpos/
+final/
 build/fontes
-*.pdf
+previas/
+previas-1080/
 png/
+png-kit/
+contato/
+zoom/
+grades/
+entrega/
+*.pdf
+*.html
+todo.txt
+render-log.txt

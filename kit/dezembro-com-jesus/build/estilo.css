@@ -158,3 +158,95 @@ svg.rabo.fundo { z-index: 4; }
 .final .seguir { margin-top: 4.5mm; background: var(--verde-claro); border-radius: 3.6mm; padding: 4mm 5mm; flex: none; }
 .final .seguir .card-t { color: var(--verde); font-size: 11.5pt; }
 .final .seguir p { font: 400 11pt/1.45 'Atkinson'; }
+
+/* ---------- páginas extras ---------- */
+.cab-pg { text-align: center; flex: none; }
+.cab-pg.esq { text-align: left; }
+.cab-pg .kicker { color: var(--dourado-escuro); font-size: 10pt; letter-spacing: .02em; }
+.cab-pg h1 { font: 700 26pt/1.05 'Fredoka'; margin: 1.2mm 0 0; color: var(--tinta); }
+.cab-pg .lead { font: 400 12.5pt/1.4 'Atkinson'; color: var(--tinta-clara); margin: 3mm auto 0; max-width: 150mm; }
+.faisca { position: absolute; }
+
+/* capa */
+.capa { background: var(--tinta); color: #fff; padding: 15mm 14mm 11mm; align-items: center; text-align: center; }
+.capa .ceu { position: absolute; inset: 0; pointer-events: none; opacity: .85; }
+.capa h1 { position: relative; font: 700 47pt/.98 'Fredoka'; margin: 2mm 0 0; color: #fffaf0; letter-spacing: -.01em; }
+.capa h1 span { color: var(--dourado); }
+.capa .promessa { position: relative; font: 700 15.5pt/1.3 'Atkinson'; color: #fcf2d8; margin: 5mm 0 0; }
+.capa .moldura { position: relative; margin: 7mm auto 0; width: 104mm; height: 156mm; border: 1.6mm solid var(--dourado); border-radius: 5mm; overflow: hidden; box-shadow: 0 0 0 2.2mm rgba(217,165,33,.22); flex: none; background: #000; }
+.capa .moldura img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.capa .selos { position: relative; display: flex; gap: 2.6mm; justify-content: center; flex-wrap: wrap; margin-top: 8mm; }
+.selo-c { display: inline-flex; align-items: center; gap: 1.6mm; background: rgba(255,255,255,.07); border: .35mm solid rgba(252,242,216,.55); color: #fcf2d8; font: 600 9.6pt/1 'Fredoka'; padding: 2.2mm 3.6mm; border-radius: 99px; }
+.selo-c svg { width: 3.8mm; height: 3.8mm; }
+.capa .marca-c { position: relative; margin-top: auto; font: 600 9pt/1 'Fredoka'; color: rgba(252,242,216,.75); letter-spacing: .04em; }
+
+/* como usar */
+.passos-uso { list-style: none; padding: 0; margin: 10mm 0 0; display: flex; flex-direction: column; gap: 5.2mm; flex: none; }
+.passos-uso li { display: grid; grid-template-columns: 10mm 16mm 1fr; gap: 4mm; align-items: center; background: #fff; border: .3mm solid var(--borda-suave); border-radius: 4mm; padding: 5.4mm 5.4mm; }
+.passos-uso .num { width: 10mm; height: 10mm; border-radius: 50%; background: var(--vermelho); color: #fff; font: 700 14pt/10mm 'Fredoka'; text-align: center; }
+.passos-uso .ic { width: 16mm; height: 16mm; border-radius: 3.4mm; background: var(--verde-claro); display: grid; place-items: center; }
+.passos-uso .ic svg { width: 9mm; height: 9mm; }
+.passos-uso p { margin: 0; font: 400 12.5pt/1.45 'Atkinson'; }
+.passos-uso b { font-weight: 700; }
+.como .duas { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 8mm; flex: none; }
+.como .duas .card { padding: 5mm 5.4mm; }
+.como .duas .card-t { font-size: 11.5pt; }
+.como .duas p { font: 400 12pt/1.48 'Atkinson'; }
+
+/* calendário */
+.calendario .familia, .certificado .familia { display: flex; align-items: flex-end; gap: 2mm; font: 600 12pt/1 'Fredoka'; color: var(--tinta); margin: 6mm auto 0; width: 120mm; flex: none; }
+.calendario .familia span, .certificado .familia span { flex: 1; border-bottom: .35mm solid var(--tinta-clara); height: 5mm; }
+.calendario .mapa { display: block; margin: 7mm auto 0; flex: none; overflow: visible; }
+.mapa .trilha { fill: none; stroke: #e0c77f; stroke-width: 1.1; stroke-dasharray: 2.2 2.2; stroke-linecap: round; }
+.mapa .casa path, .mapa .casa rect { fill: #fff; stroke: #2a2f4a; stroke-width: .55; stroke-linejoin: round; }
+.mapa .casa .porta { fill: none; }
+.mapa .estrela { fill: #fffaf0; stroke: #d9a521; stroke-width: .8; stroke-linejoin: round; }
+
+/* personagens */
+.personagens .fileira { margin-top: 7mm; flex: none; }
+.personagens .recorte { position: relative; width: 100%; overflow: hidden; border-radius: 4mm; background: #fdf6e6; }
+.personagens .recorte img { position: absolute; left: 0; width: 100%; display: block; }
+.personagens .nomes { position: relative; height: 13mm; margin-top: 2mm; }
+.personagens .nome { position: absolute; top: 0; transform: translateX(-50%); width: 27mm; text-align: center; }
+.personagens .nome b { display: block; font: 700 11pt/1.1 'Fredoka'; color: var(--tinta); }
+.personagens .nome span { display: block; font: 400 8.3pt/1.25 'Atkinson'; color: var(--tinta-clara); margin-top: .6mm; }
+.personagens .fileira:nth-of-type(2) .nome:nth-child(2) { width: 60mm; }
+.personagens .fileira { margin-top: 9mm; }
+.personagens .tambem { margin-top: 10mm; flex: none; }
+.personagens .tambem p { font: 400 12pt/1.5 'Atkinson'; }
+.titulo-longo .topo h1 { font-size: 17.5pt; }
+
+/* presépio */
+.presepio .instr { display: flex; align-items: center; gap: 2mm; font: 700 10pt/1.3 'Atkinson'; color: var(--dourado-escuro); background: var(--dourado-claro); border-radius: 99px; padding: 2mm 4mm; margin: 3.5mm 0 0; width: max-content; max-width: 100%; }
+.presepio .instr svg { width: 4mm; height: 4mm; flex: none; }
+.presepio .folha { flex: 1; min-height: 0; position: relative; margin-top: 4mm; }
+.presepio .folha img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
+
+/* cartões */
+.grade-c { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 0; margin-top: 6mm; flex: 1; min-height: 0; border: .45mm dashed #9aa0b5; }
+.cartao { position: relative; padding: 8mm 7mm 7mm; display: flex; flex-direction: column; border: .45mm dashed #9aa0b5; margin: -.225mm; }
+.cartao .fn { display: flex; align-items: center; justify-content: center; gap: 2.4mm; font: 700 25pt/1 'Fredoka'; color: #fff; -webkit-text-stroke: .5mm #2a2f4a; paint-order: stroke fill; margin: 3mm 0 6mm; }
+.cartao .fn svg { width: 8mm; height: 8mm; display: block; }
+.cartao .fn path { fill: #fff; stroke: #2a2f4a; stroke-width: 1.3; stroke-linejoin: round; }
+.cartao .desenhe { flex: 1; margin-top: 6mm; border: .35mm dashed #c4c8d6; border-radius: 3mm; display: grid; place-items: end center; padding-bottom: 2mm; font: 400 8pt/1 'Atkinson'; color: #9aa0b5; min-height: 20mm; }
+.cartao .lin { display: flex; align-items: flex-end; gap: 2mm; font: 600 11.5pt/1 'Fredoka'; color: var(--tinta); margin-top: 6.5mm; }
+.cartao .lin i { flex: 1; border-bottom: .3mm solid var(--tinta-clara); height: 5mm; }
+
+/* certificado */
+.certificado .moldura-c { flex: 1; border: 1.4mm solid var(--dourado); border-radius: 6mm; outline: .4mm solid var(--dourado); outline-offset: -3.4mm; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 16mm 14mm 12mm; }
+.certificado .kicker { font: 700 12pt/1 'Fredoka'; letter-spacing: .3em; text-transform: uppercase; color: var(--dourado-escuro); }
+.certificado h1 { font: 700 30pt/1.1 'Fredoka'; margin: 6mm 0 0; color: var(--tinta); }
+.certificado .txt { font: 400 13pt/1.5 'Atkinson'; color: var(--tinta-clara); max-width: 140mm; margin: 7mm 0 0; }
+.certificado .familia { margin-top: 12mm; width: 130mm; font-size: 14pt; }
+.certificado .estrelas { display: grid; grid-template-columns: repeat(5, 17mm); gap: 4mm 6mm; margin-top: 14mm; }
+.certificado .est { position: relative; width: 17mm; height: 17mm; }
+.certificado .est svg { width: 100%; height: 100%; }
+.certificado .est path { fill: #fff; stroke: var(--dourado); stroke-width: 1.1; stroke-linejoin: round; }
+.certificado .est span { position: absolute; inset: 0; display: grid; place-items: center; padding-top: 1.2mm; font: 700 8pt/1 'Fredoka'; color: var(--dourado-escuro); }
+.certificado .pinte { font: 400 10pt/1.3 'Atkinson'; color: var(--tinta-clara); margin: 5mm 0 0; }
+.certificado .natal { margin-top: 10mm; font: 700 18pt/1 'Fredoka'; color: var(--vermelho); }
+.certificado .assina { margin-top: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 14mm; width: 140mm; }
+.certificado .assina i { display: block; border-bottom: .35mm solid var(--tinta-clara); height: 12mm; }
+.certificado .assina span { display: block; font: 400 9.5pt/1 'Atkinson'; color: var(--tinta-clara); margin-top: 2mm; }
+
+.nw { white-space: nowrap; }

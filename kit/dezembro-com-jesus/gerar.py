@@ -2,16 +2,19 @@
 
 uso: python3 -I gerar.py previa   -> build/previa.html (dia 1 em A e B, pintar 1, Por que Jesus veio?)
 """
-import html, json, os, sys
+import html, json, os, re, sys
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 D = json.load(open(os.path.join(AQUI, 'entrada', 'dados.json'), encoding='utf-8'))
 POS = json.load(open(os.path.join(AQUI, 'posicoes.json'), encoding='utf-8'))
 CORTES = json.load(open(os.path.join(AQUI, 'limpos', '_cortes.json'), encoding='utf-8'))
 MARCA = 'Dezembro com Jesus · @paisdarotina'
+PINTAR_DIR = 'entrada/'
 ARA = D['credito_biblico']
 
-e = lambda s: html.escape(s, quote=True)
+def e(s):
+    # palavra com hífen (chamá-lo, mostrem-se) não quebra no meio
+    return re.sub(r'(\w+(?:-\w+)+)', r'<span class="nw">\1</span>', html.escape(s, quote=True))
 
 
 def ico(nome, cor='currentColor'):
@@ -25,6 +28,9 @@ def ico(nome, cor='currentColor'):
         'presente': '<rect x="4" y="9" width="16" height="11" rx="1.5"/><path d="M3 9h18v3H3zM12 9v11"/><path d="M12 9c-2-4-6-4-6-1.5S10 9 12 9zM12 9c2-4 6-4 6-1.5S14 9 12 9z"/>',
         'coracao-partido': '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/><path d="M12 7.4l-1.6 3.6 2.6 2-1.8 3.6"/>',
         'estrela-belem': '<path d="M12 2.5l1.9 7.6 7.6 1.9-7.6 1.9-1.9 7.6-1.9-7.6-7.6-1.9 7.6-1.9z"/>',
+        'calendario': '<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h2M14 14h2M8 17h2"/>',
+        'casa': '<path d="M3.5 11L12 4l8.5 7"/><path d="M5.5 9.5V20h13V9.5"/><path d="M10 20v-5h4v5"/>',
+        'tesoura': '<circle cx="6" cy="7" r="2.6"/><circle cx="6" cy="17" r="2.6"/><path d="M8.2 8.4L20 17M8.2 15.6L20 7"/>',
         'cruz-sol': '<path d="M2.5 20.5h19"/><path d="M6 20.5a6 6 0 0 1 12 0"/><path d="M12 2.5v13M8 6.5h8"/><path d="M3.2 14.6l1.6.9M20.8 14.6l-1.6.9M7.2 10.6l.9 1.4M16.8 10.6l-.9 1.4"/>',
     }[nome]
     return (f'<svg viewBox="0 0 24 24" fill="none" stroke="{cor}" stroke-width="1.9" '
@@ -112,7 +118,7 @@ def pagina_pintar(n):
     bloco = (f'<div class="bloco">{ico("luz", "#8a6510")}<div><div class="t">Para guardar no coração</div>'
              f'<div class="frase">{e(n["guardar"])}</div>'
              f'<div class="ler">Para ler na Bíblia com a família: {e(n["leitura"])}</div></div></div>')
-    desenho = f'<div class="desenho"><img src="entrada/{n["desenho_pintar"]}" alt=""></div>'
+    desenho = f'<div class="desenho"><img src="{PINTAR_DIR}{n["desenho_pintar"]}" alt=""></div>'
     tres = (f'<div class="tres">'
             f'<div class="card c-desafio"><div class="card-t">{ico("estrela")}Desafio do dia</div><p>{e(n["desafio"])}</p></div>'
             f'<div class="card c-orar"><div class="card-t">{ico("coracao")}Vamos orar</div><p>{e(n["oracao"])}</p></div>'

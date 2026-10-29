@@ -3,19 +3,22 @@
 Regras completas: `.claude/skills/kit-dezembro-com-jesus/SKILL.md`.
 
 ## Situação (29/10/2026)
-- Prévia enviada ao Mateus: dia 1 nas opções A e B, Hora de pintar 1 e "Por que Jesus veio?" (`previas/`).
-- **Esperando ele escolher A ou B** antes de montar as 25 noites.
-- Marca no rodapé "Dezembro com Jesus · @paisdarotina": falta ele confirmar.
-- bibliaonline.com.br bloqueado na rede da sessão: 2 Coríntios 8:9 e João 3:16 ainda sem conferência no site.
+- **Kit completo montado na opção A** (gibi em cima): 60 páginas A4, 12,8 MB.
+- Marca no rodapé confirmada: "Dezembro com Jesus · @paisdarotina".
+- 2 Coríntios 8:9 e João 3:16 conferidos pelo Mateus no bibliaonline.com.br. O cartão da noite 13 começa com "Pois" (P maiúsculo).
+- **Capa provisória:** `capa.jpg` (497×751) dentro de moldura. O Mateus vai mandar uma capa nova vertical de 1024×1536: troque `CAPA` no topo de `kit.py` e rode de novo.
 
 ## Como remontar
-Os anexos não estão aqui (produto pago). Peça o PDF do pacote ao Mateus.
+Os anexos não estão aqui (produto pago, repositório público). Peça o PDF do pacote ao Mateus.
 ```bash
 mkdir -p entrada && pdfdetach -saveall -o entrada/ pacote-dezembro-com-jesus.pdf && (cd entrada && unzip -q arquivos.zip)
 python3 -I limpar_quadros.py entrada/quadrinhos limpos   # tira a moldura colada nos quadros
 ln -sfn ../entrada/fontes build/fontes
-python3 -I gerar.py previa                                # -> previa.html
+python3 -I kit.py                                         # -> kit.html (60 páginas)
 python3 -m http.server 8765 --bind 127.0.0.1 &            # fontes não carregam por file://
-node render.js previa.html previa.pdf png 1240            # PDF + PNG por página + checagens
+node render.js kit.html Dezembro-com-Jesus-kit-completo.pdf png-kit 900   # PDF + PNG + checagens
+python3 -I checar_texto.py Dezembro-com-Jesus-kit-completo.pdf            # texto do PDF x dados.json (25/25)
 ```
-- `posicoes.json`: recorte e balões de cada quadro (ponta do rabinho em px da imagem limpa). `grade.py` desenha a grade de coordenadas.
+- `pos_a.py`: recorte (`y0`) e balões de cada quadro das noites 2 a 25 (ponta do rabinho em px da imagem limpa). Noite 1 em `posicoes.json["A"]`.
+- `sobra.json`: espaço que sobrava no pé de cada página de quadrinho; o `kit.py` passa esse espaço pros quadros. Se mudar texto, rode, veja a sobra no log e ajuste.
+- `grade.py` desenha a grade de coordenadas num quadro, pra posicionar balão sem cobrir rosto.
