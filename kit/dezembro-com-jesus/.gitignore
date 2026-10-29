@@ -1,0 +1,6 @@
+# anexos do pacote (produto pago): não sobem pro repositório
+entrada/
+limpos/
+build/fontes
+*.pdf
+png/

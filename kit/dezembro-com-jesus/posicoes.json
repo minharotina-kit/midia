@@ -1,0 +1,188 @@
+{
+ "_como_ler": "Por layout (A = gibi em cima, B = gibi com coluna). ox/oy = recorte (object-position 0..1). narra: lado esq|dir e largura (fração do quadro). baloes na ordem do dados.json: x|xr|xc = borda esq | borda dir | centro (fração da largura); y = topo (fração da altura) ou sob=1 (logo abaixo da narração, dy em mm); w = largura máx; t = ponta do rabinho em px da imagem limpa (pasta limpos/).",
+ "A": {
+  "_linhas": [
+   72,
+   83.2
+  ],
+  "noite-01-q1": {
+   "ox": 0.5,
+   "oy": 0.507,
+   "narra": {
+    "lado": "esq",
+    "w": 0.7
+   },
+   "baloes": [
+    {
+     "xr": 0.96,
+     "sob": 1,
+     "dy": 2.2,
+     "w": 0.5,
+     "t": [
+      262,
+      432
+     ]
+    }
+   ]
+  },
+  "noite-01-q2": {
+   "ox": 0.5,
+   "oy": 0.308,
+   "narra": {
+    "lado": "esq",
+    "w": 0.7
+   },
+   "baloes": [
+    {
+     "x": 0.05,
+     "sob": 1,
+     "dy": 2.2,
+     "w": 0.5,
+     "t": [
+      178,
+      268
+     ]
+    }
+   ]
+  },
+  "noite-01-q3": {
+   "ox": 0.5,
+   "oy": 0.12,
+   "narra": {
+    "lado": "esq",
+    "w": 0.55
+   },
+   "baloes": [
+    {
+     "x": 0.05,
+     "sob": 1,
+     "dy": 2.0,
+     "w": 0.52,
+     "t": [
+      200,
+      242
+     ]
+    }
+   ]
+  },
+  "noite-01-q4": {
+   "ox": 0.5,
+   "oy": 0.48,
+   "narra": {
+    "lado": "esq",
+    "w": 0.58
+   },
+   "baloes": [
+    {
+     "xr": 0.97,
+     "y": 0.125,
+     "w": 0.4,
+     "t": [
+      188,
+      246
+     ]
+    },
+    {
+     "x": 0.26,
+     "y": 0.58,
+     "w": 0.4,
+     "t": [
+      298,
+      440
+     ]
+    }
+   ]
+  }
+ },
+ "B": {
+  "noite-01-q1": {
+   "ox": 0.5,
+   "oy": 0.5,
+   "narra": {
+    "lado": "esq",
+    "w": 0.74
+   },
+   "baloes": [
+    {
+     "xr": 0.96,
+     "sob": 1,
+     "dy": 2.4,
+     "w": 0.66,
+     "t": [
+      262,
+      432
+     ]
+    }
+   ]
+  },
+  "noite-01-q2": {
+   "ox": 0.5,
+   "oy": 0.5,
+   "narra": {
+    "lado": "esq",
+    "w": 0.74
+   },
+   "baloes": [
+    {
+     "x": 0.05,
+     "sob": 1,
+     "dy": 2.4,
+     "w": 0.66,
+     "t": [
+      178,
+      268
+     ]
+    }
+   ]
+  },
+  "noite-01-q3": {
+   "ox": 0.5,
+   "oy": 0.5,
+   "narra": {
+    "lado": "esq",
+    "w": 0.6
+   },
+   "baloes": [
+    {
+     "x": 0.05,
+     "sob": 1,
+     "dy": 2.2,
+     "w": 0.66,
+     "t": [
+      200,
+      242
+     ]
+    }
+   ]
+  },
+  "noite-01-q4": {
+   "ox": 0.5,
+   "oy": 0.5,
+   "narra": {
+    "lado": "esq",
+    "w": 1.0
+   },
+   "baloes": [
+    {
+     "xr": 0.97,
+     "sob": 1,
+     "dy": 2.4,
+     "w": 0.56,
+     "t": [
+      180,
+      224
+     ]
+    },
+    {
+     "x": 0.2,
+     "y": 0.51,
+     "w": 0.4,
+     "t": [
+      298,
+      440
+     ]
+    }
+   ]
+  }
+ }
+}
