@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!-- MOLDE DE NATAL (linha cristã, nov–dez/2026). Pra reaproveitar: troque os textos das cenas s0–s4,
+     as palavras de cue em T1..T4 e os desenhos de cada cena. Fundo, estrelas, transições e final já ficam prontos. -->
+<style>
+@font-face { font-family: Fredoka; src: url("../fonts/ttf/Fredoka-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: Nunito; src: url("../fonts/ttf/Nunito-ExtraBold.ttf"); font-weight: 800; }
+:root { --cream: #fff6e3; --gold: #f2c14e; --goldD: #c9962a; --red: #d6453d; --green: #1f6b4f; --ink: #1b3a2e; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0f3326; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 18%, #2a7a5a 0%, #165040 38%, #0d3327 70%, #0a2a20 100%);
+  font-family: Nunito, sans-serif; color: var(--cream); perspective: 1700px; perspective-origin: 50% 42%; }
+#bg { position: absolute; inset: -140px; }
+.glow { position: absolute; border-radius: 50%; filter: blur(90px); }
+.flake { position: absolute; border-radius: 50%; background: #fff3cf; box-shadow: 0 0 10px 2px rgba(255,230,160,.45); }
+#world { position: absolute; inset: 0; }
+.scene { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+.big { position: absolute; left: 0; right: 0; text-align: center; font-family: Fredoka; }
+.center { position: absolute; left: 0; right: 0; text-align: center; }
+.chip { display: inline-block; background: rgba(255,246,227,.1); border: 3px solid var(--gold); color: var(--cream); font-size: 34px; padding: 11px 28px; border-radius: 40px; }
+.card { position: absolute; left: 90px; width: 900px; border-radius: 46px; background: var(--cream); color: var(--ink); box-shadow: 0 30px 60px rgba(0,0,0,.3); }
+.prog { position: absolute; top: 300px; left: 50%; transform: translateX(-50%); display: flex; gap: 18px; opacity: 0; }
+.prog div { width: 120px; height: 14px; border-radius: 7px; background: rgba(255,255,255,.2); overflow: hidden; }
+.prog i { display: block; height: 100%; width: 0%; background: var(--gold); border-radius: 7px; }
+.note { position: absolute; font-family: Fredoka; color: var(--gold); }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg">
+    <div class="glow" id="glowA" style="width:700px;height:700px;left:330px;top:120px;background:#ffd36b;opacity:.22"></div>
+    <div class="glow" id="glowB" style="width:640px;height:640px;left:-200px;top:1300px;background:#d6453d;opacity:.22"></div>
+    <svg id="star" width="220" height="220" viewBox="-110 -110 220 220" style="position:absolute;left:680px;top:200px;overflow:visible">
+      <circle r="100" fill="#ffe6a0" opacity=".16"/>
+      <path d="M0 -96 L18 -18 L96 0 L18 18 L0 96 L-18 18 L-96 0 L-18 -18 Z" fill="#f2c14e"/>
+      <path d="M0 -50 L9 -9 L50 0 L9 9 L0 50 L-9 9 L-50 0 L-9 -9 Z" fill="#fff6e3" transform="rotate(45)"/>
+    </svg>
+    <svg id="nativ" width="1360" height="300" viewBox="0 0 1360 300" style="position:absolute;left:0;top:1820px;opacity:.55">
+      <path d="M0 300 V 210 C 200 160 420 190 600 200 C 820 214 1060 160 1360 190 V 300 Z" fill="#082219"/>
+      <g fill="#082219"><path d="M560 200 L680 110 L800 200 Z"/><rect x="580" y="190" width="200" height="70"/>
+        <circle cx="650" cy="216" r="14"/><path d="M636 230 h28 v30 h-28 z"/><circle cx="712" cy="214" r="15"/><path d="M698 228 h30 v32 h-30 z"/>
+        <path d="M670 252 h40 l-6 14 h-28 z"/></g>
+    </svg>
+  </div>
+  <div class="prog" id="prog"><div><i></i></div><div><i></i></div><div><i></i></div></div>
+
+  <div id="world">
+    <!-- GANCHO -->
+    <div class="scene" id="s0">
+      <svg id="moon0" width="340" height="340" viewBox="0 0 340 340" style="position:absolute;left:370px;top:470px;overflow:visible">
+        <circle cx="170" cy="170" r="160" fill="#ffe6a0" opacity=".12"/>
+        <path d="M200 40 A130 130 0 1 0 300 220 A100 100 0 1 1 200 40 Z" fill="#f2c14e"/>
+      </svg>
+      <div class="note" id="no1" style="left:300px;top:780px;font-size:90px">♪</div>
+      <div class="note" id="no2" style="left:690px;top:760px;font-size:110px">♫</div>
+      <div class="note" id="no3" style="left:500px;top:820px;font-size:80px;color:#fff6e3">♪</div>
+      <div class="big" id="h0" style="top:1060px;font-size:100px;line-height:1.1">Você <span style="color:var(--gold)">canta</span><br>pro seu filho<br>antes de dormir?</div>
+    </div>
+
+    <!-- 1 · BÍBLIA -->
+    <div class="scene" id="s1">
+      <div class="center" style="top:380px"><span class="chip" id="cp1">Bíblia · Lucas 2:13-14</span></div>
+      <div class="big" id="h1" style="top:470px;font-size:76px;line-height:1.1">O Natal começou<br>com uma <span style="color:var(--gold)">canção</span></div>
+      <svg id="angels" width="760" height="420" viewBox="0 0 760 420" style="position:absolute;left:160px;top:690px;overflow:visible">
+        <g id="ang1"><ellipse cx="150" cy="170" rx="90" ry="44" fill="#fff6e3" opacity=".85" transform="rotate(-30 150 170)"/><ellipse cx="250" cy="170" rx="90" ry="44" fill="#fff6e3" opacity=".85" transform="rotate(30 250 170)"/>
+          <path d="M200 140 L270 360 H130 Z" fill="#f2c14e"/><circle cx="200" cy="120" r="40" fill="#f6d2a6"/><ellipse cx="200" cy="72" rx="44" ry="12" fill="none" stroke="#f2c14e" stroke-width="8"/>
+          <path d="M186 132 q14 12 28 0" stroke="#7a4a3a" stroke-width="5" fill="none" stroke-linecap="round"/></g>
+        <g id="ang2"><ellipse cx="510" cy="150" rx="90" ry="44" fill="#fff6e3" opacity=".85" transform="rotate(-30 510 150)"/><ellipse cx="610" cy="150" rx="90" ry="44" fill="#fff6e3" opacity=".85" transform="rotate(30 610 150)"/>
+          <path d="M560 120 L630 340 H490 Z" fill="#f2c14e"/><circle cx="560" cy="100" r="40" fill="#f6d2a6"/><ellipse cx="560" cy="52" rx="44" ry="12" fill="none" stroke="#f2c14e" stroke-width="8"/>
+          <ellipse cx="560" cy="114" rx="10" ry="12" fill="#7a4a3a"/></g>
+        <g id="notes1" font-family="Fredoka" fill="#f2c14e" font-size="64"><text x="320" y="80">♪</text><text x="400" y="40">♫</text><text x="360" y="150">♪</text></g>
+      </svg>
+      <div class="card" id="v1" style="top:1150px;height:220px;text-align:center">
+        <div class="fred" style="font-family:Fredoka;font-size:62px;margin-top:40px">“Glória a Deus nas alturas”</div>
+        <div style="font-size:34px;margin-top:14px;color:#6b5a3a">Lucas 2:14</div>
+      </div>
+    </div>
+
+    <!-- 2 · CIÊNCIA -->
+    <div class="scene" id="s2">
+      <div class="center" style="top:380px"><span class="chip" id="cp2">EUA · Universidade Harvard · 2020</span></div>
+      <div class="big" id="h2" style="top:470px;font-size:72px;line-height:1.1">A ciência também mostra<br>a força de uma <span style="color:var(--gold)">canção</span></div>
+      <div class="card" id="c2" style="top:700px;height:500px">
+        <svg width="900" height="500" viewBox="0 0 900 500" style="position:absolute;left:0;top:0">
+          <path d="M450 120 C 410 70 330 80 330 150 C 330 220 450 280 450 280 C 450 280 570 220 570 150 C 570 80 490 70 450 120 Z" fill="#d6453d"/>
+          <path id="ecg" d="M60 400 H 200 l 20 -60 l 20 110 l 20 -50 H 420 l 20 -60 l 20 110 l 20 -50 H 700 l 20 -60 l 20 110 l 20 -50 H 840" stroke="#1f6b4f" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1400" stroke-dashoffset="1400"/>
+          <text x="450" y="472" font-family="Fredoka" font-size="38" fill="#1b3a2e" text-anchor="middle">o coração desacelerou</text>
+        </svg>
+      </div>
+      <div class="big" id="t2" style="top:1240px;font-size:54px;line-height:1.15">Bebês relaxaram com canção de ninar,<br><span style="color:var(--gold)">até em outra língua</span></div>
+    </div>
+
+    <!-- 3 · PEDIATRIA -->
+    <div class="scene" id="s3">
+      <div class="center" style="top:380px"><span class="chip" id="cp3">Brasil · Sociedade Brasileira de Pediatria</span></div>
+      <svg id="clock3" width="440" height="440" viewBox="0 0 440 440" style="position:absolute;left:320px;top:480px;overflow:visible">
+        <circle cx="220" cy="220" r="200" fill="#fff6e3"/>
+        <circle id="arc3" cx="220" cy="220" r="150" fill="none" stroke="#f2c14e" stroke-width="80" stroke-dasharray="942" stroke-dashoffset="942" transform="rotate(-90 220 220)"/>
+        <circle cx="220" cy="220" r="104" fill="#fff6e3"/>
+        <text x="220" y="240" font-family="Fredoka" font-size="76" fill="#1b3a2e" text-anchor="middle">30 min</text>
+      </svg>
+      <div class="big" id="h3" style="top:980px;font-size:70px;line-height:1.12">Um momento <span style="color:var(--gold)">calmo</span>,<br>de até 30 minutos,<br>antes de dormir</div>
+    </div>
+
+    <!-- FIM -->
+    <div class="scene" id="s4">
+      <svg id="bento" width="520" height="560" viewBox="0 -40 520 580" style="position:absolute;left:280px;top:420px;overflow:visible">
+        <g id="notes4" font-family="Fredoka" fill="#f2c14e"><text x="420" y="60" font-size="80">♪</text><text x="470" y="-10" font-size="64">♫</text><text x="380" y="0" font-size="56">♪</text></g>
+        <ellipse cx="260" cy="500" rx="170" ry="20" fill="rgba(0,0,0,.25)"/>
+        <ellipse cx="260" cy="370" rx="178" ry="120" fill="#d9944f"/>
+        <g stroke="#b8743a" stroke-width="11" fill="none" stroke-linecap="round"><path d="M100 340 q160 -86 320 0"/><path d="M90 382 q170 -86 340 0"/><path d="M96 424 q164 -78 328 0"/></g>
+        <rect x="165" y="300" width="190" height="168" rx="80" fill="#f6d2a6"/>
+        <ellipse cx="210" cy="486" rx="38" ry="18" fill="#efc08a"/><ellipse cx="310" cy="486" rx="38" ry="18" fill="#efc08a"/>
+        <g id="head">
+          <ellipse cx="185" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(-22 185 98)"/><ellipse cx="185" cy="103" rx="16" ry="36" fill="#ffb3a8" transform="rotate(-22 185 103)"/>
+          <ellipse cx="335" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(22 335 98)"/><ellipse cx="335" cy="103" rx="16" ry="36" fill="#ffb3a8" transform="rotate(22 335 103)"/>
+          <ellipse cx="260" cy="196" rx="102" ry="90" fill="#efc08a"/>
+          <path d="M176 156 q84 -70 168 0 q-84 -30 -168 0z" fill="#d9944f"/>
+          <path d="M228 216 q32 -22 64 0 l-14 64 q-18 12 -36 0z" fill="#f6d2a6"/>
+          <ellipse cx="260" cy="278" rx="15" ry="9" fill="#7a4a3a"/>
+          <ellipse id="mouth" cx="260" cy="300" rx="14" ry="10" fill="#7a2f2f"/>
+          <g stroke="#2a1d1a" stroke-width="9" fill="none" stroke-linecap="round"><path d="M198 196 q17 -18 34 0"/><path d="M288 196 q17 -18 34 0"/></g>
+          <circle cx="184" cy="236" r="15" fill="#ff9e91" opacity=".6"/><circle cx="336" cy="236" r="15" fill="#ff9e91" opacity=".6"/>
+        </g>
+        <g id="scarf"><path d="M170 300 q90 40 180 0 v34 q-90 40 -180 0z" fill="#d6453d"/><rect x="300" y="320" width="40" height="110" rx="14" fill="#d6453d"/>
+          <g stroke="#fff6e3" stroke-width="6"><line x1="200" y1="318" x2="200" y2="346"/><line x1="240" y1="324" x2="240" y2="352"/><line x1="280" y1="324" x2="280" y2="352"/></g></g>
+      </svg>
+      <div class="big" id="cta" style="top:1080px;font-size:86px;line-height:1.08;color:var(--gold)">Hoje à noite,<br>canta pra ele</div>
+      <div class="big" id="handle" style="top:1300px;font-size:46px">Segue @paisdarotina</div>
+      <div class="big" id="motivo" style="top:1370px;font-size:36px;opacity:.85">todo dia: fé e ciência na rotina das crianças</div>
+    </div>
+  </div>
+</div>
+
+<script src="node_modules/gsap/dist/gsap.min.js"></script>
+<script>
+const CUES = window.CUES || [];
+const norm = w => w.toLowerCase().replace(/[^a-zà-ú0-9]/g, '');
+function cue(w, n = 1) { let k = 0; for (const c of CUES) { if (norm(c.w) === w) { k++; if (k === n) return c.s; } } throw new Error('cue ' + w + ' ' + n); }
+const END = window.END || 26;
+
+// estrelinhas caindo (posições fixas)
+const bg = document.getElementById('bg');
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const FL = []; for (let i = 0; i < 34; i++) FL.push([rnd() * 1360, rnd() * 2200, 4 + rnd() * 9]);
+FL.forEach(([x, y, s], i) => bg.insertAdjacentHTML('beforeend', `<div class="flake" id="fl${i}" style="left:${x}px;top:${y}px;width:${s}px;height:${s}px;opacity:${.35 + rnd() * .5}"></div>`));
+
+gsap.set('.scene', { transformPerspective: 1700, transformOrigin: '50% 45%' });
+gsap.set(['.chip', '.big', '.card'], { transformPerspective: 900 });
+gsap.set('#s0', { autoAlpha: 1 });
+const tl = gsap.timeline({ paused: true });
+
+// ---------- fundo vivo desde o 1º quadro ----------
+tl.fromTo('#world', { scale: 1 }, { scale: 1.05, duration: END, ease: 'none' }, 0);
+FL.forEach((f, i) => tl.to('#fl' + i, { y: 260 + (i % 4) * 60, x: (i % 2 ? 30 : -30), duration: END, ease: 'none' }, 0));
+tl.to('#star', { rotation: 20, scale: 1.08, duration: END, ease: 'sine.inOut' }, 0);
+tl.to('#star circle', { opacity: .3, duration: 1.2, yoyo: true, repeat: Math.ceil(END / 2.4), ease: 'sine.inOut' }, 0);
+tl.to('#glowA', { x: -160, y: 120, duration: END, ease: 'sine.inOut' }, 0);
+tl.to('#glowB', { x: 220, y: -200, duration: END, ease: 'sine.inOut' }, 0);
+
+const IN = { autoAlpha: 0, rotationX: -32, z: -520, y: 260 };
+const OUT = { autoAlpha: 0, rotationX: 26, z: -480, y: -280 };
+function enter(id, t) { tl.fromTo(id, IN, { autoAlpha: 1, rotationX: 0, z: 0, y: 0, duration: .9, ease: 'power3.out' }, t); }
+function leave(id, t) { tl.to(id, { ...OUT, duration: .8, ease: 'power2.inOut' }, t); }
+function camera(t, k) { tl.to('#bg', { y: -60 * k, duration: 1.2, ease: 'power2.inOut' }, t); }
+function pop(sel, t) { tl.fromTo(sel, { autoAlpha: 0, y: 60, rotationX: -50 }, { autoAlpha: 1, y: 0, rotationX: 0, duration: .7, ease: 'power3.out' }, t); }
+
+// ---------- GANCHO: notas já subindo no 1º segundo ----------
+[['#no1', 0], ['#no2', .25], ['#no3', .5]].forEach(([n, d]) => tl.fromTo(n, { y: 60, opacity: 0 }, { y: -160, opacity: 1, duration: 1.6, ease: 'sine.out', repeat: 1, repeatDelay: .1 }, d));
+tl.fromTo('#moon0', { rotation: -8 }, { rotation: 6, transformOrigin: '50% 50%', duration: 2.4, yoyo: true, repeat: 1, ease: 'sine.inOut' }, 0);
+tl.fromTo('#h0', { scale: 1.06 }, { scale: 1, duration: .8, ease: 'power3.out' }, 0);
+
+// trocas de cena (cues trocáveis)
+const pbars = document.querySelectorAll('.prog i');
+const T1 = cue('natal'), T2 = cue('ciência'), T3 = cue('sociedade') - .25, T4 = cue('hoje');
+tl.to('#prog', { opacity: 1, duration: .5 }, T1 - .3);
+[[T1, T2], [T2, T3], [T3, T4]].forEach(([a, b], i) => tl.fromTo(pbars[i], { width: '0%' }, { width: '100%', duration: b - a - .3, ease: 'none' }, a));
+tl.to('#prog', { opacity: 0, duration: .5 }, T4 - .4);
+leave('#s0', T1 - .55); enter('#s1', T1 - .3); camera(T1 - .5, 1);
+leave('#s1', T2 - .55); enter('#s2', T2 - .3); camera(T2 - .5, 2);
+leave('#s2', T3 - .55); enter('#s3', T3 - .3); camera(T3 - .5, 3);
+leave('#s3', T4 - .55); enter('#s4', T4 - .3); camera(T4 - .5, 4);
+
+// ---------- 1 · Bíblia ----------
+pop('#cp1', T1 + .1);
+tl.fromTo('#ang1', { x: -200, opacity: 0 }, { x: 0, opacity: 1, duration: .8, ease: 'power3.out' }, cue('anjos') - .3);
+tl.fromTo('#ang2', { x: 200, opacity: 0 }, { x: 0, opacity: 1, duration: .8, ease: 'power3.out' }, cue('anjos') - .15);
+tl.to(['#ang1', '#ang2'], { y: -14, duration: .8, yoyo: true, repeat: 3, ease: 'sine.inOut' }, cue('anjos') + .6);
+tl.fromTo('#notes1 text', { y: 40, opacity: 0 }, { y: -30, opacity: 1, duration: .8, stagger: .2, ease: 'sine.out' }, cue('cantaram') - .1);
+pop('#v1', cue('glória') - .25);
+
+// ---------- 2 · ciência ----------
+pop('#cp2', cue('harvard') - .3);
+pop('#c2', cue('harvard') - .1);
+tl.to('#ecg', { attr: { 'stroke-dashoffset': 0 }, duration: 2.2, ease: 'none' }, cue('bebês'));
+tl.to('#c2 svg path:first-child', { scale: 1.08, transformOrigin: '450px 180px', duration: .35, yoyo: true, repeat: 3, ease: 'sine.inOut' }, cue('coração') - .2);
+pop('#t2', cue('relaxaram') - .2);
+
+// ---------- 3 · pediatria ----------
+pop('#cp3', T3 + .15);
+tl.fromTo('#clock3', { autoAlpha: 0, scale: .7, rotation: -20 }, { autoAlpha: 1, scale: 1, rotation: 0, transformOrigin: '50% 50%', duration: .8, ease: 'back.out(1.5)' }, T3 + .3);
+tl.to('#arc3', { attr: { 'stroke-dashoffset': 471 }, duration: 1.2, ease: 'power2.inOut' }, cue('trinta') - .4);
+pop('#h3', cue('momento') - .3);
+
+// ---------- FIM ----------
+tl.fromTo('#bento', { y: 400, opacity: 0 }, { y: 0, opacity: 1, duration: .9, ease: 'power3.out' }, T4 - .1);
+tl.to('#mouth', { attr: { ry: 20 }, duration: .3, yoyo: true, repeat: 5, ease: 'sine.inOut' }, T4 + .3);
+tl.fromTo('#notes4 text', { y: 40, opacity: 0 }, { y: -40, opacity: 1, duration: .9, stagger: .25, ease: 'sine.out' }, T4 + .4);
+tl.to('#head', { rotation: 5, svgOrigin: '260 260', duration: .7, yoyo: true, repeat: 2, ease: 'sine.inOut' }, T4 + .4);
+pop('#cta', T4 + .1);
+pop('#handle', T4 + .9);
+pop('#motivo', T4 + 1.2);
+tl.to({}, { duration: .01 }, END);
+
+window.seek = (t) => { tl.seek(t, false); };
+window.ready = document.fonts.ready.then(() => true);
+</script>
+</body>
+</html>
