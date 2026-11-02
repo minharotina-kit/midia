@@ -72,3 +72,20 @@ Termos de busca pra mandar pro Mateus: "emotional piano", "soft piano hope", "ca
 - **Lado cristão:** "A Bíblia ensina X (versículo) · a ciência também mostra Y (instituição)". Dizer "também mostra", nunca "a ciência prova a Bíblia". Evitar a palavra "ritual" (pedido do Mateus).
 - Seguir por impulso: viu o vídeo, quer seguir. Chamada final com motivo ("todo dia tem…").
 
+### Músicas de Natal e cristãs (Mateus mandou em 01/11) · `scratchpad/musica/natal/`
+| Música | Como é | Uso |
+|---|---|---|
+| 88adff18 o-holy-night-gentle-christmas-piano | piano suave, começa bem baixo (usar `MSS=12`) | 12h calmo; Seg 02/11 (canção) |
+| 9847d09a jesuschristisgod-instrumental-piano-worship | piano de adoração, 83 bpm, cresce devagar | 12h com versículo |
+| b2c168e7 andriig-christian-worship-instrumental-618747 | adoração, maior, quente e constante | 12h |
+| da02fc24 andriig-christian-worship-music-603985 | adoração, constante | 12h |
+| aed29910 andriig-christian-worship-music-576404 | adoração | 12h |
+| 971e42a0 leberch-piano-627002 | piano quente e constante | 12h |
+| 3a76e6b6 / 5eb5e853 atlasaudio winter piano | piano de inverno, maior, constante | 12h |
+| a59eee21 magic-of-christmas | começa muito baixo e cresce (usar MSS) | final emocionante |
+| fe99a9c5 ocean-waves-chill | chill lento, quente | fundo calmo |
+| e4c45b23 leberch-piano-628075 | menor, triste | tema sensível |
+| aa89691c tunetank-christmas · f6623d43 merry-christmas · 90a4163a fairy-tale · 74994d1e winter-piano-625748 · 2501a497 ocean-waves | alegres e brilhantes (competem com a voz) | Família Tatu / comédia |
+| 459de2eb carol-of-the-bells | dramática, menor (melodia de domínio público) | gancho de suspense |
+| 58704b4d santa-claus-is-coming-to-town | **não usar**: a melodia é de 1934 e ainda tem direito autoral; o Instagram pode silenciar o vídeo | — |
+
