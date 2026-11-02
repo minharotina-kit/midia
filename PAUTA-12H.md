@@ -64,3 +64,11 @@ Semana 26/10 a 01/11 já usou: gentle baby sleep lullaby dream (Ter 27), lullaby
 Termos de busca pra mandar pro Mateus: "emotional piano", "soft piano hope", "calm inspiring piano", "tender lullaby piano", "heartwarming acoustic".
 
 **Nova linha (pedido do Mateus em 01/11):** a partir de 02/11 o perfil continua "rotina pros pais", agora com lado cristão e clima de Natal: cada vídeo junta 1 base bíblica (versículo citado como fonte) + ciência/psicologia de fonte forte. Objetivo: preparar a venda do PDF "Dezembro com Jesus" (link na bio, ele coloca) e ganhar seguidores. Economizar tokens: molde reaproveitado, poucos testes de quadro. Tatu só quando ele mandar clipes. Ele vai repassando o material.
+
+### Fórmula do gancho (aprendida na semana 26/10 a 01/11, aprovada pelo Mateus em 01/11)
+- **Funcionou (menos de 40% pulando):** pergunta direta ao pai sobre o filho DELE ("Quanto seu filho precisa se mexer por dia?" 37%), frase que muita gente acredita pra confrontar ("Mito ou verdade" 39%), escolha provocativa ("Palmada, grito ou elogio?" 38%), cena começando no meio da confusão (Tatu 2 e 3, 27–29%).
+- **Não funcionou (mais de 55%):** abertura de aula ("O que a ciência descobriu…" 66%, "3 erros que…" 66%, "Nos primeiros anos, o cérebro…" 58%).
+- Regra: 1ª frase fala com o pai ou provoca; algo já se mexendo na tela no 1º segundo; 20–25 s; final com "Segue" + motivo.
+- **Lado cristão:** "A Bíblia ensina X (versículo) · a ciência também mostra Y (instituição)". Dizer "também mostra", nunca "a ciência prova a Bíblia". Evitar a palavra "ritual" (pedido do Mateus).
+- Seguir por impulso: viu o vídeo, quer seguir. Chamada final com motivo ("todo dia tem…").
+
