@@ -46,3 +46,5 @@ Leia isto primeiro ao continuar o trabalho do Instagram @paisdarotina numa conve
 - Música própria: `tools/musica.py <ninar|ukulele|piano|xilo> <segundos> <semente> saida.wav` (original, sem direitos; semente diferente a cada vídeo). Mistura com `tools/remix.py`: voz +10 dB, música −13 dB com ducking, −14 LUFS.
 - Conector completo do ElevenLabs (imagem, vídeo, música): instalado na conta em 26/10, só carrega em conversa nova. Teste primeiro com `creative_get_flow_node_types`.
 - Scripts de montagem em `tools/` (`build_tatu_ep1.py` é o molde do episódio; `build_reel_noite.py` o do Reel narrado). Fontes em `fonts/` (OFL). Os scripts apontam pra pasta de rascunho antiga: troque `S` em `build_reel_info.py` pela pasta da sessão nova e copie `fonts/ttf` pra lá.
+
+- **Nova linha (01/11):** rotina pros pais com lado cristão (base bíblica + psicologia + ciência), clima de Natal, preparando a venda do "Dezembro com Jesus" (link na bio). Economizar tokens. Tatu só com clipes dele.

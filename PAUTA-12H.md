@@ -62,3 +62,5 @@ Arquivos em `scratchpad/musica/pixabay/`. Análise de 29/10 (tom, ritmo, brilho,
 Semana 26/10 a 01/11 já usou: gentle baby sleep lullaby dream (Ter 27), lullaby-baby-sleeping (Qua 28), music-box-sleep-lullaby (Qui 29), emotional-piano-598096 (Sex 30). Podem voltar a partir de 02/11. As de comédia ficam pra Família Tatu.
 
 Termos de busca pra mandar pro Mateus: "emotional piano", "soft piano hope", "calm inspiring piano", "tender lullaby piano", "heartwarming acoustic".
+
+**Nova linha (pedido do Mateus em 01/11):** a partir de 02/11 o perfil continua "rotina pros pais", agora com lado cristão e clima de Natal: cada vídeo junta 1 base bíblica (versículo citado como fonte) + ciência/psicologia de fonte forte. Objetivo: preparar a venda do PDF "Dezembro com Jesus" (link na bio, ele coloca) e ganhar seguidores. Economizar tokens: molde reaproveitado, poucos testes de quadro. Tatu só quando ele mandar clipes. Ele vai repassando o material.
