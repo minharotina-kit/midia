@@ -8,10 +8,13 @@ Uso: python3 pausas.py voz_bruta.wav palavras.json pausas.json saida.wav cues.js
 Saída: wav a 48 kHz e cues.json [{"w": palavra, "s": inicio_no_video}] pro molde de motion.
 """
 import json
+import os
 import subprocess
 import sys
 
-PRE, POST, LEAD, TAIL, TEMPO = 0.05, 0.09, 0.25, 0.6, 0.9
+# TEMPO: 0.9 desacelera (Amandinha era rápida); vozes mais lentas, como a Paula, usam TEMPO=1.12 no ambiente.
+PRE, POST, LEAD, TAIL = 0.05, 0.09, 0.25, 0.6
+TEMPO = float(os.environ.get('TEMPO', '0.9'))
 
 
 def main(src, words_path, pauses_path, out_wav, out_cues):

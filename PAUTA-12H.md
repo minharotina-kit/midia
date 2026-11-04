@@ -5,7 +5,11 @@ Regras: nunca repetir tema ou desenho. Música: não repetir na mesma semana, ma
 
 ## Como produzir (receita aprovada pelo Mateus em 26/10)
 1. **Roteiro** com pergunta-gancho, 3 pontos e um pedido ("Salva..." ou "Manda pra..."). Cada frase num parágrafo.
-2. **Voz:** Amandinha (`r2fkFV8WAqXq2AqBpgJT`), eleven_multilingual_v2. Baixo pelo storage.googleapis.com.
+2. **Voz:** conta nova do ElevenLabs (02/11). Amandinha aposentada ("bem batida"). Teste de vozes, uma por vídeo, até o Mateus escolher a definitiva:
+   - Ter 03/11 → Paula (`xPnmQf6Ow3GGYWWURFPi`)
+   - Qua 04/11 → Sofia - Natural & Expressiva (`n2a9VtkZLl8j1FSXHsL7`)
+   - Qui 05/11 → Juliana Katrein (`ZExzO7iCJWL0gUN2WYbU`)
+   eleven_multilingual_v2, 1 tomada só. Na prévia, dizer qual voz foi usada.
 3. **Calma:** transcrevo (scribe), corto nas frases, ponho pausas (0,25 a 0,45 s; maior entre pontos) e desacelero 10% (`atempo=0.9`). Ele achou a primeira versão rápida demais.
 4. **Visual:** `tools/motion/info-2710-v2.html` é o molde (GSAP + Playwright, `render.js`).
    - Transição 3D suave: a cena vai pra trás e a próxima chega de baixo girando, com `transformPerspective` por cena e **sem preserve-3d** (dá corte no texto).

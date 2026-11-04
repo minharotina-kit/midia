@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!-- Ter 03/11 · "Seu filho come na mesa ou na frente da tela?" · feito a partir do natal-molde.html -->
+<style>
+@font-face { font-family: Fredoka; src: url("../fonts/ttf/Fredoka-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: Nunito; src: url("../fonts/ttf/Nunito-ExtraBold.ttf"); font-weight: 800; }
+:root { --cream: #fff6e3; --gold: #f2c14e; --goldD: #c9962a; --red: #d6453d; --green: #1f6b4f; --ink: #1b3a2e; --sky: #8fd3ff; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0f3326; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 18%, #2a7a5a 0%, #165040 38%, #0d3327 70%, #0a2a20 100%);
+  font-family: Nunito, sans-serif; color: var(--cream); perspective: 1700px; perspective-origin: 50% 42%; }
+#bg { position: absolute; inset: -140px; }
+.glow { position: absolute; border-radius: 50%; filter: blur(90px); }
+.flake { position: absolute; border-radius: 50%; background: #fff3cf; box-shadow: 0 0 10px 2px rgba(255,230,160,.45); }
+#world { position: absolute; inset: 0; }
+.scene { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+.big { position: absolute; left: 0; right: 0; text-align: center; font-family: Fredoka; }
+.center { position: absolute; left: 0; right: 0; text-align: center; }
+.chip { display: inline-block; background: rgba(255,246,227,.1); border: 3px solid var(--gold); color: var(--cream); font-size: 34px; padding: 11px 28px; border-radius: 40px; }
+.card { position: absolute; left: 90px; width: 900px; border-radius: 46px; background: var(--cream); color: var(--ink); box-shadow: 0 30px 60px rgba(0,0,0,.3); }
+.prog { position: absolute; top: 300px; left: 50%; transform: translateX(-50%); display: flex; gap: 18px; opacity: 0; }
+.prog div { width: 120px; height: 14px; border-radius: 7px; background: rgba(255,255,255,.2); overflow: hidden; }
+.prog i { display: block; height: 100%; width: 0%; background: var(--gold); border-radius: 7px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg">
+    <div class="glow" id="glowA" style="width:700px;height:700px;left:330px;top:120px;background:#ffd36b;opacity:.22"></div>
+    <div class="glow" id="glowB" style="width:640px;height:640px;left:-200px;top:1300px;background:#d6453d;opacity:.22"></div>
+    <svg id="star" width="220" height="220" viewBox="-110 -110 220 220" style="position:absolute;left:680px;top:200px;overflow:visible">
+      <circle r="100" fill="#ffe6a0" opacity=".16"/>
+      <path d="M0 -96 L18 -18 L96 0 L18 18 L0 96 L-18 18 L-96 0 L-18 -18 Z" fill="#f2c14e"/>
+      <path d="M0 -50 L9 -9 L50 0 L9 9 L0 50 L-9 9 L-50 0 L-9 -9 Z" fill="#fff6e3" transform="rotate(45)"/>
+    </svg>
+    <svg id="nativ" width="1360" height="300" viewBox="0 0 1360 300" style="position:absolute;left:0;top:1820px;opacity:.55">
+      <path d="M0 300 V 210 C 200 160 420 190 600 200 C 820 214 1060 160 1360 190 V 300 Z" fill="#082219"/>
+      <g fill="#082219"><path d="M560 200 L680 110 L800 200 Z"/><rect x="580" y="190" width="200" height="70"/>
+        <circle cx="650" cy="216" r="14"/><path d="M636 230 h28 v30 h-28 z"/><circle cx="712" cy="214" r="15"/><path d="M698 228 h30 v32 h-30 z"/>
+        <path d="M670 252 h40 l-6 14 h-28 z"/></g>
+    </svg>
+  </div>
+  <div class="prog" id="prog"><div><i></i></div><div><i></i></div><div><i></i></div></div>
+
+  <div id="world">
+    <!-- GANCHO: mesa x tela -->
+    <div class="scene" id="s0">
+      <svg id="pick0" width="860" height="560" viewBox="0 0 860 560" style="position:absolute;left:110px;top:430px;overflow:visible">
+        <g id="mesa0">
+          <circle cx="230" cy="300" r="230" fill="#ffe6a0" opacity=".1"/>
+          <rect x="110" y="330" width="26" height="180" rx="10" fill="#7a4a2a"/><rect x="326" y="330" width="26" height="180" rx="10" fill="#7a4a2a"/>
+          <ellipse cx="231" cy="336" rx="214" ry="74" fill="#a8673a"/>
+          <ellipse cx="231" cy="326" rx="214" ry="74" fill="#c98a4b"/>
+          <ellipse cx="231" cy="322" rx="170" ry="54" fill="#fff6e3"/>
+          <ellipse cx="166" cy="318" rx="62" ry="22" fill="#ffffff"/><ellipse cx="166" cy="314" rx="38" ry="12" fill="#f2c14e"/>
+          <ellipse cx="300" cy="326" rx="62" ry="22" fill="#ffffff"/><ellipse cx="300" cy="322" rx="38" ry="12" fill="#d6453d"/>
+          <g id="steam0" stroke="#fff6e3" stroke-width="9" fill="none" stroke-linecap="round" opacity=".75">
+            <path d="M150 280 q-16 -26 0 -52 q16 -26 0 -52"/><path d="M182 286 q-16 -26 0 -52 q16 -26 0 -52"/>
+            <path d="M292 288 q-16 -26 0 -52 q16 -26 0 -52"/></g>
+        </g>
+        <g id="ou0"><circle cx="458" cy="300" r="56" fill="#d6453d"/><text x="458" y="318" font-family="Fredoka" font-size="54" fill="#fff6e3" text-anchor="middle">ou</text></g>
+        <g id="tela0">
+          <circle cx="680" cy="300" r="190" fill="#8fd3ff" opacity=".12" id="tglow"/>
+          <rect x="580" y="130" width="200" height="350" rx="36" fill="#23323d"/>
+          <rect id="scr0" x="598" y="162" width="164" height="282" rx="18" fill="#8fd3ff"/>
+          <path d="M660 262 L712 300 L660 338 Z" fill="#ffffff"/>
+          <rect x="652" y="146" width="56" height="8" rx="4" fill="#4a5a66"/>
+        </g>
+      </svg>
+      <div class="big" id="h0" style="top:1060px;font-size:88px;line-height:1.12">Seu filho come<br><span style="color:var(--gold)">na mesa</span> com você…<br>ou na frente da <span style="color:var(--sky)">tela</span>?</div>
+    </div>
+
+    <!-- 1 · BÍBLIA -->
+    <div class="scene" id="s1">
+      <div class="center" style="top:380px"><span class="chip" id="cp1">Bíblia · Atos 2:46</span></div>
+      <div class="big" id="h1" style="top:470px;font-size:76px;line-height:1.1">Os primeiros cristãos<br>comiam <span style="color:var(--gold)">juntos</span></div>
+      <svg id="pao1" width="700" height="380" viewBox="0 0 700 380" style="position:absolute;left:190px;top:690px;overflow:visible">
+        <circle cx="350" cy="200" r="190" fill="#ffe6a0" opacity=".12"/>
+        <ellipse cx="350" cy="300" rx="300" ry="26" fill="rgba(0,0,0,.22)"/>
+        <g id="brL"><path d="M100 262 C 100 150 200 108 344 108 L 344 292 L 132 292 C 112 292 100 282 100 262 Z" fill="#d9944f"/>
+          <rect x="332" y="110" width="14" height="182" fill="#f6d2a6"/>
+          <g stroke="#b8743a" stroke-width="10" fill="none" stroke-linecap="round"><path d="M160 186 q30 -24 64 -12"/><path d="M228 160 q30 -24 64 -12"/></g></g>
+        <g id="brR"><path d="M356 108 C 500 108 590 150 590 262 C 590 282 578 292 558 292 L 356 292 Z" fill="#d9944f"/>
+          <rect x="354" y="110" width="14" height="182" fill="#f6d2a6"/>
+          <g stroke="#b8743a" stroke-width="10" fill="none" stroke-linecap="round"><path d="M412 160 q30 -24 64 -12"/><path d="M478 188 q30 -24 64 -12"/></g></g>
+        <g id="crumbs1" fill="#f6d2a6"><circle cx="330" cy="312" r="7"/><circle cx="362" cy="318" r="5"/><circle cx="348" cy="306" r="4"/><circle cx="378" cy="308" r="6"/></g>
+        <g id="cup1"><path d="M618 196 h72 l-12 96 h-48 z" fill="#c9962a"/><ellipse cx="654" cy="196" rx="36" ry="11" fill="#7a2f2f"/><rect x="640" y="292" width="28" height="10" rx="4" fill="#a87a20"/></g>
+      </svg>
+      <div class="card" id="v1" style="top:1110px;height:330px;text-align:center;padding:0 50px">
+        <div style="font-family:Fredoka;font-size:50px;line-height:1.15;margin-top:42px">“Partiam o pão em suas casas, e juntos participavam das refeições, com alegria”</div>
+        <div style="font-size:34px;margin-top:16px;color:#6b5a3a">Atos 2:46 (NVI)</div>
+      </div>
+    </div>
+
+    <!-- 2 · CIÊNCIA: 182.836 crianças -->
+    <div class="scene" id="s2">
+      <div class="center" style="top:380px"><span class="chip" id="cp2">EUA · Univ. de Illinois · revista Pediatrics</span></div>
+      <div class="big" id="h2" style="top:470px;font-size:76px;line-height:1.1">E a ciência<br>também mostra <span style="color:var(--gold)">isso</span></div>
+      <div class="card" id="c2" style="top:700px;height:500px">
+        <svg id="kids2" width="900" height="500" viewBox="0 0 900 500" style="position:absolute;left:0;top:0"></svg>
+      </div>
+      <div class="big" id="n2" style="top:1235px;font-size:132px;color:var(--gold)">0</div>
+      <div class="big" id="t2" style="top:1400px;font-size:50px">crianças e adolescentes · 17 estudos</div>
+    </div>
+
+    <!-- 3 · 3 refeições → +24% -->
+    <div class="scene" id="s3">
+      <div class="center" style="top:380px"><span class="chip" id="cp3">3 refeições ou mais em família, por semana</span></div>
+      <svg id="plates3" width="900" height="270" viewBox="0 0 900 270" style="position:absolute;left:90px;top:480px;overflow:visible">
+        <g id="pl1"><ellipse cx="170" cy="120" rx="118" ry="44" fill="#ffffff"/><ellipse cx="170" cy="114" rx="74" ry="24" fill="#f2c14e"/><circle cx="150" cy="106" r="14" fill="#5fae5a"/><circle cx="196" cy="110" r="12" fill="#d6453d"/>
+          <circle cx="252" cy="62" r="30" fill="#1f6b4f" stroke="#fff6e3" stroke-width="5"/><path d="M238 62 l10 11 l20 -22" stroke="#fff6e3" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="170" y="236" font-family="Fredoka" font-size="56" fill="#f2c14e" text-anchor="middle">1</text></g>
+        <g id="pl2"><ellipse cx="450" cy="120" rx="118" ry="44" fill="#ffffff"/><ellipse cx="450" cy="114" rx="74" ry="24" fill="#e9a35a"/><circle cx="430" cy="108" r="13" fill="#5fae5a"/><circle cx="474" cy="104" r="11" fill="#f2c14e"/>
+          <circle cx="532" cy="62" r="30" fill="#1f6b4f" stroke="#fff6e3" stroke-width="5"/><path d="M518 62 l10 11 l20 -22" stroke="#fff6e3" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="450" y="236" font-family="Fredoka" font-size="56" fill="#f2c14e" text-anchor="middle">2</text></g>
+        <g id="pl3"><ellipse cx="730" cy="120" rx="118" ry="44" fill="#ffffff"/><ellipse cx="730" cy="114" rx="74" ry="24" fill="#d6453d"/><circle cx="712" cy="104" r="13" fill="#5fae5a"/><circle cx="752" cy="110" r="12" fill="#f6d2a6"/>
+          <circle cx="812" cy="62" r="30" fill="#1f6b4f" stroke="#fff6e3" stroke-width="5"/><path d="M798 62 l10 11 l20 -22" stroke="#fff6e3" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="730" y="236" font-family="Fredoka" font-size="56" fill="#f2c14e" text-anchor="middle">3</text></g>
+      </svg>
+      <div class="big" id="lig3" style="top:800px;font-size:46px;opacity:.9">estava ligado a</div>
+      <div class="big" id="n3" style="top:850px;font-size:250px;line-height:1;color:var(--gold)">+0%</div>
+      <div class="big" id="h3" style="top:1120px;font-size:72px;line-height:1.1">mais chance de<br><span style="color:var(--gold)">comer saudável</span></div>
+      <svg id="veg3" width="640" height="210" viewBox="0 0 640 210" style="position:absolute;left:220px;top:1395px;overflow:visible">
+        <g id="vg1"><rect x="72" y="110" width="26" height="80" rx="10" fill="#9bc96a"/><circle cx="60" cy="96" r="38" fill="#4f9a4a"/><circle cx="104" cy="84" r="42" fill="#5fae5a"/><circle cx="86" cy="58" r="32" fill="#6cbf63"/></g>
+        <g id="vg2"><path d="M300 60 L340 60 L322 200 Z" fill="#f08a2c"/><path d="M308 60 q-20 -40 4 -50 M320 60 q0 -44 12 -54 M332 60 q20 -40 -2 -50" stroke="#5fae5a" stroke-width="9" fill="none" stroke-linecap="round"/></g>
+        <g id="vg3"><circle cx="540" cy="130" r="66" fill="#d6453d"/><path d="M540 66 q6 -30 24 -36" stroke="#7a4a2a" stroke-width="9" fill="none" stroke-linecap="round"/><ellipse cx="572" cy="44" rx="24" ry="12" fill="#5fae5a" transform="rotate(-25 572 44)"/><ellipse cx="516" cy="104" rx="14" ry="20" fill="#ffffff" opacity=".35"/></g>
+      </svg>
+    </div>
+
+    <!-- FIM: Bento à mesa, celular de lado -->
+    <div class="scene" id="s4">
+      <svg id="bento" width="520" height="560" viewBox="0 -40 520 580" style="position:absolute;left:280px;top:400px;overflow:visible">
+        <ellipse cx="260" cy="370" rx="178" ry="120" fill="#d9944f"/>
+        <g stroke="#b8743a" stroke-width="11" fill="none" stroke-linecap="round"><path d="M100 340 q160 -86 320 0"/><path d="M90 382 q170 -86 340 0"/></g>
+        <rect x="165" y="300" width="190" height="168" rx="80" fill="#f6d2a6"/>
+        <g id="head">
+          <ellipse cx="185" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(-22 185 98)"/><ellipse cx="185" cy="103" rx="16" ry="36" fill="#ffb3a8" transform="rotate(-22 185 103)"/>
+          <ellipse cx="335" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(22 335 98)"/><ellipse cx="335" cy="103" rx="16" ry="36" fill="#ffb3a8" transform="rotate(22 335 103)"/>
+          <ellipse cx="260" cy="196" rx="102" ry="90" fill="#efc08a"/>
+          <path d="M176 156 q84 -70 168 0 q-84 -30 -168 0z" fill="#d9944f"/>
+          <path d="M228 216 q32 -22 64 0 l-14 64 q-18 12 -36 0z" fill="#f6d2a6"/>
+          <ellipse cx="260" cy="278" rx="15" ry="9" fill="#7a4a3a"/>
+          <ellipse id="mouth" cx="260" cy="300" rx="16" ry="7" fill="#7a2f2f"/>
+          <g fill="#2a1d1a"><circle cx="214" cy="190" r="12"/><circle cx="306" cy="190" r="12"/></g>
+          <g fill="#ffffff"><circle cx="219" cy="185" r="4"/><circle cx="311" cy="185" r="4"/></g>
+          <circle cx="184" cy="236" r="15" fill="#ff9e91" opacity=".6"/><circle cx="336" cy="236" r="15" fill="#ff9e91" opacity=".6"/>
+        </g>
+        <g id="bib"><path d="M196 312 h128 l-14 90 q-50 24 -100 0 z" fill="#ffffff"/>
+          <g fill="#d6453d"><circle cx="232" cy="340" r="8"/><circle cx="284" cy="346" r="8"/><circle cx="258" cy="378" r="8"/></g></g>
+        <g id="spoon"><rect x="388" y="250" width="16" height="150" rx="8" fill="#c9c9c9" transform="rotate(18 396 325)"/><ellipse cx="420" cy="244" rx="26" ry="34" fill="#dcdcdc" transform="rotate(18 420 244)"/></g>
+      </svg>
+      <svg id="table4" width="900" height="210" viewBox="0 0 900 210" style="position:absolute;left:90px;top:820px;overflow:visible">
+        <rect x="0" y="96" width="900" height="70" rx="26" fill="#a8673a"/>
+        <rect x="0" y="84" width="900" height="40" rx="20" fill="#fff6e3"/>
+        <g id="bowl4"><path d="M330 30 h240 q-10 70 -120 74 q-110 -4 -120 -74 z" fill="#d6453d"/><ellipse cx="450" cy="30" rx="120" ry="18" fill="#f2c14e"/>
+          <g id="steam4" stroke="#fff6e3" stroke-width="9" fill="none" stroke-linecap="round" opacity=".75"><path d="M410 6 q-14 -24 0 -48 q14 -24 0 -48"/><path d="M490 6 q-14 -24 0 -48 q14 -24 0 -48"/></g></g>
+        <g id="phone4"><rect x="700" y="54" width="150" height="40" rx="14" fill="#23323d"/><rect x="712" y="62" width="126" height="22" rx="8" fill="#3b4b57"/>
+          <g id="no4" opacity="0"><circle cx="775" cy="30" r="58" fill="none" stroke="#d6453d" stroke-width="12"/><line x1="734" y1="-11" x2="816" y2="71" stroke="#d6453d" stroke-width="12" stroke-linecap="round"/></g></g>
+      </svg>
+      <div class="big" id="cta" style="top:1070px;font-size:78px;line-height:1.1;color:var(--gold)">Neste Natal:<br><span style="color:var(--cream)">1 refeição por dia,</span><br>todo mundo na mesa</div>
+      <div class="big" id="sem4" style="top:1340px;font-size:58px;color:var(--cream)">e <span style="color:var(--sky)">sem tela</span></div>
+      <div class="big" id="handle" style="top:1440px;font-size:48px">Segue @paisdarotina</div>
+      <div class="big" id="motivo" style="top:1510px;font-size:36px;opacity:.85">todo dia: fé e ciência na rotina das crianças</div>
+    </div>
+  </div>
+</div>
+
+<script src="node_modules/gsap/dist/gsap.min.js"></script>
+<script>
+const CUES = window.CUES || [];
+const norm = w => w.toLowerCase().replace(/[^a-zà-ú0-9]/g, '');
+function cue(w, n = 1) { let k = 0; for (const c of CUES) { if (norm(c.w) === w) { k++; if (k === n) return c.s; } } throw new Error('cue ' + w + ' ' + n); }
+const END = window.END || 29;
+
+// estrelinhas caindo (posições fixas)
+const bg = document.getElementById('bg');
+let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const FL = []; for (let i = 0; i < 34; i++) FL.push([rnd() * 1360, rnd() * 2200, 4 + rnd() * 9]);
+FL.forEach(([x, y, s], i) => bg.insertAdjacentHTML('beforeend', `<div class="flake" id="fl${i}" style="left:${x}px;top:${y}px;width:${s}px;height:${s}px;opacity:${.35 + rnd() * .5}"></div>`));
+
+// grade de crianças (60 carinhas)
+const kids = document.getElementById('kids2'); const tons = ['#efc08a', '#d9944f', '#f6d2a6', '#c98a4b', '#e9b98a'];
+const camisas = ['#d6453d', '#1f6b4f', '#f2c14e', '#8fd3ff', '#c9962a'];
+let kh = '';
+for (let r = 0; r < 5; r++) for (let c = 0; c < 10; c++) {
+  const x = 90 + c * 80, y = 70 + r * 84, i = r * 10 + c;
+  kh += `<g class="kid" id="k${i}"><path d="M${x - 26} ${y + 52} q26 -40 52 0 z" fill="${camisas[(i * 3) % 5]}"/><circle cx="${x}" cy="${y}" r="22" fill="${tons[(i * 7) % 5]}"/></g>`;
+}
+kids.innerHTML = kh;
+
+gsap.set('.scene', { transformPerspective: 1700, transformOrigin: '50% 45%' });
+gsap.set(['.chip', '.big', '.card'], { transformPerspective: 900 });
+gsap.set('#s0', { autoAlpha: 1 });
+const tl = gsap.timeline({ paused: true });
+
+// ---------- fundo vivo desde o 1º quadro ----------
+tl.fromTo('#world', { scale: 1 }, { scale: 1.05, duration: END, ease: 'none' }, 0);
+FL.forEach((f, i) => tl.to('#fl' + i, { y: 260 + (i % 4) * 60, x: (i % 2 ? 30 : -30), duration: END, ease: 'none' }, 0));
+tl.to('#star', { rotation: 20, scale: 1.08, duration: END, ease: 'sine.inOut' }, 0);
+tl.to('#star circle', { opacity: .3, duration: 1.2, yoyo: true, repeat: Math.ceil(END / 2.4), ease: 'sine.inOut' }, 0);
+tl.to('#glowA', { x: -160, y: 120, duration: END, ease: 'sine.inOut' }, 0);
+tl.to('#glowB', { x: 220, y: -200, duration: END, ease: 'sine.inOut' }, 0);
+
+const IN = { autoAlpha: 0, rotationX: -32, z: -520, y: 260 };
+const OUT = { autoAlpha: 0, rotationX: 26, z: -480, y: -280 };
+function enter(id, t) { tl.fromTo(id, IN, { autoAlpha: 1, rotationX: 0, z: 0, y: 0, duration: .9, ease: 'power3.out' }, t); }
+function leave(id, t) { tl.to(id, { ...OUT, duration: .8, ease: 'power2.inOut' }, t); }
+function camera(t, k) { tl.to('#bg', { y: -60 * k, duration: 1.2, ease: 'power2.inOut' }, t); }
+function pop(sel, t) { tl.fromTo(sel, { autoAlpha: 0, y: 60, rotationX: -50 }, { autoAlpha: 1, y: 0, rotationX: 0, duration: .7, ease: 'power3.out' }, t); }
+function steam(sel, t, n) { tl.fromTo(sel, { y: 20, opacity: .2 }, { y: -26, opacity: .9, duration: .9, stagger: .25, yoyo: true, repeat: n, ease: 'sine.inOut' }, t); }
+
+// trocas de cena
+const pbars = document.querySelectorAll('.prog i');
+const T1 = cue('bíblia') - .1, T2 = cue('ciência') - .1, T3 = cue('três') - .3, T4 = cue('neste') - .1;
+tl.to('#prog', { opacity: 1, duration: .5 }, T1 - .3);
+[[T1, T2], [T2, T3], [T3, T4]].forEach(([a, b], i) => tl.fromTo(pbars[i], { width: '0%' }, { width: '100%', duration: b - a - .3, ease: 'none' }, a));
+tl.to('#prog', { opacity: 0, duration: .5 }, T4 - .4);
+leave('#s0', T1 - .55); enter('#s1', T1 - .3); camera(T1 - .5, 1);
+leave('#s1', T2 - .55); enter('#s2', T2 - .3); camera(T2 - .5, 2);
+leave('#s2', T3 - .55); enter('#s3', T3 - .3); camera(T3 - .5, 3);
+leave('#s3', T4 - .55); enter('#s4', T4 - .3); camera(T4 - .5, 4);
+
+// ---------- GANCHO: vapor e tela piscando no 1º segundo ----------
+steam('#steam0 path', 0, 3);
+tl.to('#scr0', { attr: { fill: '#c4ecff' }, duration: .25, yoyo: true, repeat: 9, ease: 'sine.inOut' }, 0);
+tl.to('#tglow', { opacity: .28, duration: .5, yoyo: true, repeat: 5, ease: 'sine.inOut' }, 0);
+tl.fromTo('#h0', { scale: 1.06 }, { scale: 1, duration: .8, ease: 'power3.out' }, 0);
+tl.fromTo('#mesa0', { scale: 1 }, { scale: 1.08, svgOrigin: '230 330', duration: .35, yoyo: true, repeat: 1, ease: 'sine.inOut' }, cue('mesa') - .1);
+tl.fromTo('#ou0', { scale: 1 }, { scale: 1.25, svgOrigin: '458 300', duration: .25, yoyo: true, repeat: 1, ease: 'sine.inOut' }, cue('ou') - .05);
+tl.fromTo('#tela0', { rotation: 0 }, { rotation: 6, svgOrigin: '680 300', duration: .12, yoyo: true, repeat: 5, ease: 'sine.inOut' }, cue('tela') - .1);
+
+// ---------- 1 · Bíblia ----------
+pop('#cp1', T1 + .15);
+tl.fromTo('#pao1', { autoAlpha: 0, scale: .8 }, { autoAlpha: 1, scale: 1, transformOrigin: '50% 60%', duration: .7, ease: 'back.out(1.6)' }, T1 + .4);
+tl.to('#brL', { x: -46, rotation: -7, svgOrigin: '344 292', duration: .6, ease: 'power3.out' }, cue('partiam') + .1);
+tl.to('#brR', { x: 46, rotation: 7, svgOrigin: '356 292', duration: .6, ease: 'power3.out' }, cue('partiam') + .1);
+tl.fromTo('#crumbs1 circle', { y: -60, opacity: 0 }, { y: 0, opacity: 1, duration: .5, stagger: .06, ease: 'bounce.out' }, cue('pão'));
+tl.fromTo('#cup1', { x: 60, opacity: 0 }, { x: 0, opacity: 1, duration: .6, ease: 'power3.out' }, cue('comiam') - .2);
+pop('#v1', cue('juntos') - .2);
+
+// ---------- 2 · ciência ----------
+pop('#cp2', T2 + .15);
+pop('#c2', T2 + .45);
+tl.fromTo('.kid', { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, transformOrigin: '50% 80%', duration: .35, stagger: { each: .022, from: 'random' }, ease: 'back.out(2)' }, cue('cento') - .2);
+pop('#n2', cue('cento') - .3);
+pop('#t2', cue('crianças') - .1);
+const A2 = cue('cento') - .1, B2 = cue('crianças') + .5;
+
+// ---------- 3 · 3 refeições → +24% ----------
+pop('#cp3', T3 + .2);
+[['#pl1', cue('três')], ['#pl2', cue('refeições')], ['#pl3', cue('família')]].forEach(([p, t]) =>
+  tl.fromTo(p, { y: -120, opacity: 0 }, { y: 0, opacity: 1, duration: .55, ease: 'back.out(1.8)' }, t - .1));
+pop('#lig3', cue('ligadas') - .3);
+pop('#n3', cue('vinte') - .35);
+pop('#h3', cue('chance') - .25);
+[['#vg1', 0], ['#vg2', .15], ['#vg3', .3]].forEach(([v, d]) =>
+  tl.fromTo(v, { y: 80, opacity: 0, scale: .6 }, { y: 0, opacity: 1, scale: 1, transformOrigin: '50% 100%', duration: .55, ease: 'back.out(2)' }, cue('saudável') - .2 + d));
+const A3 = cue('vinte') - .15, B3 = cue('cento', 2) + .3;
+
+// ---------- FIM ----------
+tl.fromTo('#bento', { y: 300, opacity: 0 }, { y: 0, opacity: 1, duration: .9, ease: 'power3.out' }, T4 + .1);
+tl.fromTo('#table4', { y: 200, opacity: 0 }, { y: 0, opacity: 1, duration: .8, ease: 'power3.out' }, T4 + .2);
+steam('#steam4 path', T4 + .6, 7);
+tl.to('#spoon', { rotation: -22, svgOrigin: '396 400', duration: .4, yoyo: true, repeat: 5, ease: 'sine.inOut' }, T4 + 1);
+tl.to('#mouth', { attr: { ry: 14 }, duration: .2, yoyo: true, repeat: 9, ease: 'sine.inOut' }, T4 + 1.2);
+pop('#cta', T4 + .15);
+tl.to('#no4', { opacity: 1, duration: .3 }, cue('sem') - .1);
+tl.fromTo('#no4', { scale: 1.6 }, { scale: 1, svgOrigin: '775 30', duration: .45, ease: 'back.out(2)' }, cue('sem') - .1);
+pop('#sem4', cue('sem') - .2);
+pop('#handle', cue('salva') - .1);
+pop('#motivo', cue('salva') + .3);
+tl.to({}, { duration: .01 }, END);
+
+// contadores calculados no seek (quadro a quadro, sempre igual)
+const ease = x => 1 - Math.pow(1 - x, 3);
+const clamp = x => Math.max(0, Math.min(1, x));
+const n2 = document.getElementById('n2'), n3 = document.getElementById('n3');
+window.seek = (t) => {
+  tl.seek(t, false);
+  n2.textContent = Math.round(182836 * ease(clamp((t - A2) / (B2 - A2)))).toLocaleString('pt-BR');
+  n3.textContent = '+' + Math.round(24 * ease(clamp((t - A3) / (B3 - A3)))) + '%';
+};
+window.ready = document.fonts.ready.then(() => true);
+</script>
+</body>
+</html>
