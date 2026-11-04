@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<!-- Qui 05/11 · Mito ou verdade de Natal: "Quanto mais brinquedo, mais seu filho brinca?" · 12,8 s, sem narração, tempos fixos -->
+<style>
+@font-face { font-family: Fredoka; src: url("../fonts/ttf/Fredoka-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: Nunito; src: url("../fonts/ttf/Nunito-ExtraBold.ttf"); font-weight: 800; }
+:root { --cream: #fff6e3; --gold: #f2c14e; --red: #d6453d; --green: #2f9a6a; --ink: #1b3a2e; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0f3326; }
+#stage { position: relative; width: 1080px; height: 1920px; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 18%, #2a7a5a 0%, #165040 38%, #0d3327 70%, #0a2a20 100%);
+  font-family: Nunito, sans-serif; color: var(--cream); perspective: 1700px; perspective-origin: 50% 42%; }
+#bg { position: absolute; inset: -140px; }
+.glow { position: absolute; border-radius: 50%; filter: blur(90px); }
+.flake { position: absolute; border-radius: 50%; background: #fff3cf; box-shadow: 0 0 10px 2px rgba(255,230,160,.45); }
+#world { position: absolute; inset: 0; }
+.scene { position: absolute; inset: 0; opacity: 0; visibility: hidden; }
+.big { position: absolute; left: 0; right: 0; text-align: center; font-family: Fredoka; }
+.center { position: absolute; left: 0; right: 0; text-align: center; }
+.chip { display: inline-block; background: rgba(255,246,227,.1); border: 3px solid var(--gold); color: var(--cream); font-size: 36px; padding: 12px 30px; border-radius: 40px; font-family: Fredoka; }
+.btn { position: absolute; top: 1440px; width: 400px; height: 150px; border-radius: 75px; font-family: Fredoka; font-size: 76px; display: flex; align-items: center; justify-content: center; box-shadow: 0 16px 0 rgba(0,0,0,.25); }
+#bm { left: 80px; background: var(--red); }
+#bv { left: 600px; background: var(--green); }
+#cd { position: absolute; left: 440px; top: 1640px; width: 200px; height: 200px; border-radius: 50%; background: var(--gold); color: var(--ink); font-family: Fredoka; font-size: 130px; display: flex; align-items: center; justify-content: center; opacity: 0; }
+#stamp { position: absolute; left: 190px; top: 820px; width: 700px; text-align: center; font-family: Fredoka; font-size: 230px; color: var(--red); border: 18px solid var(--red); border-radius: 40px; background: rgba(255,246,227,.92); opacity: 0; }
+.card { position: absolute; left: 80px; width: 920px; border-radius: 46px; background: var(--cream); color: var(--ink); box-shadow: 0 30px 60px rgba(0,0,0,.3); }
+.lbl { font-family: Fredoka; font-size: 44px; }
+.sub { font-size: 34px; color: #5b6b62; }
+.bar { height: 46px; border-radius: 23px; margin-top: 14px; width: 0; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bg">
+    <div class="glow" id="glowA" style="width:700px;height:700px;left:330px;top:120px;background:#ffd36b;opacity:.22"></div>
+    <div class="glow" id="glowB" style="width:640px;height:640px;left:-200px;top:1300px;background:#d6453d;opacity:.22"></div>
+    <svg id="star" width="220" height="220" viewBox="-110 -110 220 220" style="position:absolute;left:820px;top:170px;overflow:visible">
+      <circle r="100" fill="#ffe6a0" opacity=".16"/>
+      <path d="M0 -96 L18 -18 L96 0 L18 18 L0 96 L-18 18 L-96 0 L-18 -18 Z" fill="#f2c14e"/>
+    </svg>
+    <svg width="1360" height="300" viewBox="0 0 1360 300" style="position:absolute;left:0;top:1840px;opacity:.55">
+      <path d="M0 300 V 210 C 200 160 420 190 600 200 C 820 214 1060 160 1360 190 V 300 Z" fill="#082219"/>
+    </svg>
+  </div>
+
+  <div id="world">
+    <!-- PERGUNTA -->
+    <div class="scene" id="s0">
+      <div class="center" style="top:250px"><span class="chip">MITO OU VERDADE? · Natal</span></div>
+      <div class="big" id="h0" style="top:380px;font-size:104px;line-height:1.08">Quanto mais<br>brinquedo, mais<br>seu filho <span style="color:var(--gold)">brinca</span>?</div>
+      <svg id="tower" width="620" height="560" viewBox="0 0 620 560" style="position:absolute;left:300px;top:840px;overflow:visible">
+        <ellipse cx="250" cy="548" rx="230" ry="16" fill="rgba(0,0,0,.25)"/>
+        <g id="gf1"><rect x="80" y="430" width="340" height="120" rx="14" fill="#d6453d"/><rect x="235" y="430" width="30" height="120" fill="#f2c14e"/><rect x="80" y="476" width="340" height="28" fill="#f2c14e"/></g>
+        <g id="gf2"><rect x="110" y="320" width="270" height="110" rx="14" fill="#2f9a6a"/><rect x="230" y="320" width="30" height="110" fill="#fff6e3"/><rect x="110" y="360" width="270" height="26" fill="#fff6e3"/></g>
+        <g id="gf3"><rect x="140" y="225" width="220" height="95" rx="12" fill="#8fd3ff"/><rect x="236" y="225" width="26" height="95" fill="#d6453d"/><rect x="140" y="258" width="220" height="24" fill="#d6453d"/></g>
+        <g id="gf4"><rect x="165" y="140" width="170" height="85" rx="12" fill="#f2c14e"/><rect x="236" y="140" width="26" height="85" fill="#d6453d"/><rect x="165" y="170" width="170" height="22" fill="#d6453d"/></g>
+        <g id="gf5"><rect x="190" y="70" width="120" height="70" rx="10" fill="#c77dd6"/><rect x="238" y="70" width="22" height="70" fill="#fff6e3"/>
+          <ellipse cx="232" cy="62" rx="22" ry="13" fill="#fff6e3"/><ellipse cx="266" cy="62" rx="22" ry="13" fill="#fff6e3"/></g>
+      </svg>
+      <svg id="bq" width="300" height="360" viewBox="140 30 240 330" style="position:absolute;left:60px;top:1040px;overflow:visible">
+        <g id="bqHead">
+          <ellipse cx="185" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(-22 185 98)"/><ellipse cx="335" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(22 335 98)"/>
+          <ellipse cx="260" cy="196" rx="102" ry="90" fill="#efc08a"/><path d="M176 156 q84 -70 168 0 q-84 -30 -168 0z" fill="#d9944f"/>
+          <path d="M228 216 q32 -22 64 0 l-14 64 q-18 12 -36 0z" fill="#f6d2a6"/><ellipse cx="260" cy="278" rx="15" ry="9" fill="#7a4a3a"/>
+          <circle cx="226" cy="178" r="13" fill="#2a1d1a"/><circle cx="318" cy="178" r="13" fill="#2a1d1a"/>
+          <circle cx="231" cy="172" r="4" fill="#fff"/><circle cx="323" cy="172" r="4" fill="#fff"/>
+          <ellipse cx="262" cy="306" rx="12" ry="9" fill="#7a2f2f"/>
+        </g>
+        <g id="qm"><circle cx="370" cy="60" r="46" fill="#fff6e3"/><text x="370" y="84" font-family="Fredoka" font-size="70" fill="#1b3a2e" text-anchor="middle">?</text></g>
+      </svg>
+      <div class="btn" id="bm">MITO</div>
+      <div class="btn" id="bv">VERDADE</div>
+      <div class="big" id="ask" style="top:1650px;font-size:40px;opacity:.9">comenta sua resposta antes do fim</div>
+      <div id="cd">3</div>
+      <div id="stamp">MITO!</div>
+    </div>
+
+    <!-- RESPOSTA -->
+    <div class="scene" id="s1">
+      <div class="center" style="top:300px"><span class="chip">Universidade de Toledo · EUA · 2018</span></div>
+      <div class="big" id="h1" style="top:420px;font-size:84px;line-height:1.1">Com <span style="color:var(--gold)">4 brinquedos</span>,<br>a brincadeira rendeu mais</div>
+      <div class="card" id="cmp" style="top:660px;height:680px;padding:50px 56px">
+        <div class="lbl">4 brinquedos</div>
+        <svg id="t4" width="808" height="90" viewBox="0 0 808 90" style="margin-top:10px;display:block;overflow:visible"></svg>
+        <div class="bar" id="b4" style="background:#f2c14e"></div>
+        <div class="sub" style="margin-top:8px">brincou bem mais tempo com cada um</div>
+        <div class="lbl" style="margin-top:34px">16 brinquedos</div>
+        <svg id="t16" width="808" height="90" viewBox="0 0 808 90" style="margin-top:10px;display:block;overflow:visible"></svg>
+        <div class="bar" id="b16" style="background:#b9c4bd"></div>
+      </div>
+      <div class="big" id="t1" style="top:1390px;font-size:52px;line-height:1.2">Crianças de 1 a 2 anos e meio brincaram<br>com cada brinquedo cerca do <span style="color:var(--gold)">dobro do tempo</span><br>e de mais jeitos</div>
+    </div>
+
+    <!-- FIM -->
+    <div class="scene" id="s2">
+      <svg id="bento" width="520" height="560" viewBox="0 -40 520 580" style="position:absolute;left:280px;top:360px;overflow:visible">
+        <ellipse cx="260" cy="500" rx="170" ry="20" fill="rgba(0,0,0,.25)"/>
+        <ellipse cx="260" cy="370" rx="178" ry="120" fill="#d9944f"/>
+        <g stroke="#b8743a" stroke-width="11" fill="none" stroke-linecap="round"><path d="M100 340 q160 -86 320 0"/><path d="M90 382 q170 -86 340 0"/><path d="M96 424 q164 -78 328 0"/></g>
+        <g id="head2">
+          <ellipse cx="185" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(-22 185 98)"/><ellipse cx="185" cy="103" rx="16" ry="36" fill="#ffb3a8" transform="rotate(-22 185 103)"/>
+          <ellipse cx="335" cy="98" rx="32" ry="56" fill="#efc08a" transform="rotate(22 335 98)"/><ellipse cx="335" cy="103" rx="16" ry="36" fill="#ffb3a8" transform="rotate(22 335 103)"/>
+          <ellipse cx="260" cy="196" rx="102" ry="90" fill="#efc08a"/><path d="M176 156 q84 -70 168 0 q-84 -30 -168 0z" fill="#d9944f"/>
+          <path d="M228 216 q32 -22 64 0 l-14 64 q-18 12 -36 0z" fill="#f6d2a6"/><ellipse cx="260" cy="278" rx="15" ry="9" fill="#7a4a3a"/>
+          <g stroke="#2a1d1a" stroke-width="9" fill="none" stroke-linecap="round"><path d="M198 196 q17 -18 34 0"/><path d="M288 196 q17 -18 34 0"/></g>
+          <path d="M240 300 q20 18 40 0" stroke="#7a2f2f" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="184" cy="236" r="15" fill="#ff9e91" opacity=".6"/><circle cx="336" cy="236" r="15" fill="#ff9e91" opacity=".6"/>
+        </g>
+        <g id="onegift"><rect x="190" y="340" width="140" height="120" rx="14" fill="#d6453d"/><rect x="248" y="340" width="24" height="120" fill="#f2c14e"/><rect x="190" y="386" width="140" height="24" fill="#f2c14e"/>
+          <ellipse cx="242" cy="332" rx="24" ry="14" fill="#f2c14e"/><ellipse cx="278" cy="332" rx="24" ry="14" fill="#f2c14e"/>
+          <ellipse cx="176" cy="400" rx="30" ry="22" fill="#efc08a"/><ellipse cx="344" cy="400" rx="30" ry="22" fill="#efc08a"/></g>
+        <g id="hearts" fill="#ff8a80"><path d="M420 120 c0 -20 30 -20 30 0 c0 -20 30 -20 30 0 c0 24 -30 40 -30 40 c0 0 -30 -16 -30 -40z"/><path d="M60 170 c0 -14 22 -14 22 0 c0 -14 22 -14 22 0 c0 18 -22 30 -22 30 c0 0 -22 -12 -22 -30z"/></g>
+      </svg>
+      <div class="big" id="cta" style="top:1000px;font-size:96px;line-height:1.08">Neste Natal:<br><span style="color:var(--gold)">menos caixa,<br>mais presença</span></div>
+      <div class="big" id="handle" style="top:1360px;font-size:54px">Segue @paisdarotina</div>
+      <div class="big" id="amanha" style="top:1440px;font-size:40px;opacity:.85">amanhã tem mais um</div>
+    </div>
+  </div>
+</div>
+
+<script src="node_modules/gsap/dist/gsap.min.js"></script>
+<script>
+const END = window.END || 12.8;
+const bg = document.getElementById('bg');
+let seed = 23; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const FL = []; for (let i = 0; i < 34; i++) FL.push([rnd() * 1360, rnd() * 2200, 4 + rnd() * 9]);
+FL.forEach(([x, y, s], i) => bg.insertAdjacentHTML('beforeend', `<div class="flake" id="fl${i}" style="left:${x}px;top:${y}px;width:${s}px;height:${s}px;opacity:${.35 + rnd() * .5}"></div>`));
+
+// brinquedinhos (bola, bloco, triângulo, estrela)
+const cores = ['#d6453d', '#2f9a6a', '#f2c14e', '#8fd3ff', '#c77dd6'];
+function toy(k, x, s, c) {
+  if (k === 0) return `<circle cx="${x}" cy="45" r="${s}" fill="${c}"/><path d="M${x - s} 45 h${2 * s}" stroke="#fff6e3" stroke-width="5"/>`;
+  if (k === 1) return `<rect x="${x - s}" y="${45 - s}" width="${2 * s}" height="${2 * s}" rx="6" fill="${c}"/>`;
+  if (k === 2) return `<path d="M${x} ${45 - s} L${x + s} ${45 + s} L${x - s} ${45 + s} Z" fill="${c}"/>`;
+  return `<path d="M${x} ${45 - s} L${x + s * .3} ${45 - s * .3} L${x + s} 45 L${x + s * .3} ${45 + s * .3} L${x} ${45 + s} L${x - s * .3} ${45 + s * .3} L${x - s} 45 L${x - s * .3} ${45 - s * .3} Z" fill="${c}"/>`;
+}
+document.getElementById('t4').innerHTML = [0, 1, 2, 3].map(i => `<g class="ty4">${toy(i, 46 + i * 110, 38, cores[i])}</g>`).join('');
+document.getElementById('t16').innerHTML = Array.from({ length: 16 }, (_, i) => `<g class="ty16">${toy(i % 4, 26 + i * 50, 21, cores[(i * 2) % 5])}</g>`).join('');
+
+gsap.set('.scene', { transformPerspective: 1700, transformOrigin: '50% 45%' });
+gsap.set('#s0', { autoAlpha: 1 });
+const tl = gsap.timeline({ paused: true });
+
+tl.fromTo('#world', { scale: 1 }, { scale: 1.04, duration: END, ease: 'none' }, 0);
+FL.forEach((f, i) => tl.to('#fl' + i, { y: 200 + (i % 4) * 50, x: (i % 2 ? 24 : -24), duration: END, ease: 'none' }, 0));
+tl.to('#star', { rotation: 25, scale: 1.1, duration: END, ease: 'sine.inOut' }, 0);
+tl.to('#glowA', { x: -160, y: 120, duration: END, ease: 'sine.inOut' }, 0);
+
+const IN = { autoAlpha: 0, rotationX: -32, z: -520, y: 260 };
+const OUT = { autoAlpha: 0, rotationX: 26, z: -480, y: -280 };
+function enter(id, t) { tl.fromTo(id, IN, { autoAlpha: 1, rotationX: 0, z: 0, y: 0, duration: .8, ease: 'power3.out' }, t); }
+function leave(id, t) { tl.to(id, { ...OUT, duration: .7, ease: 'power2.inOut' }, t); }
+function pop(sel, t) { tl.fromTo(sel, { autoAlpha: 0, y: 50, scale: .9 }, { autoAlpha: 1, y: 0, scale: 1, duration: .5, ease: 'back.out(1.8)' }, t); }
+
+// ---------- PERGUNTA (0 → 5.3) ----------
+tl.fromTo('#h0', { scale: 1.08 }, { scale: 1, duration: .6, ease: 'power3.out' }, 0);
+tl.fromTo('#tower', { rotation: -3 }, { rotation: 3, svgOrigin: '250 548', transformOrigin: '50% 100%', duration: .45, yoyo: true, repeat: 9, ease: 'sine.inOut' }, 0);
+tl.fromTo('#gf5', { y: -18 }, { y: 0, duration: .3, yoyo: true, repeat: 13, ease: 'sine.inOut' }, 0);
+tl.fromTo('#qm', { scale: .8, opacity: .6 }, { scale: 1.1, opacity: 1, svgOrigin: '370 60', duration: .4, yoyo: true, repeat: 9, ease: 'sine.inOut' }, 0);
+tl.fromTo('#bm', { scale: 1 }, { scale: 1.07, duration: .35, yoyo: true, repeat: 5, ease: 'sine.inOut' }, 0);
+tl.fromTo('#bv', { scale: 1.07 }, { scale: 1, duration: .35, yoyo: true, repeat: 5, ease: 'sine.inOut' }, 0);
+pop('#ask', .9);
+tl.to('#ask', { autoAlpha: 0, duration: .25 }, 2.25);
+[['3', 2.4], ['2', 3.05], ['1', 3.7]].forEach(([n, t]) => {
+  tl.fromTo('#cd', { opacity: 1, scale: 1.5 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)', immediateRender: false }, t);
+});
+tl.to('#cd', { opacity: 0, duration: .2 }, 4.35);
+tl.to('#bv', { opacity: .25, scale: .9, duration: .3 }, 4.4);
+tl.to('#bm', { scale: 1.15, duration: .3, ease: 'back.out(2)' }, 4.4);
+tl.fromTo('#stamp', { opacity: 0, scale: 2.2, rotation: -14 }, { opacity: 1, scale: 1, rotation: -10, duration: .3, ease: 'power4.in' }, 4.45);
+// torre desmonta
+[['#gf5', -260, -40], ['#gf4', 220, 30], ['#gf3', -200, -25], ['#gf2', 180, 20]].forEach(([g, x, r], i) =>
+  tl.to(g, { x, y: 520, rotation: r, svgOrigin: '250 300', opacity: 0, duration: .7, ease: 'power2.in' }, 4.55 + i * .04));
+leave('#s0', 5.25);
+
+// ---------- RESPOSTA (5.4 → 10.1) ----------
+enter('#s1', 5.45);
+pop('#cmp', 5.9);
+tl.fromTo(".ty4", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .35, stagger: .08, ease: "back.out(2)" }, 6.1);
+tl.fromTo(".ty16", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: .25, stagger: .03, ease: "back.out(2)" }, 6.3);
+tl.to('#b4', { width: '100%', duration: 1.4, ease: 'power2.out' }, 6.6);
+tl.to('#b16', { width: '48%', duration: 1.0, ease: 'power2.out' }, 6.6);
+tl.to('.ty16', { y: -10, duration: .18, stagger: { each: .04, repeat: 3, yoyo: true }, ease: 'sine.inOut' }, 7.2);
+pop('#t1', 7.4);
+leave('#s1', 10.05);
+
+// ---------- FIM (10.2 → END) ----------
+enter('#s2', 10.2);
+tl.fromTo('#bento', { y: 260, opacity: 0 }, { y: 0, opacity: 1, duration: .7, ease: 'power3.out' }, 10.25);
+tl.to('#head2', { rotation: 5, svgOrigin: '260 260', duration: .5, yoyo: true, repeat: 3, ease: 'sine.inOut' }, 10.8);
+tl.fromTo('#hearts path', { y: 30, opacity: 0, scale: .6 }, { y: -20, opacity: 1, scale: 1, duration: .8, stagger: .2, ease: 'sine.out' }, 10.9);
+pop('#cta', 10.35);
+pop('#handle', 11.1);
+pop('#amanha', 11.4);
+tl.to({}, { duration: .01 }, END);
+
+const cd = document.getElementById('cd');
+window.seek = (t) => { tl.seek(t, false); cd.textContent = t < 3.05 ? '3' : t < 3.7 ? '2' : '1'; };
+window.ready = document.fonts.ready.then(() => true);
+</script>
+</body>
+</html>
