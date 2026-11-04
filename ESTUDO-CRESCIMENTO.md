@@ -46,6 +46,32 @@ Pedido do Mateus: "os vídeos não tão convencendo". Estudar o que deu certo aq
    - Testar ganchos com Reels de teste.
 4. **Parar:** "a Bíblia diz… a ciência mostra…" falado em 25 a 30 s.
 
+## 4b. Prévia do plano de Natal (03/11, aguardando OK) · https://claude.ai/artifact/7KQbGfe64dpfQWQ4ydSDg6
+
+**Até 28/11, às 12h, alternando dois formatos:**
+- **Mito ou verdade de Natal:** 10 s, só texto e música, sem narração, com o Bento reagindo. A resposta vem no fim. Ex.: "Mais presente = criança mais feliz?" → MITO. Base: Univ. de Toledo 2018, 36 crianças de 18 a 30 meses; com 4 brinquedos elas brincaram cerca do dobro do tempo do que com 16. Versículo na legenda: Lucas 12:15.
+- **Fala assim de Natal:** 12 s, uma frase pronta pra usar com o filho.
+
+**Datas marcadas:**
+- **27/11:** Black Friday, com o tema presentes.
+- **29/11 (1º domingo do Advento):** trailer da série.
+- **01/12 a 24/12:** "Calendário do Bento", 1 episódio por dia, com 15 a 20 s.
+  - Cada episódio se entende sozinho; o número é só de coleção.
+  - Cada dia segue a atividade do PDF "Dezembro com Jesus" daquele dia.
+  - Fecha com "comenta NATAL" e a resposta automática na DM leva o link.
+- **25/12:** episódio final.
+
+**Metas:**
+- Menos de 40% pulam nos 3 primeiros segundos.
+- 1 seguidor a cada 300 views.
+- 1 envio a cada 100 views.
+- Julgar só depois de 4 vídeos de cada formato.
+
+**Pendências do Mateus:**
+- Bento em 2D (eu faço tudo) ou 3D (com os clipes dele).
+- Instalar ManyChat ou parecido pra resposta automática na DM.
+- Pôr o link do PDF na bio até 29/11.
+
 ## 5. Ferramentas avaliadas
 - **GitHub:** só achei projetos acadêmicos de previsão de viralidade (modelos de ML). Nada que ajude direto, sem guia prático de gancho.
 - **Higgsfield Virality Predictor:** analisa vídeos de até 16 s (nota de gancho e risco de abandono). Dá pra usar pra testar ganchos antes de postar.
