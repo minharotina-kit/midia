@@ -4,7 +4,7 @@ const fs = require('fs'); const { spawn } = require('child_process'); const path
 (async () => {
   const [page, cuesPath, END, FPS, out, shots] = process.argv.slice(2);
   const cues = JSON.parse(fs.readFileSync(cuesPath, 'utf8'));
-  const b = await chromium.launch();
+  const b = await chromium.launch({ args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
   const p = await b.newPage({ viewport: { width: 1080, height: 1920 }, deviceScaleFactor: 1 });
   await p.addInitScript(([c, e]) => { window.CUES = c; window.END = e; }, [cues, parseFloat(END)]);
   const errs = []; p.on('pageerror', e => errs.push(String(e)));

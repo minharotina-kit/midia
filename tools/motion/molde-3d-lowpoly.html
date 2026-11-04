@@ -1,0 +1,165 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Teste 10 s: estilo "explicador 3D low-poly" (mundo de blocos, câmera voando, HUD, palavra por palavra) -->
+<style>
+@font-face { font-family: Fredoka; src: url("../fonts/ttf/Fredoka-Bold.ttf"); font-weight: 700; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1080px; height: 1920px; overflow: hidden; background: #8fd3ff; }
+canvas { position: absolute; inset: 0; }
+#ui { position: absolute; inset: 0; font-family: Fredoka; color: #fff; }
+.hud { position: absolute; top: 90px; width: 300px; height: 150px; border-radius: 26px; background: rgba(14,70,70,.82); border: 6px solid #f2c14e; text-align: center; padding-top: 14px; }
+.hud small { display: block; font-size: 26px; letter-spacing: .08em; opacity: .9; }
+.hud b { display: block; font-size: 64px; line-height: 1.05; color: #ffe27a; }
+#hl { left: 60px; } #hr { right: 60px; }
+#word { position: absolute; left: 0; right: 0; top: 1300px; text-align: center; font-size: 120px; -webkit-text-stroke: 10px #10242a; paint-order: stroke fill; text-shadow: 0 10px 0 rgba(0,0,0,.25); }
+.tag { position: absolute; font-size: 44px; background: #fff; color: #10242a; padding: 10px 26px 10px 54px; border-radius: 40px; opacity: 0; white-space: nowrap; }
+.tag::before { content: ""; position: absolute; left: 22px; top: 22px; width: 18px; height: 18px; border-radius: 50%; background: #f2c14e; }
+.yel { position: absolute; font-size: 96px; color: #ffd23f; -webkit-text-stroke: 10px #10242a; paint-order: stroke fill; opacity: 0; white-space: nowrap; }
+#rew { position: absolute; left: 440px; top: 520px; width: 200px; opacity: 0; }
+#lines { position: absolute; inset: 0; opacity: 0; background: repeating-linear-gradient(180deg, transparent 0 46px, rgba(255,255,255,.55) 46px 50px); }
+</style></head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div id="ui">
+  <div id="lines"></div>
+  <div class="hud" id="hl"><small id="hlk">JANTAR</small><b id="hlv">19:30</b></div>
+  <div class="hud" id="hr"><small id="hrk">NA TELA</small><b id="hrv">00:00</b></div>
+  <svg id="rew" viewBox="0 0 200 120"><path d="M100 10 L20 60 L100 110 Z M190 10 L110 60 L190 110 Z" fill="#fff" stroke="#10242a" stroke-width="8" stroke-linejoin="round"/></svg>
+  <div class="tag" id="tg1">TELA LIGADA</div>
+  <div class="tag" id="tg2">ATOS 2:46</div>
+  <div class="yel" id="y1">PARTIAM O PÃO</div>
+  <div id="word"></div>
+</div>
+<script src="node_modules/three/build/three.min.js"></script>
+<script src="node_modules/gsap/dist/gsap.min.js"></script>
+<script>
+const CUES = window.CUES || [], END = window.END || 10.2;
+const norm = w => w.toLowerCase().replace(/[^a-zà-ú0-9]/g, '');
+const cue = (w, n = 1) => { let k = 0; for (const c of CUES) if (norm(c.w) === w && ++k === n) return c.s; throw 'cue ' + w; };
+const R = new THREE.WebGLRenderer({ canvas: document.getElementById('c'), antialias: true, preserveDrawingBuffer: true });
+R.setSize(1080, 1920, false); R.shadowMap.enabled = true; R.shadowMap.type = THREE.PCFSoftShadowMap;
+const scene = new THREE.Scene(); scene.background = new THREE.Color('#9fd8ff'); scene.fog = new THREE.Fog('#bfe6ff', 60, 260);
+const cam = new THREE.PerspectiveCamera(50, 1080 / 1920, .1, 600);
+const hemi = new THREE.HemisphereLight('#ffffff', '#4a7a30', .55); scene.add(hemi);
+const sun = new THREE.DirectionalLight('#fff3dc', 1.15); sun.position.set(30, 50, 20); sun.castShadow = true;
+sun.shadow.mapSize.set(1024, 1024); Object.assign(sun.shadow.camera, { left: -12, right: 12, top: 12, bottom: -12 }); scene.add(sun); scene.add(sun.target);
+const M = c => new THREE.MeshLambertMaterial({ color: c, flatShading: true });
+function mesh(g, c, p, parent = scene) { const m = new THREE.Mesh(g, M(c)); m.castShadow = m.receiveShadow = true; if (p) m.position.set(...p); parent.add(m); return m; }
+let sd = 5; const rnd = () => (sd = sd * 16807 % 2147483647) / 2147483647;
+
+// chão de retalhos (fazendinhas)
+const N = 26, S = 16, G = new THREE.Group(); scene.add(G);
+const tons = ['#6aad3f', '#4f9a3a', '#86bf4e', '#9b7a45', '#5ea842', '#7fb64c', '#8a5a3a', '#3f8a35'];
+for (let i = 0; i < N; i++) for (let j = 0; j < N; j++) {
+  const t = mesh(new THREE.BoxGeometry(S - .3, .2, S - .3), tons[Math.floor(rnd() * tons.length)], [(i - N / 2) * S, -.1, (j - N / 2) * S], G);
+  t.castShadow = false;
+}
+mesh(new THREE.BoxGeometry(N * S, .1, N * S), '#4e8a37', [0, -.25, 0]);
+// árvores e nuvens
+function tree(x, z, s = 1) { mesh(new THREE.CylinderGeometry(.15 * s, .2 * s, 1 * s, 5), '#7a4a2a', [x, .5 * s, z]); mesh(new THREE.IcosahedronGeometry(.9 * s, 0), '#3f9a45', [x, 1.5 * s, z]); }
+for (let k = 0; k < 140; k++) { const a = rnd() * 6.28, r = 9 + rnd() * 150; tree(Math.cos(a) * r, Math.sin(a) * r, .8 + rnd() * 1.2); }
+const clouds = [];
+for (let k = 0; k < 14; k++) { const g = new THREE.Group(); for (let q = 0; q < 4; q++) mesh(new THREE.IcosahedronGeometry(2 + rnd() * 2, 0), '#ffffff', [q * 2.6 - 4, rnd() * 1.2, rnd() * 2], g); { const a = rnd() * 6.28, r = 45 + rnd() * 110; g.position.set(Math.cos(a) * r, 14 + rnd() * 14, Math.sin(a) * r); } g.traverse(o => o.castShadow = false); scene.add(g); clouds.push(g); }
+
+// ---------- CENA A: Bento na mesa + tablet ----------
+const A = new THREE.Group(); scene.add(A);
+mesh(new THREE.BoxGeometry(2.6, .15, 1.4), '#c98a4b', [0, .85, 0], A);
+[[-1.1, -.55], [1.1, -.55], [-1.1, .55], [1.1, .55]].forEach(([x, z]) => mesh(new THREE.BoxGeometry(.14, .85, .14), '#8a5a30', [x, .42, z], A));
+mesh(new THREE.CylinderGeometry(.32, .32, .05, 10), '#ffffff', [0, .95, .35], A);
+mesh(new THREE.CylinderGeometry(.22, .22, .06, 8), '#f2c14e', [0, .99, .35], A);
+// Bento low-poly (tatu)
+const B = new THREE.Group(); B.position.set(0, .25, -1.05); A.add(B);
+const casco = mesh(new THREE.SphereGeometry(.75, 9, 6, 0, 6.28, 0, 1.7), '#d9944f', [0, .55, 0], B); casco.scale.set(1, 1.05, .9);
+for (let k = 0; k < 3; k++) { const r = mesh(new THREE.TorusGeometry(.62 - k * .02, .05, 4, 10), '#b8743a', [0, .95 - k * .22, 0], B); r.rotation.x = Math.PI / 2; r.scale.set(1.04, .95, 1); }
+const H = new THREE.Group(); H.position.set(0, 1.55, .25); B.add(H);
+mesh(new THREE.IcosahedronGeometry(.5, 1), '#efc08a', [0, 0, 0], H).scale.set(1.05, .92, .95);
+mesh(new THREE.ConeGeometry(.2, .45, 6), '#f6d2a6', [0, -.12, .5], H).rotation.x = Math.PI / 2;
+mesh(new THREE.SphereGeometry(.08, 6, 4), '#7a4a3a', [0, -.12, .74], H);
+[-1, 1].forEach(s => { const e = mesh(new THREE.SphereGeometry(.17, 6, 4), '#efc08a', [s * .36, .42, -.05], H); e.scale.set(.8, 1.5, .5); e.rotation.z = -s * .4;
+  mesh(new THREE.SphereGeometry(.07, 6, 4), '#20140f', [s * .2, .1, .43], H); });
+// tablet chamando atenção
+const TB = new THREE.Group(); TB.position.set(1.9, 1.9, -.3); A.add(TB);
+mesh(new THREE.BoxGeometry(1.2, .85, .08), '#23323d', [0, 0, 0], TB);
+const scr = new THREE.Mesh(new THREE.PlaneGeometry(1.05, .7), new THREE.MeshBasicMaterial({ color: '#8fe3ff' })); scr.position.z = .045; TB.add(scr);
+const glow = new THREE.PointLight('#7fd8ff', 0, 5); TB.add(glow);
+
+// ---------- CENA B: casa, 3 pessoas partindo o pão ----------
+const Bc = new THREE.Group(); Bc.position.set(60, 0, -50); scene.add(Bc);
+mesh(new THREE.BoxGeometry(5, 2.6, 4), '#e8d2a8', [0, 1.3, -4], Bc);
+const roof = mesh(new THREE.ConeGeometry(4, 1.6, 4), '#b5562f', [0, 3.4, -4], Bc); roof.rotation.y = Math.PI / 4; roof.scale.set(1.15, 1, 1);
+mesh(new THREE.BoxGeometry(.9, 1.5, .1), '#7a4a2a', [0, .75, -1.95], Bc);
+mesh(new THREE.CylinderGeometry(1.1, 1.1, .12, 10), '#a8673a', [0, .7, 0], Bc);
+mesh(new THREE.CylinderGeometry(.15, .2, .7, 6), '#7a4a2a', [0, .35, 0], Bc);
+const breadL = mesh(new THREE.SphereGeometry(.28, 7, 5, 0, 3.14), '#d9944f', [-.02, .86, 0], Bc); breadL.rotation.y = Math.PI / 2; breadL.scale.set(1, .7, 1.6);
+const breadR = mesh(new THREE.SphereGeometry(.28, 7, 5, 0, 3.14), '#d9944f', [.02, .86, 0], Bc); breadR.rotation.y = -Math.PI / 2; breadR.scale.set(1, .7, 1.6);
+const people = [];
+[['#d6453d', 0], ['#2f7fd0', 2.1], ['#f2a73b', 4.2]].forEach(([c, a]) => {
+  const p = new THREE.Group(); p.position.set(Math.sin(a) * 1.7, 0, Math.cos(a) * 1.7); p.rotation.y = a + Math.PI; Bc.add(p);
+  mesh(new THREE.BoxGeometry(.6, .8, .35), c, [0, 1.2, 0], p);
+  mesh(new THREE.BoxGeometry(.5, .5, .45), '#f0c8a0', [0, 1.85, 0], p);
+  mesh(new THREE.BoxGeometry(.52, .14, .47), '#4a3020', [0, 2.13, 0], p);
+  [-1, 1].forEach(s => mesh(new THREE.BoxGeometry(.22, .8, .25), '#3b4a6b', [s * .16, .4, 0], p));
+  const arm = new THREE.Group(); arm.position.set(.38, 1.5, 0); p.add(arm); mesh(new THREE.BoxGeometry(.18, .65, .2), c, [0, -.3, .0], arm);
+  const arm2 = new THREE.Group(); arm2.position.set(-.38, 1.5, 0); p.add(arm2); mesh(new THREE.BoxGeometry(.18, .65, .2), c, [0, -.3, 0], arm2);
+  people.push({ p, arm, arm2 });
+});
+
+// ---------- linha do tempo ----------
+const C = { x: 0, y: 70, z: 45, lx: 0, ly: 0, lz: 0 };
+const st = { glow: 0, tb: 0, split: 0, warm: 0 };
+const tl = gsap.timeline({ paused: true });
+const TB0 = cue('bíblia') - .25;
+tl.to(C, { x: 3.6, y: 3.0, z: 6.0, lx: .5, ly: 1.1, lz: -.5, duration: 2.6, ease: 'power3.inOut' }, 0);
+tl.to(C, { x: 4.4, y: 3.2, z: 5.0, lx: .9, ly: 1.3, lz: -.5, duration: TB0 - 2.6, ease: 'sine.inOut' }, 2.6);
+tl.to(st, { glow: 1, duration: .4, yoyo: true, repeat: 5, ease: 'sine.inOut' }, cue('ou'));
+tl.to(st, { tb: 1, duration: .5, ease: 'back.out(2)' }, cue('tela') - .2);
+tl.fromTo('#tg1', { opacity: 0, scale: .6 }, { opacity: 1, scale: 1, duration: .35, ease: 'back.out(2)' }, cue('tela') - .1);
+// rebobinar pro tempo da Bíblia
+tl.to('#rew', { opacity: 1, duration: .15 }, TB0 - .35); tl.to('#rew', { opacity: 0, duration: .2 }, TB0 + .45);
+tl.to('#lines', { opacity: 1, duration: .15 }, TB0 - .35); tl.to('#lines', { opacity: 0, duration: .3 }, TB0 + .45);
+tl.to('#tg1', { opacity: 0, duration: .2 }, TB0 - .3);
+tl.set(C, { x: 60 + 9, y: 9, z: -50 + 10, lx: 60, ly: 1, lz: -50 }, TB0);
+tl.set(st, { warm: 1 }, TB0);
+tl.to(C, { x: 60 + 5.5, y: 3.4, z: -50 + 5.5, lx: 60, ly: 1.1, lz: -50, duration: 1.6, ease: 'power3.out' }, TB0);
+tl.to(C, { x: 60 - 3.2, y: 3.0, z: -50 + 6.6, duration: END - TB0 - 1.6, ease: 'sine.inOut' }, TB0 + 1.6);
+
+tl.to(st, { split: 1, duration: .6, ease: 'power3.out' }, cue('partiam') + .1);
+tl.fromTo('#y1', { opacity: 0, scale: 1.6, rotation: -6 }, { opacity: 1, scale: 1, rotation: -4, duration: .35, ease: 'back.out(2)' }, cue('partiam'));
+tl.to('#y1', { opacity: 0, duration: .3 }, cue('juntos') + .2);
+tl.to({}, { duration: .01 }, END);
+
+const word = document.getElementById('word'), v = new THREE.Vector3();
+function place(el, x, y, z, dx = 0, dy = 0) { v.set(x, y, z).project(cam); el.style.left = ((v.x + 1) / 2 * 1080 - el.offsetWidth / 2 + dx) + 'px'; el.style.top = ((1 - v.y) / 2 * 1920 + dy) + 'px'; }
+const mmss = s => String(Math.floor(s / 60)).padStart(2, '0') + ':' + String(Math.floor(s % 60)).padStart(2, '0');
+window.seek = t => {
+  tl.seek(t, false);
+  cam.position.set(C.x, C.y, C.z); cam.lookAt(C.lx, C.ly, C.lz);
+  clouds.forEach((c, i) => c.position.x += 0); // nuvens fixas (determinístico)
+  A.visible = !st.warm; Bc.visible = !!st.warm;
+  sun.target.position.set(st.warm ? 60 : 0, 0, st.warm ? -50 : 0); sun.position.set((st.warm ? 60 : 0) + 30, st.warm ? 22 : 50, (st.warm ? -50 : 0) + 20);
+  sun.color.set(st.warm ? '#ffd9a0' : '#fff3dc'); scene.background.set(st.warm ? '#ffd6a6' : '#9fd8ff'); scene.fog.color.set(st.warm ? '#ffe2bd' : '#bfe6ff');
+  // cena A
+  glow.intensity = 2.5 * st.glow; scr.material.color.set(st.glow > .5 ? '#c8f1ff' : '#8fe3ff');
+  TB.position.y = 1.9 + Math.sin(t * 3) * .08; TB.rotation.y = -.5 + Math.sin(t * 2) * .05 + st.tb * .3 * Math.sin(t * 18) * (t < cue('tela') + .6 ? 1 : 0);
+  H.rotation.y = t > cue('ou') ? .55 : 0; H.rotation.x = Math.sin(t * 4) * .03; B.position.y = Math.abs(Math.sin(t * 5)) * .03;
+  // cena B
+  breadL.position.x = -.02 - .28 * st.split; breadR.position.x = .02 + .28 * st.split;
+  people.forEach(({ arm, arm2 }, i) => { arm.rotation.x = -.55 - Math.sin(t * 4 + i) * .25; arm2.rotation.x = -.15 + Math.sin(t * 3 + i * 2) * .1; });
+  R.render(scene, cam);
+  // HUD
+  if (!st.warm) { document.getElementById('hlk').textContent = 'JANTAR'; document.getElementById('hlv').textContent = '19:30';
+    document.getElementById('hrk').textContent = 'NA TELA'; document.getElementById('hrv').textContent = mmss(Math.max(0, t - .3) * 9); document.getElementById('hrv').style.color = '#ff8a7a'; }
+  else { document.getElementById('hlk').textContent = 'LIVRO'; document.getElementById('hlv').textContent = 'ATOS';
+    document.getElementById('hrk').textContent = 'VERSÍCULO'; document.getElementById('hrv').textContent = '2:46'; document.getElementById('hrv').style.color = '#ffe27a'; }
+  // rótulos presos nos objetos
+  place(document.getElementById('tg1'), 1.9, 2.55, -.3); place(document.getElementById('tg2'), 0, 0, 0, 0, 0);
+  document.getElementById('tg2').style.left = '390px'; document.getElementById('tg2').style.top = '300px';
+  place(document.getElementById('y1'), 60, 1.6, -50, 0, -230);
+  // palavra por palavra
+  let cur = ''; let cs = -1; for (const c of CUES) if (c.s <= t + .02) { cur = c.w.replace(/[.,?!:…]+$/g, '').replace('...', ''); cs = c.s; }
+  if (t > 9.5) cur = '';
+  word.textContent = cur; const k = Math.min(1, (t - cs) / .12); word.style.transform = `scale(${.85 + .15 * k})`;
+  word.style.color = /^(tela|pão|juntos|bíblia)$/i.test(cur) ? '#ffd23f' : '#ffffff';
+};
+window.ready = document.fonts.ready.then(() => true);
+</script></body></html>
