@@ -88,7 +88,7 @@ Um formato por dia, sempre às 11h45. Comparar 24 h e 48 h depois:
 | Qui 05 | Mito ou verdade de Natal, 13 s | sem voz | quiz só com texto |
 | Sex 06 | Fala assim de Natal, ~12 s | Juliana | frase pronta (envio) |
 | Sáb 07 | Mito ou verdade de Natal, ~13 s | Sofia | o mesmo quiz com voz (isola o efeito da voz) |
-| Dom 08 | Cena do Bento com conflito (história), ~15 s | a definir pelo resultado | formato história, como a Tatu |
+| Dom 08 | Explicador 3D de curiosidade "Uva na ceia" (gancho "Na ceia, seu filho põe uma uva… e para de respirar"), 40 s, pronto e agendado | Juliana | estilo 3D dos vídeos que viralizam + primeiros socorros (envio) |
 
 **Domingo às 21h:** ranking dos 5. O vencedor vira o formato da semana seguinte, replicado com temas novos. A voz vencedora vira a definitiva, se o Mateus concordar.
 
