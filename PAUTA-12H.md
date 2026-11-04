@@ -1,5 +1,9 @@
 # Pauta das 12h · @paisdarotina
 
+> **LER ANTES (03/11): `ESTUDO-CRESCIMENTO.md`.** O formato "Bíblia diz X + ciência mostra Y" falado em 25–30 s foi o pior (65% pulam, 4 s assistidos). A partir de 05/11:
+> - Se o Mateus aprovou a remodelagem, usar a seção 4 do estudo (série numerada, Mito ou verdade de 8–12 s, Fala assim).
+> - Se ele não respondeu, mesmo assim encurtar pra no máximo 20 s, abrir com cena ou quiz e pôr a fonte na legenda.
+
 Formato: informativo em motion design 2D, feito 100% por mim, com 20 a 25 s, 1080×1920.
 Regras: nunca repetir tema ou desenho. Música: não repetir na mesma semana, mas pode reutilizar de semanas anteriores (pedido de 29/10). Cada vídeo tem paleta e ilustrações próprias. Legenda sem a linha "feito com IA".
 
