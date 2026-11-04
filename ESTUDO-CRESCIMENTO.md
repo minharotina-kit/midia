@@ -46,7 +46,7 @@ Pedido do Mateus: "os vídeos não tão convencendo". Estudar o que deu certo aq
    - Testar ganchos com Reels de teste.
 4. **Parar:** "a Bíblia diz… a ciência mostra…" falado em 25 a 30 s.
 
-## 4b. Prévia do plano de Natal (03/11, aguardando OK) · https://claude.ai/artifact/7KQbGfe64dpfQWQ4ydSDg6
+## 4b. Plano de Natal (03/11: Mateus aprovou TESTAR; 2D x 3D e ManyChat ainda sem resposta) · https://claude.ai/artifact/7KQbGfe64dpfQWQ4ydSDg6
 
 **Até 28/11, às 12h, alternando dois formatos:**
 - **Mito ou verdade de Natal:** 10 s, só texto e música, sem narração, com o Bento reagindo. A resposta vem no fim. Ex.: "Mais presente = criança mais feliz?" → MITO. Base: Univ. de Toledo 2018, 36 crianças de 18 a 30 meses; com 4 brinquedos elas brincaram cerca do dobro do tempo do que com 16. Versículo na legenda: Lucas 12:15.
