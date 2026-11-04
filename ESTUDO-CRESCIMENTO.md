@@ -72,6 +72,26 @@ Pedido do Mateus: "os vídeos não tão convencendo". Estudar o que deu certo aq
 - Instalar ManyChat ou parecido pra resposta automática na DM.
 - Pôr o link do PDF na bio até 29/11.
 
+## 4c. Semana de testes (04 a 08/11) · pedido do Mateus: "testar até achar um que bata, aí a gente fica replicando"
+
+Um formato por dia, sempre às 11h45. Comparar 24 h e 48 h depois:
+- pulo nos 3 s
+- tempo médio assistido
+- views
+- envios
+- salvos
+- seguidores
+
+| Dia | Formato | Voz | O que testa |
+|---|---|---|---|
+| Qua 04 | Mesa (aula antiga), 29 s | Paula | linha de base |
+| Qui 05 | Mito ou verdade de Natal, 13 s | sem voz | quiz só com texto |
+| Sex 06 | Fala assim de Natal, ~12 s | Juliana | frase pronta (envio) |
+| Sáb 07 | Mito ou verdade de Natal, ~13 s | Sofia | o mesmo quiz com voz (isola o efeito da voz) |
+| Dom 08 | Cena do Bento com conflito (história), ~15 s | a definir pelo resultado | formato história, como a Tatu |
+
+**Domingo às 21h:** ranking dos 5. O vencedor vira o formato da semana seguinte, replicado com temas novos. A voz vencedora vira a definitiva, se o Mateus concordar.
+
 ## 5. Ferramentas avaliadas
 - **GitHub:** só achei projetos acadêmicos de previsão de viralidade (modelos de ML). Nada que ajude direto, sem guia prático de gancho.
 - **Higgsfield Virality Predictor:** analisa vídeos de até 16 s (nota de gancho e risco de abandono). Dá pra usar pra testar ganchos antes de postar.
