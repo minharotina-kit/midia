@@ -79,3 +79,39 @@ Antes do pacote, conferir cada fato em fonte forte e pôr a fonte na legenda.
 - criança mais sensível à luz que adulto (Akacem et al. 2018, Univ. do Colorado; Higuchi 2014);
 - SBP: desligar as telas 1 a 2 h antes de dormir;
 - modo noturno sozinho não melhorou o sono (Brigham Young University, 2021).
+
+---
+
+# Rodada 2 (05/11) · ganchos no molde exato das referências ("Se você… vai ter… Mas…" / "Você é… + fato surpreendente")
+
+## Roteiro 4 · "Se você colocar um bebê no berço e apagar a luz…" (~75 s)
+Se você colocar um bebê no berço e apagar a luz, ele vai dormir. Mas no instante em que você sai do quarto, ele acorda.
+Porque nos primeiros minutos o sono do bebê é leve: ele mexe os olhos, faz careta, se assusta. Só depois de uns 20 minutos ele afunda. Então você espera esse tempo antes de sair. Essa é a janela do sono profundo.
+Mas aí ele se assusta com os próprios braços e acorda. Então você enrola ele num charutinho, até ele começar a tentar rolar. Esse é o abraço da barriga.
+Mas o silêncio total também atrapalha: a barriga era barulhenta, com o chiado do sangue e o coração da mãe. Então você liga um chiado baixinho, longe do berço. Esse é o som da barriga.
+Mas pra ele dia e noite ainda são iguais. Então de dia você abre a cortina e conversa; de noite é luz baixa e silêncio. Esse é o relógio sendo ajustado.
+E tudo isso com ele de barriga pra cima, num berço vazio, sem travesseiro nem bichinho. Essa é a regra de ouro.
+Dormir de bruços é melhor? LENDA: de barriga pra cima é o mais seguro.
+Cartões: CHIADO / SILÊNCIO — "seu bebê dorme melhor com qual?"
+Conferir: sono ativo no começo (~20 min) (AAP/literatura do sono); charutinho até sinais de rolar (AAP); ruído branco baixo e longe (AAP); sono seguro: barriga pra cima, berço vazio (AAP Safe Sleep); ritmo dia/noite se forma nos primeiros meses.
+
+## Roteiro 5 · "Se você colocar brócolis no prato do seu filho…" (~70 s)
+Se você colocar brócolis no prato do seu filho, ele vai comer. Mas na primeira garfada ele cospe e empurra o prato.
+Isso tem nome: medo de comida nova. Aparece por volta dos 2 anos e é normal: o corpo se protegendo do desconhecido. Essa é a neofobia.
+Então você esconde o brócolis no arroz. Mas aí ele come sem sentir o gosto e nunca aprende a gostar. Então você coloca um pedacinho no prato, sem obrigar. Essa é a exposição.
+Mas ele nem toca. Então você come brócolis na frente dele, com cara boa. Esse é o espelho: criança copia quem ela ama.
+Mas um dia ele lambe, no outro ele cospe. Calma: pode levar de 8 a 15 tentativas até aceitar um alimento novo. Essa é a paciência.
+Obrigar a raspar o prato funciona? LENDA: pressão costuma aumentar a recusa.
+Cartões: SIM / NEM PENSAR — "seu filho come brócolis?"
+Conferir: neofobia alimentar 2–6 anos (Dovey et al., 2008); 8–15 exposições (Birch & Marlin 1982; Wardle et al. 2003); modelagem pelo adulto (Addessi et al. 2005); pressão reduz ingestão (Galloway et al., Appetite 2006).
+
+## Roteiro 6 · "Você é um útero." (~75 s)
+Você é um útero. Você tem o tamanho de uma pera. E em nove meses vai caber um bebê inteiro aí dentro.
+Mas o bebê precisa de espaço. Então você estica e suas fibras crescem. No fim, você fica do tamanho de uma melancia. Esse é o útero de nove meses.
+Mas, crescendo, você empurra tudo pra cima: estômago, intestino, até o diafragma. Por isso a mãe sente azia e falta de ar. Esse é o aperto.
+Mas o bebê precisa de muito mais oxigênio e comida. Então o sangue da mãe aumenta quase pela metade. Esse é o sangue extra.
+Mas o bebê não pode ficar solto. Então você enche uma bolsa de líquido em volta dele. Essa é a bolsa d'água: piscina, amortecedor e aquecedor.
+E quando chega a hora, você se contrai em ondas pra empurrar o bebê pra fora. Essas são as contrações.
+Grávida tem que comer por dois? LENDA: só no 2º e 3º trimestre a necessidade aumenta, e pouco.
+Cartões: AZIA / SONO — "na gravidez, o que pegou mais em você?"
+Conferir: útero de pera a melancia; volume de sangue +40–50% (ACOG); azia por pressão + progesterona (ACOG); líquido amniótico protege e regula temperatura; "comer por dois" é mito: ~340 kcal a mais no 2º tri e ~450 no 3º (ACOG).
