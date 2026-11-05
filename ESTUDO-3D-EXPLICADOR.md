@@ -130,3 +130,8 @@ Referências estudadas:
   - Caminho C/híbrido: cenas geradas por IA no estilo 3D Pixar, com a mesma personagem.
   - A edição fica comigo: narração, sons, legenda, rótulos e carimbo.
   - Antes, um teste barato: 1 imagem da mãe + 1 clipe de 5 s, pra ele aprovar o visual.
+- **Aprovado (05/11):** o Mateus fez o "Cérebro de 3 anos" no ChatGPT, a partir do pacote 2 em PDF, e aprovou o resultado.
+  - Personagens bonecos, cozinha 3D e corte do cérebro em 2 andares, com rótulos, legenda amarela e cartões ABRAÇO/ESPERAR.
+  - Tem 44,5 s.
+  - Postado em 05/11 às 18h.
+  - **Esse é o caminho que funciona:** eu faço o roteiro e o pacote em PDF, o ChatGPT gera, e eu confiro e posto. O arquivo precisa ter menos de 20 MB pro jsDelivr; recomprimir com x264 em 2 passadas.
