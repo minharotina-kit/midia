@@ -115,3 +115,39 @@ E quando chega a hora, você se contrai em ondas pra empurrar o bebê pra fora. 
 Grávida tem que comer por dois? LENDA: só no 2º e 3º trimestre a necessidade aumenta, e pouco.
 Cartões: AZIA / SONO — "na gravidez, o que pegou mais em você?"
 Conferir: útero de pera a melancia; volume de sangue +40–50% (ACOG); azia por pressão + progesterona (ACOG); líquido amniótico protege e regula temperatura; "comer por dois" é mito: ~340 kcal a mais no 2º tri e ~450 no 3º (ACOG).
+
+---
+
+# Rodada 3 (05/11) · vibe "como se forma / construção" (pedido do Mateus: igual ao útero)
+
+## Roteiro 7 · "Você é um bebê na barriga" (~80 s)
+Você é um bebê. Mas por enquanto você é só um pontinho menor que um grão de areia, solto dentro da sua mãe.
+Mas você precisa de comida. Então você se gruda na parede do útero. Esse é o seu primeiro endereço.
+Mas o sangue não anda sozinho. Então, com umas seis semanas, um coraçãozinho começa a bater. Essa é a primeira batida.
+Mas você vai precisar pegar o mundo com as mãos. Então seus dedinhos, que eram grudados, se separam. Essas são as suas mãos.
+Mas você precisa reconhecer quem está te esperando. Então seus ouvidos começam a captar os sons de fora. Essa é a voz da sua mãe: a primeira conversa.
+Mas lá fora você vai ter que respirar. Então você treina, puxando e soltando o líquido da barriga. Esse é o treino do pulmão.
+Mas o espaço vai acabando. Então, no fim, você vira de cabeça pra baixo. Essa é a posição de saída.
+O formato da barriga mostra se é menino ou menina? LENDA.
+Cartões: DE DIA / DE NOITE — "seu bebê mexia mais quando?"
+Conferir: implantação ~6–10 dias após a fecundação; batimento detectável ~6 semanas; dedos separados ~10 semanas; audição ~18–25 semanas; movimentos respiratórios fetais; maioria fica de cabeça pra baixo no 3º trimestre; formato da barriga não indica sexo (ACOG / Mayo Clinic / NHS).
+
+## Roteiro 8 · "Você é uma placenta" (~75 s)
+Você é uma placenta. Um mês atrás você nem existia. E você vai ser jogada fora no dia do parto.
+Mas o bebê precisa comer e respirar dentro da barriga. Então você se forma do zero, grudada no útero, e liga a mãe ao bebê pelo cordão. Essa é a ponte.
+Mas o sangue da mãe e o do bebê não podem se misturar. Então você cria uma parede finíssima: passa oxigênio e comida, mas o sangue fica de cada lado. Essa é a barreira.
+Mas o bebê faz lixo, como gás carbônico. Então você leva tudo de volta pra mãe jogar fora. Esse é o seu filtro.
+Mas a gravidez precisa continuar. Então você fabrica hormônios. Um deles é o que faz o teste de gravidez dar positivo. Essa é a sua fábrica.
+Um copinho de vinho não passa pro bebê? LENDA: o álcool atravessa a placenta.
+Cartões: SABIA / NÃO SABIA — "que o positivo do teste vem de você?"
+Conferir: placenta existe só na gravidez; trocas sem misturar o sangue; hCG produzido pelas células da placenta (trofoblasto); álcool atravessa a placenta (CDC / OMS).
+
+## Roteiro 9 · "Você é um dente de leite" (~75 s)
+Você é um dente de leite. E você começa a se formar quando o bebê ainda está na barriga.
+Mas o bebê precisa mamar, e dente atrapalha. Então você fica escondido dentro da gengiva. Esse é o seu esconderijo.
+Mas uma hora você precisa sair. Então você abre caminho: a gengiva incha, coça, o bebê baba e morde tudo. Essa é a dentição.
+Mas o seu esmalte é fininho e açúcar vira cárie rápido. Então, desde o primeiro dente, escova com pasta com flúor do tamanho de um grão de arroz. Essa é a sua armadura.
+Mas você não é pra sempre. Então, embaixo de você, o dente permanente já está se formando e vai te empurrando. Essa é a troca, por volta dos 6 anos.
+Nascer dente dá febre alta? LENDA: febre alta não é do dente, procure o pediatra.
+Cartões: DE BAIXO / DE CIMA — "qual dente nasceu primeiro no seu filho?"
+Conferir: brotos dos dentes de leite se formam na gestação (ADA/AAPD); sintomas de dentição (AAP); flúor "grão de arroz" até 3 anos (AAP/AAPD/SBP); troca por volta dos 6 anos; dentição não causa febre alta (AAP).
