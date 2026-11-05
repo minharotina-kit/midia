@@ -119,3 +119,5 @@ Referências estudadas:
 2. **Teste de 5 s no Blender**, só pra ver o visual. Uma cena com luz, profundidade de campo, grama e um bicho/boneco: o primeiro plano do "Você é um bebê recém-nascido".
 3. **Escrever o roteiro completo** de um vídeo na escada problema → solução, com fontes conferidas. Ele aprova antes de qualquer render.
 4. **Só depois disso, o vídeo inteiro.**
+
+> **Regra (05/11, Mateus):** vídeos 3D renderizam em **720x1280** (igual às referências), metade do tempo. O 1080 fica só pros 2D.
