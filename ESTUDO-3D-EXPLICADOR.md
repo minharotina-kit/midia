@@ -136,3 +136,19 @@ Referências estudadas:
   - Postado em 05/11 às 18h.
   - **Esse é o caminho que funciona:** eu faço o roteiro e o pacote em PDF, o ChatGPT gera, e eu confiro e posto. O arquivo precisa ter menos de 20 MB pro jsDelivr; recomprimir com x264 em 2 passadas.
   - **Atenção:** com 17,5 MB, o link do jsDelivr deu "container status: ERROR" 2 vezes no Instagram. Com o link do raw.githubusercontent.com (mesmo commit) postou de primeira. Pra vídeo grande, usar o raw.
+
+## 8. Os métodos que o Mateus achou (05/11): tudo feito por código, rodando aqui mesmo
+- **mromidev/claude-animated-shorts**, skill `cartoon-3d-short` (MIT, ~1 mil estrelas). Clonado em /home/claude/mromidev/claude-animated-shorts.
+  - Usa three.js dentro do Remotion, ou seja, a mesma base técnica que a gente já usa, só que com um molde pronto e lapidado.
+  - O molde (templates/bridge) traz:
+    - mundo pintado: casas, céu, rio, neblina;
+    - personagens 2D de cabeça de feijão com contorno ameixa, 14 expressões, caminhada e piscada;
+    - passe de contorno (ink), desfoque de lente e correção de cor;
+    - som sintetizado com mixagem;
+    - script de QA que confere quadro a quadro.
+  - Os objetos de cena vêm do Kenney (CC0, .glb). Se o arquivo faltar, o código segue sem ele.
+- **lemomo-ai/lemo-opuscar** (66 estilos, ajustado pro Claude Opus 5.5). Clonado em /home/claude/lemomo-ai/lemo-opuscar.
+  - Cada estilo tem um "style prompt" (a receita) e um motor: páginas canvas/WebGL renderizadas quadro a quadro, com narração TTS.
+  - Estilos úteis pra nós: white-model, microscope, teardown (vista explodida), isometric-picture-book, memphis-diorama e o "Technicolor 3D stage set" (#34).
+- **Conclusão:** o que faltava era o molde pronto, não Blender nem gerador de vídeo. Dá pra rodar aqui, na nuvem, em 720p, só que mais lento por não ter placa de vídeo.
+- **Teste só com o OK do Mateus.**
