@@ -72,6 +72,8 @@ Pedido do Mateus: "os vídeos não tão convencendo". Estudar o que deu certo aq
 - Instalar ManyChat ou parecido pra resposta automática na DM.
 - Pôr o link do PDF na bio até 29/11.
 
+> **REGRA (04/11, Mateus):** vídeo 3D (explicador low-poly) SÓ com autorização dele, caso a caso. Gasta muitos tokens e o "Uva na ceia" saiu com bugs; o post de domingo foi pausado. Só fazer 3D de novo quando ele pedir e com o roteiro aprovado.
+
 ## 4c. Semana de testes (04 a 08/11) · pedido do Mateus: "testar até achar um que bata, aí a gente fica replicando"
 
 Um formato por dia, sempre às 11h45. Comparar 24 h e 48 h depois:
