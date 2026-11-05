@@ -121,3 +121,12 @@ Referências estudadas:
 4. **Só depois disso, o vídeo inteiro.**
 
 > **Regra (05/11, Mateus):** vídeos 3D renderizam em **720x1280** (igual às referências), metade do tempo. O 1080 fica só pros 2D.
+
+## 7. Resultado do vídeo 7 "Bebê na barriga" (05/11): reprovado
+- **Reprovado pelo Mateus.** Ele achou ruim ("cadê a boneca da mãe?"), com o 3D, o fundo e a edição abaixo das referências. O post de sexta foi cancelado.
+- **Conclusão:** Three.js com formas de código (esferas, cápsulas) **não faz personagem nem cenário** no nível das referências. Foram 2 tentativas (uva e bebê) e as duas foram reprovadas. **Não usar mais esse caminho pra vídeo com personagem.**
+- **O que falta não é skill, é matéria-prima:** modelos 3D prontos (mãe, bebê, casa), com rosto, cabelo, textura e esqueleto, e um motor de render de verdade (Blender ou vídeo por IA).
+- **Próxima tentativa, só com OK:**
+  - Caminho C/híbrido: cenas geradas por IA no estilo 3D Pixar, com a mesma personagem.
+  - A edição fica comigo: narração, sons, legenda, rótulos e carimbo.
+  - Antes, um teste barato: 1 imagem da mãe + 1 clipe de 5 s, pra ele aprovar o visual.
