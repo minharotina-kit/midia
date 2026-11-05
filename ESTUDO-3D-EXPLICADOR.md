@@ -135,3 +135,4 @@ Referências estudadas:
   - Tem 44,5 s.
   - Postado em 05/11 às 18h.
   - **Esse é o caminho que funciona:** eu faço o roteiro e o pacote em PDF, o ChatGPT gera, e eu confiro e posto. O arquivo precisa ter menos de 20 MB pro jsDelivr; recomprimir com x264 em 2 passadas.
+  - **Atenção:** com 17,5 MB, o link do jsDelivr deu "container status: ERROR" 2 vezes no Instagram. Com o link do raw.githubusercontent.com (mesmo commit) postou de primeira. Pra vídeo grande, usar o raw.
