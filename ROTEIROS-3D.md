@@ -151,3 +151,67 @@ Mas você não é pra sempre. Então, embaixo de você, o dente permanente já e
 Nascer dente dá febre alta? LENDA: febre alta não é do dente, procure o pediatra.
 Cartões: DE BAIXO / DE CIMA — "qual dente nasceu primeiro no seu filho?"
 Conferir: brotos dos dentes de leite se formam na gestação (ADA/AAPD); sintomas de dentição (AAP); flúor "grão de arroz" até 3 anos (AAP/AAPD/SBP); troca por volta dos 6 anos; dentição não causa febre alta (AAP).
+
+---
+
+## Lote 05/11 (pautas fortes, pro Mateus fazer no GPT)
+
+## Roteiro 10 · "Você é o cérebro de uma criança com TDAH" (~67 s)
+| # | Narração | Na tela |
+|---|---|---|
+| 1 | Você é o cérebro de uma criança com TDAH. E a mãe acabou de dizer: vai escovar os dentes. | Cérebro 3D dentro da cabeça; o pedido entra como um bilhete amarelo |
+| 2 | Você guarda o pedido num bilhete. Mas no caminho tem um carrinho no chão... e o bilhete cai. | Bilhete voando e caindo atrás do sofá; rótulo **MEMÓRIA DE TRABALHO** |
+| 3 | Isso não é desobediência. Esse é o seu quadro de recados, e nele os bilhetes caem fácil. | Quadro com bilhetes escorregando |
+| 4 | Mas tem outro problema. Pra começar uma tarefa chata, o cérebro precisa de combustível: dopamina. No TDAH, esse sistema de recompensa funciona diferente. | Tanque com ponteiro baixo; rótulo **MOTOR DE ARRANQUE** |
+| 5 | Então escovar dente parece uma montanha. E o videogame parece uma descida. | Montanha x escorregador |
+| 6 | E o freio? A parte do cérebro que planeja e segura o impulso amadurece, em média, uns 3 anos depois. Mas amadurece. | Dois prédios: um pronto, outro com andaime; contador 7 → 10 anos |
+| 7 | Então você precisa de um andaime de fora: um pedido por vez, olhando nos olhos. A tarefa grande vira pedacinhos. E um relógio onde dá pra ver o tempo passando. | Bilhete no espelho, escada de degraus pequenos, timer visual; rótulo **ANDAIME** |
+| 8 | Ah, e açúcar dá TDAH? Lenda. | Carimbo **LENDA** sobre um doce |
+| 9 | E o seu filho? Esquece no caminho ou trava antes de começar? | Cartões **ESQUECE / TRAVA** · "comenta aqui" |
+
+**Conferido:**
+- o pico de maturação do córtex chega ~3 anos depois, aos 10,5 contra 7,5 anos, com o maior atraso nas áreas pré-frontais (Shaw et al., PNAS 2007; NIH);
+- o sistema de recompensa da dopamina é diferente no TDAH (Volkow et al., JAMA 2009);
+- açúcar não muda o comportamento (meta-análise de Wolraich et al., JAMA 1995; Child Mind Institute);
+- **na legenda:** "só um profissional pode diagnosticar".
+
+## Roteiro 11 · "Você é o cérebro de uma criança autista" (~62 s)
+| # | Narração | Na tela |
+|---|---|---|
+| 1 | Você é o cérebro de uma criança autista. E na cozinha, alguém liga o liquidificador. | Cozinha 3D; câmera entra pelo ouvido; ondas de som em anéis |
+| 2 | Pra muita gente, é só um barulho. Pra você, é como se alguém girasse o volume do mundo até o máximo. | Botão de volume gigante girando; rótulo **VOLUME** |
+| 3 | Mas não para aí. A luz pisca. A etiqueta da blusa arranha. E tudo entra ao mesmo tempo. | Três canos (SOM, LUZ, TATO) enchendo um copo dentro do cérebro |
+| 4 | Esse é o seu copo. E ele enche rápido. | Rótulo **COPO** |
+| 5 | Então o copo transborda. Você chora, grita, se joga. Crise é birra? Lenda. | Copo transbordando, tela treme; carimbo **LENDA** |
+| 6 | Na birra, a criança quer alguma coisa. Na crise, ela não consegue mais segurar. É sobrecarga. | Balança: QUER x NÃO AGUENTA |
+| 7 | Então seu cérebro abre uma válvula: balançar as mãos, girar, repetir um som. Isso acalma. | Válvula soltando vapor dourado; rótulo **VÁLVULA** |
+| 8 | Se não machuca ninguém, não precisa proibir. | Mão que ia segurar recua |
+| 9 | O que ajuda a esvaziar o copo: avisar antes do barulho, um abafador de ouvido, um cantinho calmo, e a rotina em figuras, pra saber o que vem depois. | Abafador, cantinho, quadro de rotina; rótulo **ESCUDO** |
+| 10 | E no seu filho, o que enche mais o copo: barulho ou textura? | Cartões **BARULHO / TEXTURA** |
+
+**Conferido:**
+- **crise x birra:** a crise é uma resposta intensa à sobrecarga, não é birra (National Autistic Society);
+- **stimming:** acalma e regula; se é inofensivo, não há motivo pra impedir (National Autistic Society);
+- **o que ajuda:** quieto, rotina previsível e apoio visual (National Autistic Society);
+- **na legenda:** "cada criança autista é diferente".
+
+## Roteiro 12 · "Se o seu filho engolir uma bateria de botão" (~60 s)
+| # | Narração | Na tela |
+|---|---|---|
+| 1 | Seu filho pega o controle remoto. A tampa abre. E uma bateria do tamanho de uma moeda vai pra boca. | Sala 3D, close na bateria brilhando |
+| 2 | Ele engole. Não engasga, não chora. Parece que não aconteceu nada. | Volta a brincar; câmera atravessa o pescoço em raio-x |
+| 3 | Mas a bateria para no meio do caminho: no esôfago, o tubo da comida. | Corte transparente; rótulo **ESÔFAGO** |
+| 4 | E aí a saliva fecha o circuito. A bateria liga ali dentro. | Faíscas de corrente; rótulo **CIRCUITO** |
+| 5 | Ela produz uma substância que age como soda cáustica. Essa é a queimadura. | Mancha avançando; contador 0 → 2 HORAS |
+| 6 | Em 2 horas, a queimadura já pode ser grave. | Relógio |
+| 7 | Então: suspeitou, vai direto pro hospital. Não faz vomitar. | Carro indo ao hospital; X sobre "vomitar" |
+| 8 | Se ele tem mais de 1 ano e engoliu há menos de 12 horas: no caminho, 2 colherzinhas de mel a cada 10 minutos, até 6 vezes. | Mel cobrindo a bateria como capa; rótulo **CAPA DE MEL** |
+| 9 | O mel não tira a bateria. Ele só ganha tempo até o médico tirar. | Médico com pinça |
+| 10 | E se ele não sentiu nada, tá tudo bem? Lenda. | Carimbo **LENDA** |
+| 11 | Na sua casa, onde tem bateria de botão: no controle ou nos brinquedos? | Cartões **CONTROLE / BRINQUEDO** |
+
+**Conferido:**
+- **mel:** 10 mL (2 colheres de chá) a cada 10 min, até 6 doses, só a partir de 1 ano e até 12 h depois de engolir;
+- **queimadura:** pode ficar grave em 2 h, e a criança pode não ter sintoma no começo;
+- **o que não fazer:** não induzir vômito; o mel não substitui a retirada (National Capital Poison Center, poison.org);
+- **na legenda:** SAMU 192 e "nunca dê mel pra bebê com menos de 1 ano".
