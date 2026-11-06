@@ -288,4 +288,4 @@ Conferir: brotos dos dentes de leite se formam na gestação (ADA/AAPD); sintoma
 - Método Mãe Canguru: começou em 1979 no Instituto Materno Infantil de Bogotá, com Héctor Martínez e Edgar Rey Sanabria, por falta de incubadoras e por causa das infecções cruzadas (IDEASS / ONU);
 - estudo da OMS no NEJM (2021): 3.211 bebês, mortalidade em 28 dias de 15,7% para 12%;
 - Método Canguru é política do Ministério da Saúde;
-- **ainda falta conferir:** a frase do "metrônomo" (estabiliza o batimento e a respiração) com UNICEF ou OMS antes de produzir.
+- o pele a pele deixa o batimento, a respiração e a temperatura do bebê mais estáveis, e mãe e pai podem fazer (CHOP, Children's Hospital of Philadelphia).
