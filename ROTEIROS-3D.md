@@ -215,3 +215,77 @@ Conferir: brotos dos dentes de leite se formam na gestação (ADA/AAPD); sintoma
 - **queimadura:** pode ficar grave em 2 h, e a criança pode não ter sintoma no começo;
 - **o que não fazer:** não induzir vômito; o mel não substitui a retirada (National Capital Poison Center, poison.org);
 - **na legenda:** SAMU 192 e "nunca dê mel pra bebê com menos de 1 ano".
+
+---
+
+## Lote 06/11: histórias reais com virada (cenário muda a cada uma)
+
+## Roteiro 13 · "O conselho que mandou os pais pararem de abraçar" (~70 s)
+1. Em 1928, o psicólogo mais famoso dos Estados Unidos deu um conselho pros pais: nunca abrace seu filho. *(anos 20, sépia, livro abrindo, "1928")*
+2. Nada de beijo. Nada de colo. No máximo, um aperto de mão de manhã. *(pai apertando a mão do filho, quarto frio)*
+3. A ideia era criar crianças fortes e independentes. E muitos pais seguiram.
+4. Uns 30 anos depois, um cientista chamado Harry Harlow fez uma pergunta: o que o filhote quer mais, comida ou conforto? *(laboratório anos 50)*
+5. Ele deu duas "mães" pra um macaquinho. Uma de arame, com mamadeira. Outra de pano, macia, sem comida nenhuma. *(rótulos ARAME + LEITE / PANO + COLO)*
+6. O filhote ia na de arame só pra mamar. E voltava correndo pra de pano.
+7. E quando levava um susto? Corria direto pro pano e se agarrava. *(rótulo PORTO SEGURO)*
+8. Essa é a resposta: o filho precisa de leite. Mas precisa de colo pra se sentir seguro.
+9. Colo estraga a criança? LENDA. Atender o choro de um bebê não deixa ele mimado.
+10. Na sua casa, quem é o colo na hora do susto: MÃE ou PAI? *(cartões)*
+
+**Conferido:**
+- John B. Watson, "Psychological Care of Infant and Child" (1928): "Never hug and kiss them, never let them sit in your lap";
+- Harry Harlow, "The Nature of Love" (1958): o filhote assustado corria pra mãe de pano, não pra de arame que dava leite;
+- não dá pra mimar um bebê atendendo o choro (AAP, HealthyChildren).
+
+## Roteiro 14 · "O teste do marshmallow tinha um segredo" (~70 s)
+1. Você já ouviu falar do teste do marshmallow: a criança que espera pra ganhar dois doces se dá melhor na vida. *(sala, mesa, marshmallow)*
+2. Mas em 2012, cientistas da Universidade de Rochester mudaram uma coisa antes do teste. *("2012 · ROCHESTER")*
+3. Deram pra cada criança um pote de giz de cera velho e prometeram: se você esperar, eu trago material novo.
+4. Pra metade das crianças, a pesquisadora voltou com o material novo. *(rótulo PROMESSA CUMPRIDA)*
+5. Pra outra metade, voltou de mãos vazias: "desculpa, eu errei". *(rótulo PROMESSA QUEBRADA)*
+6. Aí veio o marshmallow.
+7. Quem viu a promessa quebrada esperou, em média, 3 minutos.
+8. Quem viu a promessa cumprida esperou 12 minutos. Quatro vezes mais. *(barra 4x)*
+9. Ou seja: esperar não depende só de força de vontade. Depende de confiar que o adulto cumpre. *(rótulo CONFIANÇA)*
+10. "Depois a gente vai." "Amanhã eu compro." Cada promessa cumprida ensina seu filho a esperar.
+11. Paciência é só de nascença? LENDA.
+12. E você: cumpre as pequenas promessas ou às vezes esquece? Comenta: CUMPRO ou ESQUEÇO.
+
+**Conferido:**
+- Kidd, Palmeri e Aslin, revista Cognition (2013), Universidade de Rochester: 28 crianças de 3 a 5 anos;
+- quem viu a promessa quebrada esperou em média 3 min 2 s; quem viu a promessa cumprida esperou 12 min 2 s.
+
+## Roteiro 15 · "O garoto que ficou 11 dias acordado" (~65 s)
+1. Em 1963, um garoto de 17 anos decidiu: vou ficar acordado o máximo que eu conseguir. *(San Diego, anos 60, "DIA 1")*
+2. Era um projeto da feira de ciências da escola. E ele aguentou 11 dias. 264 horas. *(contador de horas)*
+3. No começo, parecia tranquilo. Só cansaço.
+4. Mas aí a memória começou a falhar. Ele esquecia o que tinha acabado de fazer. *(bilhetes voando; rótulo MEMÓRIA)*
+5. E o humor foi ficando cada vez pior. No último dia, ele estourava com qualquer pergunta. *(repórteres; rótulo PAVIO CURTO)*
+6. Agora olha pro seu filho. Ele não precisa ficar 11 dias acordado pra isso acontecer. *(corte: criança na sala, à noite)*
+7. Uma criança de 3 a 5 anos precisa de 10 a 13 horas de sono por dia, contando a soneca. *(relógio; rótulo 10 A 13 H)*
+8. Quando falta sono, a criança fica mais irritada, faz mais birra e presta menos atenção. *(bateria baixa)*
+9. Então, antes de achar que é manha, pergunta: ele dormiu o suficiente? *(rótulo BATERIA)*
+10. Quantas horas o seu filho dorme por noite? Comenta: MENOS DE 10 ou MAIS DE 10.
+
+**Conferido:**
+- Randy Gardner: 264 h acordado, de 28/12/1963 a 08/01/1964, aos 17 anos; teve problemas de memória e ficou cada vez mais irritado (NPR, 2024);
+- de 3 a 5 anos, 10 a 13 h de sono; a falta de sono está ligada a problemas de atenção e de comportamento (consenso AASM/AAP, 2016).
+
+## Roteiro 16 · "Bogotá, 1979: mais bebês que incubadoras" (~70 s)
+1. Bogotá, 1979. Numa maternidade, nasciam mais bebês prematuros do que cabiam nas incubadoras. *(hospital anos 70)*
+2. Às vezes, dois bebês dividiam a mesma incubadora. E as infecções passavam de um pro outro. *(rótulo INFECÇÃO)*
+3. Então dois médicos tiveram uma ideia que parecia loucura: e se a incubadora fosse a mãe? *(título grande)*
+4. O bebê, só de fralda, vai pele com pele no peito da mãe, preso como um filhote de canguru.
+5. O corpo da mãe esquenta o bebê. Esse é o aquecedor. *(rótulo AQUECEDOR)*
+6. O peito dela sobe e desce, e o coração do bebê se acalma junto. Esse é o metrônomo. *(rótulo METRÔNOMO)*
+7. E o leite está ali, a um palmo. Essa é a lancheira. *(rótulo LANCHEIRA)*
+8. Virou o Método Canguru. Hoje é usado no mundo inteiro, e no Brasil também, pelo SUS. *(mapa)*
+9. Em 2021, um estudo da OMS com mais de 3 mil bebês mostrou: começar o pele a pele logo depois do parto reduziu as mortes em 25%. *(barras 15,7% → 12%)*
+10. E o pai também pode fazer pele a pele.
+11. Você fez pele a pele com seu bebê? Comenta: SIM ou NÃO. *(cartões)*
+
+**Conferido:**
+- Método Mãe Canguru: começou em 1979 no Instituto Materno Infantil de Bogotá, com Héctor Martínez e Edgar Rey Sanabria, por falta de incubadoras e por causa das infecções cruzadas (IDEASS / ONU);
+- estudo da OMS no NEJM (2021): 3.211 bebês, mortalidade em 28 dias de 15,7% para 12%;
+- Método Canguru é política do Ministério da Saúde;
+- **ainda falta conferir:** a frase do "metrônomo" (estabiliza o batimento e a respiração) com UNICEF ou OMS antes de produzir.
