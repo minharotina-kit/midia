@@ -92,6 +92,19 @@ Um formato por dia, sempre às 11h45. Comparar 24 h e 48 h depois:
 | Sáb 07 | Mito ou verdade de Natal, ~13 s | Sofia | o mesmo quiz com voz (isola o efeito da voz) |
 | Dom 08 | Explicador 3D de curiosidade "Uva na ceia" (gancho "Na ceia, seu filho põe uma uva… e para de respirar"), 40 s, pronto e agendado | Juliana | estilo 3D dos vídeos que viralizam + primeiros socorros (envio) |
 
+**Resultado do "Cérebro de 3 anos"** (explicador 3D feito no GPT, 44,5 s, postado em 05/11 às 18h; lido em 06/11 às 06h, cerca de 12 h depois):
+
+| Métrica | Valor |
+|---|---|
+| Views | 2.006 |
+| Alcance | 1.676 |
+| Pulo nos 3 s | 23% |
+| Tempo médio assistido | 19,8 s |
+| Salvos | 6 |
+| Envios | 2 |
+
+**É o melhor Reel do perfil em views, pulo, tempo assistido e salvos.** No mesmo dia, o Mito de Natal sem voz das 11h45 fez 162 views e 63% de pulo. Esse formato é o que bate; agora é replicar com os roteiros 10 a 12.
+
 **Domingo às 21h:** ranking dos 5. O vencedor vira o formato da semana seguinte, replicado com temas novos. A voz vencedora vira a definitiva, se o Mateus concordar.
 
 ## 5. Ferramentas avaliadas
