@@ -289,3 +289,19 @@ Conferir: brotos dos dentes de leite se formam na gestação (ADA/AAPD); sintoma
 - estudo da OMS no NEJM (2021): 3.211 bebês, mortalidade em 28 dias de 15,7% para 12%;
 - Método Canguru é política do Ministério da Saúde;
 - o pele a pele deixa o batimento, a respiração e a temperatura do bebê mais estáveis, e mãe e pai podem fazer (CHOP, Children's Hospital of Philadelphia).
+
+---
+# 17–21 · Estilo "bonequinhos low-poly" (referência do Mateus, 09/11)
+
+Referência: vídeo de 2 min 20 s sobre autismo em meninas (Pedro x Ana). Molde:
+- Gancho em pergunta. Aviso "NÃO É DIAGNÓSTICO" logo no começo e selo fixo no canto.
+- "Imagina dois…": dois personagens com nomes, mesma cena, reações diferentes. Depois "Isso tem nome: ___".
+- Bonecos 3D low-poly coloridos, cenário novo a cada 2–4 s, etiquetas coloridas no topo, legenda de 1 palavra por vez com palavra-chave amarela.
+- Fim com pergunta e balão "CONHECE ALGUÉM? COMENTA AQUI".
+
+Roteiros (prompts completos enviados no chat em 09/11):
+17. Davi e o barulho (sentidos). Fato: diferença sensorial faz parte dos critérios do DSM-5.
+18. Cérebro se formando (Marina grávida). Fatos: NIMH 2014 (10 de 11 autistas e 1 de 11 controles com trechos desorganizados); Columbia 2014 (poda ~50% x ~16%); Bai 2019 (~80% herdabilidade, 2 mi, 5 países, sem efeito materno).
+19. 72h: Carla x Rita (plano da família, ready.gov).
+20. Duas casas, oito da noite (rotina do sono). Fato: Mindell 2015, 10.085 mães, 14 países.
+21. Mudou o caminho (previsibilidade e aviso antes). Base: National Autistic Society.
