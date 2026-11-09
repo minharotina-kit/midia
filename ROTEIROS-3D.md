@@ -305,3 +305,19 @@ Roteiros (prompts completos enviados no chat em 09/11):
 19. 72h: Carla x Rita (plano da família, ready.gov).
 20. Duas casas, oito da noite (rotina do sono). Fato: Mindell 2015, 10.085 mães, 14 países.
 21. Mudou o caminho (previsibilidade e aviso antes). Base: National Autistic Society.
+
+---
+# 22–24 · Formato "história com contagem e virada" (referência do porco no poço, ~1 mi views, 09/11)
+
+Por que o vídeo de referência prende (97 s):
+1. Abre numa ação, não numa explicação: "Um fazendeiro jogou a carcaça de um porco num poço seco" com câmera dentro do poço.
+2. Contador fixo no topo (80, 77, 61, 18, 2, 1): o espectador fica até ver o último número.
+3. Cinema escuro e realista; a cor muda com o clima (marrom, vermelho, campo dourado, vermelho em círculos).
+4. Frases de 5 a 8 palavras, uma ideia por quadro, legenda de duas linhas embaixo.
+5. Virada: o sobrevivente é solto e vira o predador. Depois a metáfora ("as pessoas sentadas no topo só criam a situação") e a virada pro espectador ("se você se sente preso…").
+6. Frase final de frase-de-print: "A saída nunca foi vencer o outro. É sair do jogo." + CTA de seguir.
+Obs.: a história do porco é uma parábola; não achei fonte de experimento real. Aqui só usamos histórias reais, com a mesma arquitetura.
+
+22. "Vinte bebês e nenhum choro" (Romênia, BEIP · Nelson/Zeanah/Fox; APA Monitor 2014; Harvard Magazine 2023).
+23. "O rosto parado" (Tronick, Pediatrics 1978).
+24. "Bogotá, 1979" reescrito como história com contador (OMS/NEJM 2021: 15,7% → 12%).
