@@ -343,3 +343,11 @@ Aposta: história real + família de autista + final que dá vontade de mandar.
 - Fluxo: roteiro em script.js → voz Lax (ElevenLabs, id tS45q0QcrDHqHoaWdCDR, eleven_v4, texto inteiro numa geração) → transcrição grátis do nó pra pegar o tempo de cada palavra → timing.js → render (2 processos, ~20 min pra 53 s) → snd.py (trilha + voz) → finish.sh.
 - A Lax fala ~3 palavras/s. Pausa de 0,45 a 1,3 s entre frases.
 - Fatos: mesmos do roteiro 26.
+
+## Atualização 11/11 à noite · versão 3D de dia com personagens (porta2)
+- Mateus mandou 3 referências (formigueiro, tubarão no quintal, pombos na varanda): mundo low-poly de dia, personagem cabeçudo, cenário rico.
+- Método confirmado no GitHub: artemnovitckii/claude-animation-skills (skill zach-d-films): Three.js procedural + Playwright + ffmpeg, igual ao nosso pipeline. Clonado em /home/claude/artemnovitckii.
+- Projeto novo: /home/claude/curto/porta2/scene.js (casa com telhado, cerca, rua, árvores, lago com pedras; função person() com rosto, cabelo spiky/long/bun/cap, walk(); barras e 10 crianças no palco). Usa o mesmo script.js/timing.js/mix.wav de /home/claude/curto/porta.
+- ERRO DE ÁUDIO corrigido: cortar a narração só no MEIO dos silêncios reais (silencedetect), nunca pelo timestamp da palavra; mix com ganhos fixos + limiter (mix.sh), sem loudnorm dinâmico.
+- Cuidado: câmera não pode nascer dentro das casas do outro lado da rua (z > 9).
+- Render: ~1,3 s/quadro por processo, 2 processos, ~18 min pra 53 s; saída 720p ampliada pra 1080x1920.
