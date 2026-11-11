@@ -321,3 +321,17 @@ Obs.: a história do porco é uma parábola; não achei fonte de experimento rea
 22. "Vinte bebês e nenhum choro" (Romênia, BEIP · Nelson/Zeanah/Fox; APA Monitor 2014; Harvard Magazine 2023).
 23. "O rosto parado" (Tronick, Pediatrics 1978).
 24. "Bogotá, 1979" reescrito como história com contador (OMS/NEJM 2021: 15,7% → 12%).
+
+---
+# 25–27 · Histórias reais pra família de autista (11/11)
+
+Leitura dos números em 11/11 (44 seguidores, eram 17 em 08/11):
+- Kit 72h atípico: 3.792 views, 176 envios, 66 salvos (melhor do perfil; autismo + utilidade pra mandar).
+- Vinte bebês: 1.678 views, 28% pulo, 34,4 s assistidos (melhor retenção; história real, cinema escuro).
+- Bogotá (postado pelo Mateus em 10/11): 1.579 views, 21% pulo, 24,5 s.
+- Fracos: autismo v2 (157) e bateria (154): abrem explicando, sem cena.
+Aposta: história real + família de autista + final que dá vontade de mandar.
+
+25. "Caso 1" (Donald Triplett). Conferido: nasceu 08/09/1933 em Forest, Mississippi; internado aos 3 anos, pais buscaram um ano depois; Kanner em 10/1938; aos 2 anos recitava o Salmo 23; formou-se em 1958; 65 anos no Bank of Forest; golfe; 40 países; morreu 15/06/2023 aos 89; sobrinho: a cidade "o incentivou e o aceitou" (NHPR/AP; Wikipedia).
+26. "Um minuto de porta aberta" (fuga e água). Conferido: ~49% tentam fugir, 4x os irmãos; 32% dos pais relatam quase afogamento; metade nunca recebeu orientação (IAN/Kennedy Krieger 2011); 91% das mortes após fuga, até 14 anos, foram afogamento, EUA 2009–2011; 68% em lago, rio, açude perto (NAA).
+27. "A culpa é sua" (mãe geladeira). Conferido: Kanner 1943 e 1949 (pais frios); Bettelheim 1967 comparou mães a guardas de campo de concentração e defendeu afastar os filhos; Rimland, psicólogo, pai do Mark (1956), livro de 1964 com prefácio do Kanner; Kanner em 1969 "absolveu" os pais (Embryo Project, ASU); ~80% herdabilidade (Bai 2019).
