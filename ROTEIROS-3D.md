@@ -335,3 +335,11 @@ Aposta: história real + família de autista + final que dá vontade de mandar.
 25. "Caso 1" (Donald Triplett). Conferido: nasceu 08/09/1933 em Forest, Mississippi; internado aos 3 anos, pais buscaram um ano depois; Kanner em 10/1938; aos 2 anos recitava o Salmo 23; formou-se em 1958; 65 anos no Bank of Forest; golfe; 40 países; morreu 15/06/2023 aos 89; sobrinho: a cidade "o incentivou e o aceitou" (NHPR/AP; Wikipedia).
 26. "Um minuto de porta aberta" (fuga e água). Conferido: ~49% tentam fugir, 4x os irmãos; 32% dos pais relatam quase afogamento; metade nunca recebeu orientação (IAN/Kennedy Krieger 2011); 91% das mortes após fuga, até 14 anos, foram afogamento, EUA 2009–2011; 68% em lago, rio, açude perto (NAA).
 27. "A culpa é sua" (mãe geladeira). Conferido: Kanner 1943 e 1949 (pais frios); Bettelheim 1967 comparou mães a guardas de campo de concentração e defendeu afastar os filhos; Rimland, psicólogo, pai do Mark (1956), livro de 1964 com prefácio do Kanner; Kanner em 1969 "absolveu" os pais (Embryo Project, ASU); ~80% herdabilidade (Bai 2019).
+
+---
+# 28 · "Um minuto de porta aberta" · feito em código (11/11), estilo neon noturno aprovado pelo Mateus
+
+- Rota nova que funciona: cena 3D SEM boneco (peões, casas, barras, mapas), neon + bloom, legenda palavra por palavra, etiquetas que seguem os objetos. Projeto em /home/claude/curto/porta (index.html, scene.js, script.js, timing.js, snd.py, render_all.sh, finish.sh). Teste aprovado: /home/claude/curto/teste11.
+- Fluxo: roteiro em script.js → voz Lax (ElevenLabs, id tS45q0QcrDHqHoaWdCDR, eleven_v4, texto inteiro numa geração) → transcrição grátis do nó pra pegar o tempo de cada palavra → timing.js → render (2 processos, ~20 min pra 53 s) → snd.py (trilha + voz) → finish.sh.
+- A Lax fala ~3 palavras/s. Pausa de 0,45 a 1,3 s entre frases.
+- Fatos: mesmos do roteiro 26.
