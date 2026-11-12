@@ -351,3 +351,16 @@ Aposta: história real + família de autista + final que dá vontade de mandar.
 - ERRO DE ÁUDIO corrigido: cortar a narração só no MEIO dos silêncios reais (silencedetect), nunca pelo timestamp da palavra; mix com ganhos fixos + limiter (mix.sh), sem loudnorm dinâmico.
 - Cuidado: câmera não pode nascer dentro das casas do outro lado da rua (z > 9).
 - Render: ~1,3 s/quadro por processo, 2 processos, ~18 min pra 53 s; saída 720p ampliada pra 1080x1920.
+
+---
+# 29 · "Brigadeiro na festa" (mito do açúcar) · 12/11, fórmula "porta de entrada pra todos"
+Fórmula nova (pedido do Mateus: conteúdo pra todo mundo sem sair do nicho):
+1. Gancho com algo que todo mundo já viveu ou acredita (açúcar, mel, memória de bebê).
+2. Resposta só no final, com surpresa (mito cai ou número enorme); simulação 3D com contador.
+3. Última frase volta pro nicho ("o que isso muda pro seu filho"); 1 a cada 3 vídeos no lado atípico.
+Fatos conferidos:
+- Wolraich, Wilson e White, JAMA 1995: meta-análise de 23 experimentos (16 artigos), duplo-cegos com placebo; açúcar não afetou comportamento nem desempenho cognitivo (não exclui efeito pequeno).
+- Hoover e Milich, J. Abnormal Child Psychology 1994: 35 meninos de 5 a 7 anos, todos tomaram placebo (aspartame); mães que ouviram "dose grande de açúcar" avaliaram o filho como mais hiperativo e ficaram mais perto dele (crítica foi só tendência).
+- Ressalva dita no vídeo: açúcar demais faz mal pros dentes e pra saúde.
+Projeto: /home/claude/curto/acucar (base.js = ajudantes do mundo 3D de dia; story.js = cenas; scene.js = base+story).
+Outros ganchos prontos nessa fórmula (fatos conferidos em 12/11): memória de bebê (Yale/Columbia, Science 2025, 26 bebês), 1 livro por dia (Ohio State 2019: 296.660 palavras; 5 por dia: 1.483.300), mel antes de 1 ano (esporos; CDC/AAP; 10% das amostras nos EUA), matrícula 2027 (Lei 7.853/89, 2 a 5 anos).
