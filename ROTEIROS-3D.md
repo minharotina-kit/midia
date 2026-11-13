@@ -364,3 +364,8 @@ Fatos conferidos:
 - Ressalva dita no vídeo: açúcar demais faz mal pros dentes e pra saúde.
 Projeto: /home/claude/curto/acucar (base.js = ajudantes do mundo 3D de dia; story.js = cenas; scene.js = base+story).
 Outros ganchos prontos nessa fórmula (fatos conferidos em 12/11): memória de bebê (Yale/Columbia, Science 2025, 26 bebês), 1 livro por dia (Ohio State 2019: 296.660 palavras; 5 por dia: 1.483.300), mel antes de 1 ano (esporos; CDC/AAP; 10% das amostras nos EUA), matrícula 2027 (Lei 7.853/89, 2 a 5 anos).
+
+## 30. "Por que você não lembra de quando era bebê?" (produzido 12/11, agendado 13/11 12h)
+- Formato "pra todos": gancho que todo mundo viveu (1º aniversário) → prova com estudo → mistério (baú, chave perdida) → volta pro filho ("o cérebro dele estava lá, gravando") → CTA de comentário com chips de idade (2/3/4/5+).
+- Fatos: Yates, Turk-Browne e colegas, Science (2025), Yale: 26 bebês de 4 meses a 2 anos, ressonância, imagem por 2 s; hipocampo mais ativo → olhar maior pra imagem repetida; sinal mais forte depois de 1 ano. Hipótese das lembranças guardadas sem acesso; em roedores já reativaram lembranças da infância (Scientific American, 2025).
+- Pipeline: /home/claude/curto/memoria (base.js + party.js + story.js), voz Lax take pBcIV90VJAjUdBbNXtcV, 66 s.
