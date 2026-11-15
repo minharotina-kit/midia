@@ -59,7 +59,7 @@ O que **não** funciona: "e se acontecer" (ex.: pilha engolida) e assunto morno.
 - Transcreve com `eleven_scribe_v1` (custa 0) e salva o `words.json` em `voz/`.
 
 ## 4. Pipeline (arquivos nesta pasta, em `motor/`)
-Estrutura: `projeto/` com `node_modules/three` (`npm i three@0.160.0`), `fonts/ttf/` (Fredoka-Bold, Nunito-ExtraBold) e a pasta do vídeo (ex.: `creche/`).
+Estrutura: `projeto/` com `node_modules/three` (`npm i three@0.160.0`), `fonts/ttf/` (as duas fontes estão na pasta `fonts/` deste zip) e a pasta do vídeo (ex.: `creche/`) com os arquivos de `motor/`. Precisa de Node + Playwright (Chromium) + ffmpeg + Python com numpy.
 
 1. **`build_timing.py`**:
    - Edita `RAW`: uma linha por frase, `*palavra*` = destaque colorido, terceiro campo = última palavra falada da frase, sem acento.
@@ -87,7 +87,7 @@ Estrutura: `projeto/` com `node_modules/three` (`npm i three@0.160.0`), `fonts/t
 6. **Som**:
    - `snd.py` cria a batida (100 bpm) e os efeitos: whoosh no corte, baque no carimbo, moedas, ding, assobio descendo no meme, festa.
    - Os momentos vêm do `timing.js`. Ajusta a lista de efeitos para os eventos do vídeo novo.
-   - `mix.sh` mistura voz (-16 LUFS), batida, efeitos e uma música engraçada (Pixabay) só no trecho do meme e do pedido de comentário. Meta final: **-14 LUFS**, pico ≤ -1,5 dB.
+   - `mix.sh` mistura voz (-16 LUFS), batida, efeitos e uma música engraçada (Pixabay) só no trecho do meme e do pedido de comentário. **Troca a linha `M=` do mix.sh** pelo caminho da música que o Mateus mandar. Meta final: **-14 LUFS**, pico ≤ -1,5 dB.
 7. **Juntar**:
 ```
 ffmpeg -f concat -safe 0 -i lista.txt -c copy out/v.mp4
