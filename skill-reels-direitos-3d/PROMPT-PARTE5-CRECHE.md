@@ -8,10 +8,12 @@ Mano, preciso que tu produza a **Parte 5** da minha série de Reels 3D "direitos
 
 **Tema:** a creche (ou pré-escola) pública nega a vaga ou "não aceita" a criança autista.
 
+**Gancho do momento (confere a notícia antes de usar):** saiu que um pai se acorrentou na prefeitura de Lajeado pra cobrar vaga na creche pro filho autista de 2 anos. Se a notícia se confirmar, ela abre a legenda do post e serve de prova de que o assunto é de agora.
+
 **Gancho (0 s, fala da atendente, em vermelho):** *"Não tem vaga pra ele."*
 
 **3 desculpas** (confere cada lei numa fonte oficial antes de gravar; se não confirmar, troca ou corta):
-1. *"Não tem vaga, entra na fila."* → O STF decidiu em 2022 que creche e pré-escola são **dever do poder público** para crianças de 0 a 5 anos, e que a família pode cobrar isso na Justiça (Tema 548, RE 1.008.166). Caminho: Defensoria Pública, Ministério Público ou Conselho Tutelar.
+1. *"Não tem vaga, entra na fila."* → O STF decidiu em 2022 que creche e pré-escola são **dever do poder público** para crianças de 0 a 5 anos, e que a família pode cobrar isso na Justiça (Tema 548, RE 1.008.166; Constituição, art. 208, IV). Caminho: Defensoria Pública, Ministério Público ou Conselho Tutelar.
 2. *"A gente não tem estrutura pra criança autista."* → Recusar matrícula por causa da deficiência é crime, com pena de 2 a 5 anos (Lei 7.853/89, art. 8º, com redação da LBI). O gestor que recusa aluno com autismo leva multa de 3 a 20 salários mínimos (Lei 12.764/2012, art. 7º).
 3. *"Só se a mãe ficar junto"* ou *"só meio período pra ele"* → A escola tem que oferecer o apoio (acompanhante especializado quando houver necessidade, Lei 12.764/2012, art. 3º, parágrafo único). Não pode cobrar a mais nem limitar o horário só por causa do autismo (LBI, Lei 13.146/2015, art. 28). Confere o artigo exato.
 
