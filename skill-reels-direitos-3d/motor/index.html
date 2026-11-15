@@ -1,0 +1,46 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:F;src:url("../fonts/ttf/Fredoka-Bold.ttf");font-weight:700}
+@font-face{font-family:N;src:url("../fonts/ttf/Nunito-ExtraBold.ttf");font-weight:800}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#000}
+canvas{position:absolute;inset:0}
+#ui{position:absolute;inset:0;font-family:F;color:#fff;pointer-events:none}
+#cap{position:absolute;left:70px;right:70px;top:1335px;text-align:center;font-family:N;font-size:74px;line-height:1.12;-webkit-text-stroke:12px #0d1b2a;paint-order:stroke fill;text-shadow:0 8px 0 rgba(0,0,0,.35)}
+#cap span{display:inline-block;margin:0 9px;transition:none}
+#counter{position:absolute;top:205px;left:50%;transform:translateX(-50%);background:#0d1b2a;border:6px solid #ffd24a;color:#ffd24a;font-size:50px;padding:8px 34px;border-radius:999px;opacity:0;white-space:nowrap}
+#bubble{position:absolute;top:310px;left:90px;right:90px;background:#fff;color:#0d1b2a;font-size:62px;line-height:1.1;text-align:center;padding:30px 36px;border-radius:44px;opacity:0;box-shadow:0 12px 0 rgba(0,0,0,.25)}
+#bubble::after{content:"";position:absolute;bottom:-38px;left:50%;margin-left:-30px;border:30px solid transparent;border-top:40px solid #fff;border-bottom:0}
+#bubble small{display:block;font-size:30px;color:#ff5a68;letter-spacing:.06em;margin-bottom:6px}
+#stamp{position:absolute;top:700px;left:50%;font-size:96px;line-height:1;padding:22px 40px;border:12px solid #3dffa0;color:#3dffa0;border-radius:26px;background:rgba(13,27,42,.82);white-space:nowrap;opacity:0;transform:translate(-50%,-50%) rotate(-6deg)}
+#stamp.red{border-color:#ff5a68;color:#ff5a68}
+#card{position:absolute;top:960px;left:60px;width:640px;background:#fff;color:#0d1b2a;border-radius:30px;padding:24px 30px 24px 34px;opacity:0;border-left:16px solid #1351b4;box-shadow:0 12px 0 rgba(0,0,0,.25)}
+#card b{display:block;font-size:44px;line-height:1.05}
+#card i{display:block;font-style:normal;font-family:N;font-size:30px;line-height:1.2;margin-top:8px;color:#34495e}
+.pill{position:absolute;font-size:40px;background:#fff;color:#0d1b2a;padding:10px 26px;border-radius:999px;white-space:nowrap;opacity:0;box-shadow:0 8px 0 rgba(0,0,0,.22);transform:translate(-50%,-50%)}
+.pill.r{background:#ff5a68;color:#fff}.pill.g{background:#3dffa0}.pill.y{background:#ffd24a}
+#flash{position:absolute;inset:0;background:#fff;opacity:0}
+#cmt{position:absolute;left:80px;right:80px;top:960px;background:#fff;border-radius:34px;padding:26px 32px;color:#0d1b2a;opacity:0;box-shadow:0 14px 0 rgba(0,0,0,.25)}
+#cmt b{display:block;font-size:46px}
+#cmt div{margin-top:14px;border:4px solid #d5dbe3;border-radius:22px;padding:16px 20px;font-family:N;font-size:38px;color:#5b6b7c;min-height:80px}
+#cur{display:inline-block;width:4px;height:40px;background:#1351b4;vertical-align:middle}
+#at{position:absolute;left:0;right:0;top:250px;text-align:center;font-size:56px;color:#ffd24a;-webkit-text-stroke:9px #0d1b2a;paint-order:stroke fill;opacity:0}
+#dark{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.45));}
+</style></head><body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div id="ui">
+<div id="dark"></div>
+<div id="pills"></div>
+<div id="counter"></div>
+<div id="bubble"><small>ATENDENTE DO INSS</small><span id="bq"></span></div>
+<div id="card"><b id="cb"></b><i id="ci"></i></div>
+<div id="stamp"></div>
+<div id="cmt"><b>COMENTA 👇</b><div><span id="ct"></span><span id="cur"></span></div></div>
+<div id="at">SEGUE @PAISDAROTINA</div>
+<div id="cap"></div>
+<div id="flash"></div>
+</div>
+<script type="importmap">{"imports":{"three":"../node_modules/three/build/three.module.js","three/addons/":"../node_modules/three/examples/jsm/"}}</script>
+<script type="module" src="scene.js"></script>
+</body></html>
